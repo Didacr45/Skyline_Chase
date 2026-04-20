@@ -59,7 +59,7 @@ func actualizar_vidas() -> void:
 			animar_latido(vidas[i], 0.5)
 
 func game_over() -> void:
-	get_tree().change_scene_to_file("res://escenas/GUI/GameOver.tscn")
+	ScenesManager.ir_a_game_over()
 
 func animar_latido(corazon: TextureRect, duracion: float = 0.5) -> void:
 	var tween := create_tween()

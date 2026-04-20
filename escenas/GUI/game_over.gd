@@ -1,6 +1,6 @@
 extends Control
 
-func _mouse ():
+func _ready ():
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _on_reintentar_pressed() -> void:
