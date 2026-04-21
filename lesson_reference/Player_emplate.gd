@@ -30,6 +30,7 @@ var _start_position := Vector3.ZERO
 var was_on_floor := false
 var is_attacking := false
 var can_attack := true
+var puede_moverse := true
 
 var is_ledge_grabbing := false
 var ledge_normal := Vector3.ZERO
@@ -62,6 +63,9 @@ func _ready() -> void:
 		_do_spawn_animation()
 	)
 	attack_area.monitoring = false
+	Events.flag_reached.connect(func():
+		puede_moverse = false
+	)
 
 func _do_spawn_animation() -> void:
 	set_physics_process(false)
@@ -133,7 +137,7 @@ func _physics_process(delta: float) -> void:
 		global_position.z += platform.velocity.z * delta
 
 	var raw_input := Vector2.ZERO
-	if not is_attacking:
+	if not is_attacking and puede_moverse:
 		raw_input = Input.get_vector("Izquierda", "Derecha", "Atras", "Alante")
 
 	var forward := -_camera.global_basis.z

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dfx6or0yf3iag"]
+
+[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="1_xed47"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3rbs7"]
+font = ExtResource("1_xed47")
+font_size = 120
+
+[node name="Victoria" type="Control" unique_id=1443960157]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=1603143080]
+layout_mode = 0
+offset_right = 1924.0
+offset_bottom = 1081.0
+color = Color(0.07450981, 0.15686275, 0.30588236, 1)
+
+[node name="Titulo" type="Label" parent="Fondo" unique_id=1545664375]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 179.0
+offset_right = 1348.0
+offset_bottom = 299.0
+text = "¡HAS GANADO!"
+label_settings = SubResource("LabelSettings_3rbs7")

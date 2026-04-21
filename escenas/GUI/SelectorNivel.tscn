@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://bapi61hhmu27a"]
 
 [ext_resource type="Script" uid="uid://dhagyiyo55qe7" path="res://Scripts/GUI/selector_nivel.gd" id="1_nagik"]
-[ext_resource type="PackedScene" uid="uid://bx1a7btr3gn48" path="res://escenas/GUI/button.tscn" id="1_ypn5h"]
 [ext_resource type="Texture2D" uid="uid://ccnqadffupj6r" path="res://escenas/GUI/Fondo Selector.png" id="2_oyen7"]
 [ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://LightGreen_Panel.png" id="4_dw05i"]
 [ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://Fuentes/Pixel Lofi.otf" id="4_huh3l"]
+[ext_resource type="Texture2D" uid="uid://d3dh3pw3dfkpc" path="res://escenas/Estrella/estrella.png" id="5_huh3l"]
 [ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="6_huh3l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dw05i"]
+texture = ExtResource("4_dw05i")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1og72"]
 texture = ExtResource("4_dw05i")
@@ -13,8 +16,9 @@ texture = ExtResource("4_dw05i")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4q4au"]
 texture = ExtResource("4_dw05i")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0nak"]
-texture = ExtResource("4_dw05i")
+[sub_resource type="LabelSettings" id="LabelSettings_1og72"]
+font = ExtResource("4_huh3l")
+font_size = 70
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oeoyj"]
 texture = ExtResource("4_dw05i")
@@ -70,75 +74,247 @@ position = Vector2(959.99994, 539)
 scale = Vector2(1.3821838, 1.8006645)
 texture = ExtResource("2_oyen7")
 
-[node name="Lvl1" parent="." unique_id=752590789 instance=ExtResource("1_ypn5h")]
-process_mode = 3
-custom_minimum_size = Vector2(100, 100)
+[node name="Lvl1" type="Button" parent="." unique_id=384059932]
 layout_mode = 0
-offset_left = 174.0
-offset_top = 337.0
-offset_right = 337.0
-offset_bottom = 493.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
+offset_left = 251.0
+offset_top = 360.0
+offset_right = 678.0
+offset_bottom = 608.0
 theme_override_fonts/font = ExtResource("4_huh3l")
 theme_override_font_sizes/font_size = 70
-theme_override_styles/normal = SubResource("StyleBoxTexture_1og72")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_4q4au")
-theme_override_styles/hover = SubResource("StyleBoxTexture_x0nak")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dw05i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1og72")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4q4au")
+
+[node name="1" type="Label" parent="Lvl1" unique_id=503501385]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 49.0
+offset_right = 241.0
+offset_bottom = 119.0
 text = "1"
-script = null
+label_settings = SubResource("LabelSettings_1og72")
+
+[node name="estrella1" type="TextureRect" parent="Lvl1" unique_id=1901858282]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 105.0
+offset_right = 166.0
+offset_bottom = 211.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella2" type="TextureRect" parent="Lvl1" unique_id=274646879]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 105.0
+offset_right = 268.0
+offset_bottom = 211.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella3" type="TextureRect" parent="Lvl1" unique_id=1282370559]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 105.0
+offset_right = 368.0
+offset_bottom = 211.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
 
 [node name="Lvl2" type="Button" parent="." unique_id=658319235]
 layout_mode = 0
-offset_left = 465.0
-offset_top = 719.0
-offset_right = 635.0
-offset_bottom = 882.0
+offset_left = 254.0
+offset_top = 699.0
+offset_right = 679.0
+offset_bottom = 928.0
 theme_override_fonts/font = ExtResource("4_huh3l")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_oeoyj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_x2qam")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8iuna")
+text = "
+"
+
+[node name="2" type="Label" parent="Lvl2" unique_id=1824333402]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 36.0
+offset_right = 235.0
+offset_bottom = 106.0
 text = "2"
+label_settings = SubResource("LabelSettings_1og72")
+
+[node name="estrella4" type="TextureRect" parent="Lvl2" unique_id=1427313228]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 90.0
+offset_right = 159.0
+offset_bottom = 196.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella5" type="TextureRect" parent="Lvl2" unique_id=1768149369]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 90.0
+offset_right = 261.0
+offset_bottom = 196.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella6" type="TextureRect" parent="Lvl2" unique_id=1712007818]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 90.0
+offset_right = 361.0
+offset_bottom = 196.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
 
 [node name="Lvl3" type="Button" parent="." unique_id=332959790]
 layout_mode = 0
-offset_left = 865.0
-offset_top = 356.0
-offset_right = 1025.0
-offset_bottom = 502.0
+offset_left = 779.0
+offset_top = 363.0
+offset_right = 1202.0
+offset_bottom = 608.0
 theme_override_fonts/font = ExtResource("4_huh3l")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_53ias")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_rgxvo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yfh8i")
+
+[node name="3" type="Label" parent="Lvl3" unique_id=525561790]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 39.0
+offset_right = 231.0
+offset_bottom = 109.0
 text = "3"
+label_settings = SubResource("LabelSettings_1og72")
+
+[node name="estrella7" type="TextureRect" parent="Lvl3" unique_id=1722000842]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 93.0
+offset_right = 155.0
+offset_bottom = 199.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella8" type="TextureRect" parent="Lvl3" unique_id=1298744978]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 93.0
+offset_right = 257.0
+offset_bottom = 199.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella9" type="TextureRect" parent="Lvl3" unique_id=156486179]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 93.0
+offset_right = 357.0
+offset_bottom = 199.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
 
 [node name="Lvl4" type="Button" parent="." unique_id=745634714]
 layout_mode = 0
-offset_left = 1145.0
-offset_top = 733.0
-offset_right = 1320.0
-offset_bottom = 890.0
+offset_left = 786.0
+offset_top = 695.0
+offset_right = 1192.0
+offset_bottom = 935.0
 theme_override_fonts/font = ExtResource("4_huh3l")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_1j72r")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_x3qdc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2eim8")
+
+[node name="4" type="Label" parent="Lvl4" unique_id=1617721789]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 37.0
+offset_right = 223.0
+offset_bottom = 107.0
 text = "4"
+label_settings = SubResource("LabelSettings_1og72")
+
+[node name="estrella10" type="TextureRect" parent="Lvl4" unique_id=1841489028]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 91.0
+offset_right = 152.0
+offset_bottom = 197.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella11" type="TextureRect" parent="Lvl4" unique_id=702581532]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 91.0
+offset_right = 254.0
+offset_bottom = 197.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella12" type="TextureRect" parent="Lvl4" unique_id=851265670]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 91.0
+offset_right = 354.0
+offset_bottom = 197.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
 
 [node name="Lvl5" type="Button" parent="." unique_id=2068249558]
 layout_mode = 0
-offset_left = 1408.0
-offset_top = 358.0
-offset_right = 1578.0
-offset_bottom = 518.0
+offset_left = 1298.0
+offset_top = 368.0
+offset_right = 1705.0
+offset_bottom = 604.0
 theme_override_fonts/font = ExtResource("4_huh3l")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_huh3l")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_t4sn4")
 theme_override_styles/hover = SubResource("StyleBoxTexture_grbhl")
+
+[node name="5" type="Label" parent="Lvl5" unique_id=1107599257]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 35.0
+offset_right = 229.0
+offset_bottom = 105.0
 text = "5"
+label_settings = SubResource("LabelSettings_1og72")
+
+[node name="estrella13" type="TextureRect" parent="Lvl5" unique_id=1725864234]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 87.0
+offset_right = 151.0
+offset_bottom = 193.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella14" type="TextureRect" parent="Lvl5" unique_id=734295699]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 87.0
+offset_right = 253.0
+offset_bottom = 193.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella15" type="TextureRect" parent="Lvl5" unique_id=252156642]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 87.0
+offset_right = 353.0
+offset_bottom = 193.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1833922075]
 layout_mode = 0
@@ -158,7 +334,6 @@ text = "Selector de nivel"
 label_settings = SubResource("LabelSettings_cpxs3")
 
 [connection signal="pressed" from="Lvl1" to="." method="_on_lvl_1_pressed"]
-[connection signal="pressed" from="Lvl1" to="." method="_on_lvl_3_pressed"]
 [connection signal="pressed" from="Lvl2" to="." method="_on_lvl_2_pressed"]
 [connection signal="pressed" from="Lvl3" to="." method="_on_lvl_3_pressed"]
 [connection signal="pressed" from="Lvl4" to="." method="_on_lvl_4_pressed"]

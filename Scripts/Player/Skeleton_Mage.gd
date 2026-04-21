@@ -148,6 +148,8 @@ func _patrol(delta: float) -> void:
 
 func _start_random_movement() -> void:
 	while true:
+		if not is_inside_tree():
+			return
 		if current_state == State.PATROL:
 			_pick_random_direction()
 		var wait_time = randf_range(1.0, 3.0)
