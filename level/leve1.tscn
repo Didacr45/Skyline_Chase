@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://ddn42334oe48i" path="res://Players/Characters/SkeletonWarriorCharacter.tscn" id="25_255j1"]
 [ext_resource type="ArrayMesh" uid="uid://8oo8eilk2dix" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/obj/street_lantern.obj" id="25_cjt1v"]
 [ext_resource type="Script" uid="uid://x4acyl8lqsrg" path="res://Players/Characters/skeleton_warrior.gd" id="26_cjt1v"]
-[ext_resource type="Script" path="res://Players/Characters/skeleton_movement_platform.gd" id="26_da604"]
+[ext_resource type="Script" uid="uid://jkink55u3xw7" path="res://Players/Characters/skeleton_movement_platform.gd" id="26_da604"]
 [ext_resource type="PackedScene" uid="uid://c6x0sa0atynwa" path="res://Players/Characters/SkeletonMageCharacter.tscn" id="27_cjt1v"]
 
 [sub_resource type="Curve" id="Curve_k4wis"]
@@ -1424,12 +1424,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D28" unique_id=846647835]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.055382, 0.010741234, 0.80241966)
 shape = SubResource("ConcavePolygonShape3D_ximny")
-
-[node name="CharacterBody3D2" parent="." unique_id=1809422166]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.596893, 13.477774, -24.99332)
-collision_layer = 2
-collision_mask = 12
-script = ExtResource("26_da604")
 
 [node name="CSGBox3D21" type="CSGBox3D" parent="." unique_id=911536395]
 transform = Transform3D(6.4198813, 0, 0, 0, 1, 0, 0, 0, 3.669007, 33.37903, 12.977758, -23.431078)
