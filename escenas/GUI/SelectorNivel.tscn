@@ -222,29 +222,99 @@ expand_mode = 1
 
 [node name="Lvl4" type="Button" parent="." unique_id=745634714]
 layout_mode = 0
-offset_left = 1145.0
-offset_top = 733.0
-offset_right = 1320.0
-offset_bottom = 890.0
+offset_left = 786.0
+offset_top = 695.0
+offset_right = 1192.0
+offset_bottom = 935.0
 theme_override_fonts/font = ExtResource("4_huh3l")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_1j72r")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_x3qdc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2eim8")
+
+[node name="4" type="Label" parent="Lvl4" unique_id=1617721789]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 37.0
+offset_right = 223.0
+offset_bottom = 107.0
 text = "4"
+label_settings = SubResource("LabelSettings_1og72")
+
+[node name="estrella10" type="TextureRect" parent="Lvl4" unique_id=1841489028]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 91.0
+offset_right = 152.0
+offset_bottom = 197.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella11" type="TextureRect" parent="Lvl4" unique_id=702581532]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 91.0
+offset_right = 254.0
+offset_bottom = 197.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella12" type="TextureRect" parent="Lvl4" unique_id=851265670]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 91.0
+offset_right = 354.0
+offset_bottom = 197.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
 
 [node name="Lvl5" type="Button" parent="." unique_id=2068249558]
 layout_mode = 0
-offset_left = 1408.0
-offset_top = 358.0
-offset_right = 1578.0
-offset_bottom = 518.0
+offset_left = 1298.0
+offset_top = 368.0
+offset_right = 1705.0
+offset_bottom = 604.0
 theme_override_fonts/font = ExtResource("4_huh3l")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxTexture_huh3l")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_t4sn4")
 theme_override_styles/hover = SubResource("StyleBoxTexture_grbhl")
+
+[node name="5" type="Label" parent="Lvl5" unique_id=1107599257]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 35.0
+offset_right = 229.0
+offset_bottom = 105.0
 text = "5"
+label_settings = SubResource("LabelSettings_1og72")
+
+[node name="estrella13" type="TextureRect" parent="Lvl5" unique_id=1725864234]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 87.0
+offset_right = 151.0
+offset_bottom = 193.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella14" type="TextureRect" parent="Lvl5" unique_id=734295699]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 87.0
+offset_right = 253.0
+offset_bottom = 193.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
+
+[node name="estrella15" type="TextureRect" parent="Lvl5" unique_id=252156642]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 87.0
+offset_right = 353.0
+offset_bottom = 193.0
+texture = ExtResource("5_huh3l")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1833922075]
 layout_mode = 0

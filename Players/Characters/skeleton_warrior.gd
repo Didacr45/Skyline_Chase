@@ -84,7 +84,8 @@ func _die() -> void:
 	Events.player_attack.disconnect(_on_player_attack)
 	_play_anim(ANIM_DEATH)
 	await anim_player.animation_finished
-	queue_free()  # Se elimina de la escena
+	await get_tree().process_frame  # da tiempo al bucle a salir
+	queue_free()
 
 # ─────────────────────────────────────────
 #  ANIMACIONES
@@ -123,6 +124,8 @@ func _patrol(delta: float) -> void:
 # ─────────────────────────────────────────
 func _start_random_movement() -> void:
 	while true:
+		if not is_inside_tree():
+			return
 		if current_state == State.PATROL:
 			_pick_random_direction()
 		var wait_time = randf_range(1.0, 3.0)

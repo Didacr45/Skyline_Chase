@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dpyts00g4ljql" path="res://escenas/BarraVida.tscn" id="6_rvgv0"]
 [ext_resource type="PackedScene" uid="uid://bnkfs1uw2wx2x" path="res://escenas/GUI/pause_menu.tscn" id="7_vpehr"]
 
-[node name="Gamelv3" type="Node" unique_id=2132981713 groups=["enemigo", "player"]]
+[node name="Gamelv1" type="Node" unique_id=2132981713 groups=["enemigo", "player"]]
 script = ExtResource("1_2cjaw")
 
 [node name="FlagReachedScreen" parent="." unique_id=1250105717 instance=ExtResource("3_rvgv0")]

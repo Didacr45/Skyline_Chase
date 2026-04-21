@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://h2q42hd0kd8h" path="res://escenas/GUI/game_over.gd" id="1_6i7iq"]
 [ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://Fuentes/Pixel Lofi.otf" id="1_or7j6"]
+[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="2_0kjlr"]
 [ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://LightGreen_Panel.png" id="2_ih8e1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ih8e1"]
-font = ExtResource("1_or7j6")
+font = ExtResource("2_0kjlr")
 font_size = 120
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6i7iq"]
@@ -30,15 +31,15 @@ script = ExtResource("1_6i7iq")
 layout_mode = 0
 offset_right = 1924.0
 offset_bottom = 1081.0
-color = Color(0.23921569, 0.627451, 0.8117647, 1)
+color = Color(0.07450981, 0.15686275, 0.30588236, 1)
 
 [node name="Titulo" type="Label" parent="." unique_id=760973789]
 layout_mode = 0
-offset_left = 667.0
+offset_left = 522.0
 offset_top = 179.0
-offset_right = 1299.0
+offset_right = 1348.0
 offset_bottom = 299.0
-text = "HAS MUERTO"
+text = "¡HAS MUERTO!"
 label_settings = SubResource("LabelSettings_ih8e1")
 
 [node name="Reintentar" type="Button" parent="." unique_id=1597392654]

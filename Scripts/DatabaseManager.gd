@@ -2,6 +2,12 @@ extends Node
 var db : SQLite
 const DB_PATH := "user://game_data.db"
 
+func  _ready():
+	db = SQLite.new()
+	db.path = DB_PATH
+	db.open_db()
+	crear_tablas()
+
 func crear_tablas():
 	var progreso := """
     CREATE TABLE IF NOT EXISTS progreso (
@@ -9,7 +15,7 @@ func crear_tablas():
         nivel INTEGER,
         vidas INTEGER
     );
-    """
+	"""
 	db.query(progreso)
 
 	# Añade esto aquí
@@ -18,7 +24,7 @@ func crear_tablas():
         nivel INTEGER PRIMARY KEY,
         cantidad INTEGER DEFAULT 0
     );
-    """
+	"""
 	db.query(estrellas)
 
 func guardar_estrellas(nivel: int, cantidad: int):
@@ -26,7 +32,13 @@ func guardar_estrellas(nivel: int, cantidad: int):
 		"INSERT OR REPLACE INTO estrellas (nivel, cantidad) VALUES (?, ?);",
 		[nivel, cantidad]
 	)
-
+	
+func guardar_progreso(nivel:int, vidas:int):
+	db.query("DELETE FROM progreso;")
+	db.query_with_bindings(
+		"INSERT INTO progreso (nivel, vidas) VALUES (?, ?);",
+		[nivel, vidas]
+	)
 func cargar_estrellas(nivel: int) -> int:
 	db.query_with_bindings(
 		"SELECT cantidad FROM estrellas WHERE nivel = ?;",
@@ -42,3 +54,10 @@ func cargar_todas_estrellas() -> Dictionary:
 	for fila in db.query_result:
 		resultado[fila["nivel"]] = fila["cantidad"]
 	return resultado
+	
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		borrar_estrellas()
+
+func borrar_estrellas() -> void:
+	db.query("DELETE FROM estrellas;")

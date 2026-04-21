@@ -30,18 +30,13 @@ func _process(delta):
 
 
 func _on_body_entered(body: Node) -> void:
-
 	if recogida:
 		return
-
 	if body.is_in_group("player"):
-
 		recogida = true
 		collision.disabled = true
-		emit_signal("estrella_recogida")
-
+		Events.estrella_recogida_global.emit()
 		animacion_recogida()
-
 
 # ==============================
 # ANIMACIÓN DE RECOGIDA
