@@ -12,6 +12,7 @@ func pause_game(paused: bool) -> void:
 	
 
 func ir_a_selector() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().change_scene_to_file("res://escenas/GUI/SelectorNivel.tscn")
 
 # Funcion para ir al selector nivel guardando el nivel actual
