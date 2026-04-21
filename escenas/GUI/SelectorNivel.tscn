@@ -60,6 +60,15 @@ texture = ExtResource("4_dw05i")
 font = ExtResource("6_huh3l")
 font_size = 100
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0nak"]
+texture = ExtResource("4_dw05i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lvify"]
+texture = ExtResource("4_dw05i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uhbo8"]
+texture = ExtResource("4_dw05i")
+
 [node name="SelectorNivel" type="Control" unique_id=1643839672]
 layout_mode = 3
 anchors_preset = 15
@@ -332,6 +341,19 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Selector de nivel"
 label_settings = SubResource("LabelSettings_cpxs3")
+
+[node name="Button" type="Button" parent="." unique_id=1206996161]
+layout_mode = 0
+offset_left = 1461.0
+offset_top = 825.0
+offset_right = 1830.0
+offset_bottom = 1011.0
+theme_override_fonts/font = ExtResource("4_huh3l")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_x0nak")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lvify")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uhbo8")
+text = "Volver"
 
 [connection signal="pressed" from="Lvl1" to="." method="_on_lvl_1_pressed"]
 [connection signal="pressed" from="Lvl2" to="." method="_on_lvl_2_pressed"]
