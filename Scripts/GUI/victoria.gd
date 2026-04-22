@@ -6,3 +6,6 @@ func _on_salir_pressed() -> void:
 
 func _on_siguiente_pressed() -> void:
 	ScenesManager.cargar_siguiente_nivel()
+
+func _on_reintentar_pressed() -> void:
+	ScenesManager.reintentar()

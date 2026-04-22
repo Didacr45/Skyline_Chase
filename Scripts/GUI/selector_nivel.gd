@@ -39,3 +39,5 @@ func _on_lvl_4_pressed() -> void:
 	ScenesManager.ir_a_nivel(4, "res://escenas/LVLS/gamelv4.tscn")
 func _on_lvl_5_pressed() -> void:
 	ScenesManager.ir_a_nivel(5, "res://escenas/LVLS/gamelv5.tscn")
+func _on_vovler_pressed() -> void:
+	get_tree().change_scene_to_file("res://escenas/GUI/Inicio.tscn")

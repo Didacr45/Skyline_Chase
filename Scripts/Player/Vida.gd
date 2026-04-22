@@ -11,6 +11,7 @@ func _ready() -> void:
 	actualizar_vidas()
 	Events.kill_plane_touched.connect(caer_del_mapa)
 	Events.player_damaged.connect(recibir_daño)
+	Events.player_healed.connect(recuperar_toda_la_vida)
 	for corazon in vidas:
 		animar_latido(corazon)
 		# Si no quedan vidas game over
@@ -71,3 +72,51 @@ func animar_corazon_perdido(corazon: TextureRect) -> void:
 	var tween := create_tween()
 	tween.tween_property(corazon, "scale", Vector2(1.4, 1.4), 0.15)
 	tween.tween_property(corazon, "modulate:a", 0.0, 0.2)
+
+func recuperar_toda_la_vida() -> void:
+	# 1. ACTUALIZAR LA VARIABLE PRIMERO
+	# Si no hacemos esto primero, el resto del código no sabe cuánta vida hay
+	var vidas_previas = vidas_actuales
+	vidas_actuales = max_vidas 
+	
+	print("Curando... De ", vidas_previas, " a ", vidas_actuales)
+
+	# 2. EL FLASH (Efecto visual inmediato)
+	for corazon in vidas:
+		var flash = create_tween()
+		corazon.modulate = Color(2, 2, 2) # Brillo HDR
+		flash.tween_property(corazon, "modulate", Color.WHITE, 0.3)
+
+	# 3. ANIMACIÓN DE APARICIÓN (Cascada)
+	for i in range(vidas.size()):
+		var corazon = vidas[i]
+		
+		# Solo animamos los corazones que estaban "muertos"
+		if i >= vidas_previas:
+			corazon.visible = true
+			corazon.modulate.a = 0.0
+			corazon.scale = Vector2(0.5, 0.5)
+			
+			var tw := create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+			tw.parallel().tween_property(corazon, "modulate:a", 1.0, 0.4)
+			tw.parallel().tween_property(corazon, "scale", Vector2(1.0, 1.0), 0.4)
+			
+			# Importante: Esperar un poquito para el siguiente
+			await get_tree().create_timer(0.1).timeout
+
+	# 4. REFRESCAR TODO AL FINAL
+	actualizar_vidas()
+
+func animar_recuperacion_corazon(corazon: TextureRect) -> void:
+	corazon.visible = true
+	corazon.modulate.a = 0.0 
+	corazon.scale = Vector2(0.5, 0.5)
+	
+	var tween := create_tween()
+	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	
+	tween.parallel().tween_property(corazon, "modulate:a", 1.0, 0.4)
+	tween.parallel().tween_property(corazon, "scale", Vector2(1.0, 1.0), 0.4)
+	
+	tween.tween_callback(func(): animar_latido(corazon))
+	actualizar_vidas()

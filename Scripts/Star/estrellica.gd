@@ -36,6 +36,7 @@ func _on_body_entered(body: Node) -> void:
 		recogida = true
 		collision.disabled = true
 		Events.estrella_recogida_global.emit()
+		Events.player_healed.emit()
 		animacion_recogida()
 
 # ==============================

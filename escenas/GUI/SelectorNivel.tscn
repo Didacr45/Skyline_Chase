@@ -342,7 +342,7 @@ size_flags_vertical = 0
 text = "Selector de nivel"
 label_settings = SubResource("LabelSettings_cpxs3")
 
-[node name="Button" type="Button" parent="." unique_id=1206996161]
+[node name="Vovler" type="Button" parent="." unique_id=1206996161]
 layout_mode = 0
 offset_left = 1461.0
 offset_top = 825.0
@@ -360,3 +360,4 @@ text = "Volver"
 [connection signal="pressed" from="Lvl3" to="." method="_on_lvl_3_pressed"]
 [connection signal="pressed" from="Lvl4" to="." method="_on_lvl_4_pressed"]
 [connection signal="pressed" from="Lvl5" to="." method="_on_lvl_5_pressed"]
+[connection signal="pressed" from="Vovler" to="." method="_on_vovler_pressed"]

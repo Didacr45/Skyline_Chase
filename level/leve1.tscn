@@ -168,7 +168,7 @@ directional_shadow_max_distance = 40.0
 transform = Transform3D(-3.8281467, 0, 7.407901, 0, 1, 0, -3.8281467, 0, -7.407901, -13.514484, -17.7152, -41.49684)
 
 [node name="Flag3D" parent="." unique_id=2007009153 instance=ExtResource("4_a53v5")]
-transform = Transform3D(0.36083588, 0, -0.36083588, 0, 1, 0, 0.36083588, 0, 0.36083588, 39.762974, 13.600505, 4.735491)
+transform = Transform3D(0.36083588, 0, -0.36083588, 0, 1, 0, 0.36083588, 0, 0.36083588, -41.36156, 13.600505, -73.03677)
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="." unique_id=1640457445]
 transform = Transform3D(6.4198813, 0, 0, 0, 1, 0, 0, 0, 3.669007, -29.943743, 12.977758, -69.70417)
