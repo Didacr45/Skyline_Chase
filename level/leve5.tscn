@@ -29,6 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://ddn42334oe48i" path="res://Players/Characters/SkeletonWarriorCharacter.tscn" id="27_qjg13"]
 [ext_resource type="Script" uid="uid://x4acyl8lqsrg" path="res://Players/Characters/skeleton_warrior.gd" id="28_25s1t"]
 [ext_resource type="PackedScene" uid="uid://b4txtdgp6wa1e" path="res://Players/Characters/SkeletonMinionCharacter.tscn" id="29_25s1t"]
+[ext_resource type="PackedScene" uid="uid://c4b85w11uuoqh" path="res://Players/Characters/SkeletonRogeCharacter.tscn" id="30_trjyu"]
+[ext_resource type="Script" uid="uid://dqsod34ehqu7y" path="res://Players/Characters/SkeletonRogue.gd" id="31_h6x2e"]
 
 [sub_resource type="Curve" id="Curve_k4wis"]
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.697336, 1), 0.51276, 0.0, 0, 0]
@@ -3404,4 +3406,12 @@ collision_mask = 12
 script = ExtResource("28_25s1t")
 
 [node name="CharacterBody3D" parent="." unique_id=217140582 instance=ExtResource("29_25s1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -124.30612, 13.829883, -19.569736)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.30612, 13.829883, -19.569736)
+collision_layer = 2
+collision_mask = 12
+
+[node name="CharacterBody3D2" parent="." unique_id=1090110626 instance=ExtResource("30_trjyu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -113.64345, 13.866633, -17.861063)
+collision_layer = 2
+collision_mask = 12
+script = ExtResource("31_h6x2e")

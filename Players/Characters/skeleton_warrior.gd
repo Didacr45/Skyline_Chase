@@ -1,10 +1,10 @@
 extends CharacterBody3D
 
-@export var speed: float = 5.0
+@export var speed: float = 3.5
 @export var gravity: float = 9.8
 @export var attack_damage: int = 1
 @export var attack_cooldown: float = 2.0
-@export var attack_range: float = 1.5
+@export var attack_range: float = 1
 @export var rotation_speed: float = 5.0
 
 @export_group("Vida")
@@ -12,7 +12,7 @@ extends CharacterBody3D
 
 @onready var anim_player: AnimationPlayer = $Skeleton_Warrior/AnimationPlayer
 @onready var detection_area: Area3D = $DetectionArea
-@onready var health_bar: ProgressBar = $HealthBar3D/SubViewport/ProgressBar  # ← barra de vida
+@onready var health_bar: ProgressBar = get_node("HealthBar3D/SubViewport/ProgressBar")  # ← barra de vida
 
 const ANIM_IDLE   = "Animation_Items/Idle_A"
 const ANIM_WALK   = "AnimationMovement/Walking_B"
@@ -26,15 +26,6 @@ var player: Node = null
 var can_attack: bool = true
 var is_attacking: bool = false
 var current_health: int = 0  # ← vida actual
-
-func _ready() -> void:
-	current_health = max_health
-	detection_area.body_entered.connect(_on_player_entered)
-	detection_area.body_exited.connect(_on_player_exited)
-	Events.player_attack.connect(_on_player_attack)  # ← escucha el ataque del jugador
-	_play_anim(ANIM_IDLE)
-	_start_random_movement()
-	_update_health_bar()
 
 func _physics_process(delta: float) -> void:
 	if current_state == State.DEAD:
@@ -72,9 +63,22 @@ func _on_player_attack(damage: int) -> void:
 		_die()
 
 func _update_health_bar() -> void:
-	if health_bar:
-		health_bar.max_value = max_health
-		health_bar.value = current_health
+	# 1. Buscamos el nodo de nuevo para estar 100% seguros
+	var bar = get_node_or_null("HealthBar3D/SubViewport/ProgressBar")
+	
+	if bar:
+		bar.max_value = max_health
+		bar.value = current_health
+		
+		# 2. ESTO ES CLAVE: Forzamos al Viewport a renderizar
+		var viewport = get_node_or_null("HealthBar3D/SubViewport")
+		if viewport:
+			viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
+			
+		# 3. DEBUG: Si ves este mensaje en la consola, el código funciona
+		print("BARRA: Vida actualizada a ", current_health, " de ", max_health)
+	else:
+		print("ERROR: ¡No encuentro la barra en la ruta HealthBar3D/SubViewport/ProgressBar!")
 
 func _die() -> void:
 	current_state = State.DEAD
@@ -199,3 +203,38 @@ func _on_player_exited(body: Node) -> void:
 	if body.is_in_group("player"):
 		player = null
 		current_state = State.PATROL
+		
+# --- Añade esto dentro del script de tu ENEMIGO ---
+
+func _ready() -> void:
+	current_health = max_health
+	# Aseguramos que el enemigo esté en el grupo que busca el jugador
+	add_to_group("enemigo") 
+	
+	detection_area.body_entered.connect(_on_player_entered)
+	detection_area.body_exited.connect(_on_player_exited)
+	
+	# Esta línea puedes mantenerla o quitarla si ya no usas señales globales
+	Events.player_attack.connect(_on_player_attack) 
+	
+	_play_anim(ANIM_IDLE)
+	_start_random_movement()
+	_update_health_bar()
+
+# Esta es la función que llama tu jugador en su script: body.take_damage(attack_damage)
+func take_damage(amount: int) -> void:
+	if current_state == State.DEAD:
+		return
+
+	current_health -= amount
+	current_health = max(current_health, 0)
+	_update_health_bar()
+	
+	# Opcional: imprimir para debug
+	print("Enemigo dañado. Vida restante: ", current_health)
+
+	if current_health <= 0:
+		_die()
+	else:
+		# Opcional: podrías poner una animación de "Hit" aquí
+		pass

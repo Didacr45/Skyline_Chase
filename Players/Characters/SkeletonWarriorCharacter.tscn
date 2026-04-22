@@ -10,6 +10,12 @@ height = 2.4980469
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_n13ph"]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_n13ph"]
+viewport_path = NodePath("HealthBar3D/SubViewport")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n13ph"]
+bg_color = Color(1, 0, 0.50980395, 1)
+
 [node name="SkeletonWarrior" type="CharacterBody3D" unique_id=511050408]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
@@ -56,5 +62,24 @@ libraries/Animation_Items = ExtResource("3_acmbf")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=109572605]
 transform = Transform3D(12.764857, 0, 0, 0, 3.0073547, 0, 0, 0, 12.838219, 0, 0, 0)
 shape = SubResource("SphereShape3D_n13ph")
+
+[node name="HealthBar3D" type="Sprite3D" parent="." unique_id=939391285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7120895, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_n13ph")
+
+[node name="SubViewport" type="SubViewport" parent="HealthBar3D" unique_id=1250418104]
+transparent_bg = true
+size = Vector2i(150, 20)
+render_target_update_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthBar3D/SubViewport" unique_id=1890379252]
+custom_minimum_size = Vector2(150, 20)
+offset_right = 150.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(1, 1, 0.9490196, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_n13ph")
+max_value = 3.0
+value = 3.0
 
 [editable path="Skeleton_Warrior"]

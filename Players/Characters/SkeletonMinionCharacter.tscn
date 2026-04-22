@@ -11,6 +11,12 @@ height = 2.4980469
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8o17o"]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_dcqli"]
+viewport_path = NodePath("HealthBar3D/SubViewport")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44j7l"]
+bg_color = Color(1, 0, 0.50980395, 1)
+
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=217140582]
 script = ExtResource("1_dcqli")
 
@@ -54,5 +60,24 @@ libraries/Animation_Items = ExtResource("3_44j7l")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=1049414497]
 transform = Transform3D(12.764857, 0, 0, 0, 3.0073547, 0, 0, 0, 12.838219, 0, 0, 0)
 shape = SubResource("SphereShape3D_8o17o")
+
+[node name="HealthBar3D" type="Sprite3D" parent="." unique_id=353617413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4286323, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_dcqli")
+
+[node name="SubViewport" type="SubViewport" parent="HealthBar3D" unique_id=1382434565]
+transparent_bg = true
+size = Vector2i(150, 20)
+render_target_update_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthBar3D/SubViewport" unique_id=498442555]
+custom_minimum_size = Vector2(150, 20)
+offset_right = 150.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(1, 1, 0.9490196, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_44j7l")
+max_value = 3.0
+value = 3.0
 
 [editable path="Skeleton_Minion"]

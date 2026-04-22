@@ -10,7 +10,7 @@ extends CharacterBody3D
 @export_group("Vida")
 @export var max_health: int = 3
 
-@onready var anim_player: AnimationPlayer = $Skeleton_Minion/AnimationPlayer
+@onready var anim_player: AnimationPlayer = $Skeleton_Rogue/AnimationPlayer
 @onready var detection_area: Area3D = $DetectionArea
 @onready var health_bar: ProgressBar = get_node("HealthBar3D/SubViewport/ProgressBar")  # ← barra de vida
 

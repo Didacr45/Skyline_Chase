@@ -19,7 +19,7 @@ extends CharacterBody3D
 
 @export_group("Ataque")
 @export var attack_damage := 1
-@export var attack_cooldown := 0.8
+@export var attack_cooldown := 0.25
 
 var jumps_left := max_jumps
 var can_jump := true
