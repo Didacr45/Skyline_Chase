@@ -2,6 +2,8 @@ extends Node
 
 var nivel_actual := 1
 var ultima_escena_jugada : String = "" # Aquí guardaremos el nivel
+var proximo_nivel : String = ""
+var siguiente_numero = nivel_actual + 1
 signal game_paused(paused: bool)
 
 func pause_game(paused: bool) -> void:
@@ -9,17 +11,29 @@ func pause_game(paused: bool) -> void:
 		return
 	get_tree().paused = paused
 	game_paused.emit(paused)
-	
+
+# Funcion para ir al selector nivel guardando el nivel actual
+func ir_a_nivel(numero: int, path: String) -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	nivel_actual = numero # <--- ESTO ES LA CLAVE
+	get_tree().change_scene_to_file(path)
 
 func ir_a_selector() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().change_scene_to_file("res://escenas/GUI/SelectorNivel.tscn")
 
-# Funcion para ir al selector nivel guardando el nivel actual
-func ir_a_nivel(numero: int, path: String) -> void:
-	print("Cambiando a nivel: ", numero, " path: ", path)
-	nivel_actual = numero
-	get_tree().change_scene_to_file(path)
+func ir_a_victoria():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_tree().change_scene_to_file("res://escenas/GUI/victoria.tscn")
+
+func cargar_siguiente_nivel():
+	if proximo_nivel != "":
+		get_tree().change_scene_to_file(proximo_nivel)
+	else:
+		# Por si acaso, si no hay nivel, vuelve al menú
+		get_tree().change_scene_to_file("res://escenas/MenuPrincipal.tscn")
+
+
 
 # Función para ir al Game Over guardando el nivel actual
 func ir_a_game_over():

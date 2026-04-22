@@ -1,10 +1,41 @@
 [gd_scene format=3 uid="uid://dfx6or0yf3iag"]
 
+[ext_resource type="Script" uid="uid://pi0wkdhhljj1" path="res://Scripts/GUI/victoria.gd" id="1_b2176"]
+[ext_resource type="Texture2D" uid="uid://csc40w1chhqcd" path="res://escenas/GUI/Fondo_Victoria.png" id="1_mnsbm"]
 [ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="1_xed47"]
+[ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://Fuentes/Pixel Lofi.otf" id="2_ubgb4"]
+[ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://LightGreen_Panel.png" id="3_mnsbm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2176"]
+texture = ExtResource("3_mnsbm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bb6cy"]
+texture = ExtResource("3_mnsbm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qhlom"]
+texture = ExtResource("3_mnsbm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xm2l2"]
+texture = ExtResource("3_mnsbm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c6kj8"]
+texture = ExtResource("3_mnsbm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lth47"]
+texture = ExtResource("3_mnsbm")
 
 [sub_resource type="LabelSettings" id="LabelSettings_3rbs7"]
 font = ExtResource("1_xed47")
 font_size = 120
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ymcku"]
+texture = ExtResource("3_mnsbm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5wg3"]
+texture = ExtResource("3_mnsbm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ntg2m"]
+texture = ExtResource("3_mnsbm")
 
 [node name="Victoria" type="Control" unique_id=1443960157]
 layout_mode = 3
@@ -13,18 +44,62 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_b2176")
 
-[node name="Fondo" type="ColorRect" parent="." unique_id=1603143080]
+[node name="FondoVictoria" type="Sprite2D" parent="." unique_id=387965378]
+position = Vector2(958, 540)
+scale = Vector2(1.5584415, 1.8691913)
+texture = ExtResource("1_mnsbm")
+
+[node name="Salir" type="Button" parent="." unique_id=1855157909]
 layout_mode = 0
-offset_right = 1924.0
-offset_bottom = 1081.0
-color = Color(0.07450981, 0.15686275, 0.30588236, 1)
+offset_left = 1381.0
+offset_top = 602.0
+offset_right = 1892.0
+offset_bottom = 849.0
+theme_override_fonts/font = ExtResource("2_ubgb4")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_b2176")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bb6cy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qhlom")
+text = "Volver al
+menu"
 
-[node name="Titulo" type="Label" parent="Fondo" unique_id=1545664375]
+[node name="Siguiente" type="Button" parent="." unique_id=1996435006]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 598.0
+offset_right = 1228.0
+offset_bottom = 850.0
+theme_override_fonts/font = ExtResource("2_ubgb4")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_xm2l2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_c6kj8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lth47")
+text = "Continuar....."
+
+[node name="Titulo" type="Label" parent="." unique_id=1545664375]
 layout_mode = 0
 offset_left = 522.0
 offset_top = 179.0
-offset_right = 1348.0
+offset_right = 1380.0
 offset_bottom = 299.0
 text = "¡HAS GANADO!"
 label_settings = SubResource("LabelSettings_3rbs7")
+
+[node name="Reintentar" type="Button" parent="." unique_id=1440005671]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 604.0
+offset_right = 622.0
+offset_bottom = 852.0
+theme_override_fonts/font = ExtResource("2_ubgb4")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_ymcku")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g5wg3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ntg2m")
+text = "Reintentar"
+
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="Reintentar" to="." method="_on_reintentar_pressed"]

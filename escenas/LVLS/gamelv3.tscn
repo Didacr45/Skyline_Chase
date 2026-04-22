@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dpyts00g4ljql" path="res://escenas/BarraVida.tscn" id="7_515j0"]
 [ext_resource type="PackedScene" uid="uid://bxg6oejpaitdt" path="res://level/flag/flag_reached_screen.tscn" id="19_cpgj4"]
 
-[node name="Game" type="Node" unique_id=643107420]
+[node name="Gamelv3" type="Node" unique_id=643107420]
 script = ExtResource("1_1il7v")
 
 [node name="Player3DTemplate" parent="." unique_id=18099479 instance=ExtResource("1_w0p8v")]
