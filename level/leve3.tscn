@@ -24,6 +24,12 @@
 [ext_resource type="ArrayMesh" uid="uid://dtsgpetf7fk53" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/obj/fountain_leaves.obj" id="21_qq1or"]
 [ext_resource type="Script" uid="uid://bjf6euw2h3wi2" path="res://Scripts/Star/estrellica.gd" id="23_hxuky"]
 [ext_resource type="ArrayMesh" uid="uid://cxribqsh0k83c" path="res://level/estrella/estrellica.obj" id="24_d2w5e"]
+[ext_resource type="PackedScene" uid="uid://c6x0sa0atynwa" path="res://Players/Characters/SkeletonMageCharacter.tscn" id="25_gv2cp"]
+[ext_resource type="Script" uid="uid://jkink55u3xw7" path="res://Players/Characters/skeleton_movement_platform.gd" id="26_jcxtm"]
+[ext_resource type="PackedScene" uid="uid://c4b85w11uuoqh" path="res://Players/Characters/SkeletonRogeCharacter.tscn" id="27_82qno"]
+[ext_resource type="Script" uid="uid://dqsod34ehqu7y" path="res://Players/Characters/SkeletonRogue.gd" id="28_tcro2"]
+[ext_resource type="PackedScene" uid="uid://ddn42334oe48i" path="res://Players/Characters/SkeletonWarriorCharacter.tscn" id="29_huxtc"]
+[ext_resource type="Script" uid="uid://x4acyl8lqsrg" path="res://Players/Characters/skeleton_warrior.gd" id="30_tvqml"]
 
 [sub_resource type="Curve" id="Curve_k4wis"]
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.697336, 1), 0.51276, 0.0, 0, 0]
@@ -364,6 +370,11 @@ radius = 9.071
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hjxn"]
 albedo_color = Color(1, 1, 0, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hxuky"]
+size = Vector3(1.5488281, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gv2cp"]
+
 [node name="Level" type="Node3D" unique_id=2010892895]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1350204024]
@@ -379,7 +390,7 @@ directional_shadow_max_distance = 40.0
 transform = Transform3D(-3.8281467, 0, 7.407901, 0, 1, 0, -3.8281467, 0, -7.407901, -55.25, -17.7152, -181.99728)
 
 [node name="Flag3D" parent="." unique_id=8547968 instance=ExtResource("4_tkvxb")]
-transform = Transform3D(0.36083588, 0, -0.36083588, 0, 1, 0, 0.36083588, 0, 0.36083588, 10.077156, 13.032244, -68.205765)
+transform = Transform3D(0.36083588, 0, -0.36083588, 0, 1, 0, 0.36083588, 0, 0.36083588, 117.17096, 13.621486, 21.782274)
 
 [node name="CSGBox3D31" type="CSGBox3D" parent="." unique_id=1213520392]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -54.88663, 12.977758, -53.123985)
@@ -591,6 +602,8 @@ transform = Transform3D(2.4470172, -0.52898943, 1.8728846, 0.66206294, 2.5521097
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2069663257]
 transform = Transform3D(-6.376987e-08, 0, 1, 0, 1, 0, -1.4588846, 0, -4.371139e-08, -59.81007, 13.608939, -71.00919)
+collision_layer = 31
+collision_mask = 31
 
 [node name="Bench" type="MeshInstance3D" parent="StaticBody3D" unique_id=617206321]
 layers = 16
@@ -722,6 +735,8 @@ shape = SubResource("ConcavePolygonShape3D_huxtc")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1522385328]
 transform = Transform3D(-6.376987e-08, 0, 1, 0, 1, 0, -1.4588846, 0, -4.371139e-08, -56.64345, 13.608939, -4.0912094)
+collision_layer = 31
+collision_mask = 31
 
 [node name="Bench3" type="MeshInstance3D" parent="StaticBody3D3" unique_id=1687849011]
 layers = 16
@@ -851,6 +866,8 @@ size = Vector3(9.777832, 1, 8.435089)
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=682224957]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 11.626424, 12.977758, -69)
+collision_layer = 31
+collision_mask = 31
 
 [node name="HedgeCorner2" type="MeshInstance3D" parent="StaticBody3D2" unique_id=569510141]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.135353, 0.5, 3.4653625)
@@ -964,6 +981,8 @@ shape = SubResource("ConcavePolygonShape3D_yf3qh")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=1071899585]
 transform = Transform3D(0.86898696, 0, 0, 0, 1, 0, 0, 0, 1, 17.189451, 13.614846, -10.638061)
+collision_layer = 31
+collision_mask = 31
 
 [node name="HedgeStraightLong" type="MeshInstance3D" parent="StaticBody3D4" unique_id=637089278]
 layers = 16
@@ -1387,6 +1406,8 @@ skeleton = NodePath("../..")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="." unique_id=2069599881]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 64.223755, 13.483906, 5.8445706)
+collision_layer = 31
+collision_mask = 31
 
 [node name="StreetLantern" type="MeshInstance3D" parent="StaticBody3D5" unique_id=43636708]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.8597784, 0.19409275, -0.7691002)
@@ -1511,3 +1532,165 @@ shape = SubResource("SphereShape3D_sxsjj")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Estrellica7" unique_id=39948169]
 mesh = ExtResource("24_d2w5e")
 surface_material_override/0 = SubResource("StandardMaterial3D_0hjxn")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="." unique_id=1355181854]
+transform = Transform3D(-0.16735159, 0, -4.3694925e-07, 0, 3.987954, 0, 1.4630341e-08, 0, -4.998116, -57.016808, 15.460965, -8.595186)
+
+[node name="LimiteDer" type="StaticBody3D" parent="StaticBody3D6" unique_id=1986861546]
+transform = Transform3D(1, 0, 2.2737368e-13, 0, 0.9999999, 0, 2.220446e-16, 0, 0.99999994, 0, 0, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6/LimiteDer" unique_id=1209492834]
+transform = Transform3D(0.99999994, 0, 2.2737368e-12, 0, 0.9999994, 0, 4.440892e-16, 0, 1.8983544, 7.387787, 0, -0.4678582)
+shape = SubResource("BoxShape3D_hxuky")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D6/LimiteDer" unique_id=1436085381]
+
+[node name="LimiteFront" type="StaticBody3D" parent="StaticBody3D6" unique_id=914598378]
+transform = Transform3D(-4.3711395e-08, 0, -47.67619, 0, 0.9999999, 0, 0.03348293, 0, -6.977818e-08, -16.563202, 0, 0.48694253)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6/LimiteFront" unique_id=1694245736]
+shape = SubResource("BoxShape3D_hxuky")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D6/LimiteFront" unique_id=144573172]
+
+[node name="LimiteIzq" type="StaticBody3D" parent="StaticBody3D6" unique_id=248351171]
+transform = Transform3D(1, 0, 2.2737368e-13, 0, 0.9999999, 0, 2.220446e-16, 0, 0.99999994, -41.14865, 0, -1.1920929e-07)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6/LimiteIzq" unique_id=553217272]
+transform = Transform3D(0.99999994, 0, 1.8189894e-12, 0, 0.9999995, 0, 2.220446e-16, 0, 1.9138244, 0, 0, -0.48985326)
+shape = SubResource("BoxShape3D_hxuky")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D6/LimiteIzq" unique_id=629134199]
+
+[node name="LimiteBack" type="StaticBody3D" parent="StaticBody3D6" unique_id=1394027611]
+transform = Transform3D(-4.3711395e-08, 0, -41.83398, 0, 0.9999999, 0, 0.03348293, 0, -6.122761e-08, -20.384308, 0, -0.48073602)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6/LimiteBack" unique_id=523910444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1606549, -28.19234, 0, -0.08683205)
+shape = SubResource("BoxShape3D_hxuky")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D6/LimiteBack" unique_id=1846084725]
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="." unique_id=881028545]
+transform = Transform3D(-0.16735159, 0, -4.3694925e-07, 0, 3.987954, 0, 1.4630341e-08, 0, -4.998116, 56.255516, 15.460965, 0.4390955)
+
+[node name="LimiteDer" type="StaticBody3D" parent="StaticBody3D7" unique_id=1611871561]
+transform = Transform3D(1, 0, 2.2737368e-13, 0, 0.9999999, 0, 2.220446e-16, 0, 0.99999994, 0, 0, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D7/LimiteDer" unique_id=2118912457]
+transform = Transform3D(0.99999994, 0, 2.728484e-12, 0, 0.9999989, 0, -2.220446e-16, 0, 1.8983543, 15.595093, 0, -0.4538434)
+shape = SubResource("BoxShape3D_hxuky")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D7/LimiteDer" unique_id=1787466204]
+
+[node name="LimiteFront" type="StaticBody3D" parent="StaticBody3D7" unique_id=457282177]
+transform = Transform3D(-4.3711395e-08, 0, -47.67619, 0, 0.9999999, 0, 0.03348293, 0, -6.977818e-08, -16.563202, 0, 0.48694253)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D7/LimiteFront" unique_id=1603086782]
+transform = Transform3D(1.0000005, 0, 0, 0, 1, 0, -1.6653345e-16, 0, 1.2823324, 0, 0, -0.040317535)
+shape = SubResource("BoxShape3D_hxuky")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D7/LimiteFront" unique_id=376719072]
+
+[node name="LimiteIzq" type="StaticBody3D" parent="StaticBody3D7" unique_id=64607988]
+transform = Transform3D(1, 0, 2.2737368e-13, 0, 0.9999999, 0, 2.220446e-16, 0, 0.99999994, -41.14865, 0, -1.1920929e-07)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D7/LimiteIzq" unique_id=256254]
+transform = Transform3D(0.99999994, 0, 2.2737368e-12, 0, 0.9999994, 0, 0, 0, 1.9138243, -2.78125, 0, -0.48985332)
+shape = SubResource("BoxShape3D_hxuky")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D7/LimiteIzq" unique_id=1517504107]
+
+[node name="LimiteBack" type="StaticBody3D" parent="StaticBody3D7" unique_id=954784930]
+transform = Transform3D(-4.3711395e-08, 0, -41.83398, 0, 0.9999999, 0, 0.03348293, 0, -6.122761e-08, -20.384308, 0, -0.48073602)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D7/LimiteBack" unique_id=690870965]
+transform = Transform3D(1.0000004, 0, 0, 0, 1.0000004, 0, -2.220446e-16, 0, 1.4029009, -28.192343, 0, -0.14651012)
+shape = SubResource("BoxShape3D_hxuky")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D7/LimiteBack" unique_id=269663725]
+
+[node name="CharacterBody3D" parent="." unique_id=1533694577 instance=ExtResource("25_gv2cp")]
+transform = Transform3D(-1.3, 0, -1.9629454e-07, 0, 1.3, 0, 1.9629454e-07, 0, -1.3, -54.076103, 13.477781, -6.779708)
+collision_mask = 12
+script = ExtResource("26_jcxtm")
+
+[node name="CharacterBody3D3" parent="." unique_id=1333835824 instance=ExtResource("25_gv2cp")]
+transform = Transform3D(-1.3, 0, -1.9629454e-07, 0, 1.3, 0, 1.9629454e-07, 0, -1.3, 59.487656, 13.477781, 2.749692)
+collision_mask = 12
+script = ExtResource("26_jcxtm")
+
+[node name="Limite enemigos 1" type="StaticBody3D" parent="." unique_id=1630672686]
+transform = Transform3D(1.010833, 0, 8.002339e-06, 0, 5.18434, 0, -2.4100115e-07, 0, 33.56428, 33.448036, 13.141731, 2.1011915)
+
+[node name="LimiteDer3" type="StaticBody3D" parent="Limite enemigos 1" unique_id=116563911]
+transform = Transform3D(0.9999999, 0, 9.094947e-13, 0, 0.9999999, 0, 0, 0, 0.82501465, 0, 0, -0.023212086)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 1/LimiteDer3" unique_id=710403453]
+transform = Transform3D(0.9999992, 0, 3.1832315e-12, 0, 0.9999994, 0, 2.6645353e-15, 0, 0.89926374, -1.4462318, 0.5424719, -0.00011490658)
+shape = SubResource("BoxShape3D_gv2cp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 1/LimiteDer3" unique_id=1165421887]
+
+[node name="LimiteFront3" type="StaticBody3D" parent="Limite enemigos 1" unique_id=112088565]
+transform = Transform3D(-4.6720096e-08, 0, -41.137844, 0, 0.9999999, 0, 0.03218926, 0, -5.415495e-08, -20.19072, 0, 0.4864152)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 1/LimiteFront3" unique_id=1134362150]
+transform = Transform3D(1, 0, 4.092726e-12, 0, 1, 0, 2.6645353e-15, 0, 0.6202847, -5.121462, 0.5588052, -0.15556616)
+shape = SubResource("BoxShape3D_gv2cp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 1/LimiteFront3" unique_id=1479021173]
+
+[node name="LimiteIzq3" type="StaticBody3D" parent="Limite enemigos 1" unique_id=318742157]
+transform = Transform3D(0.99999994, 0, -2.2737368e-13, 0, 0.9999999, 0, 0, 0, 1.0017388, -40.294907, 0, 0.0014425516)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 1/LimiteIzq3" unique_id=649469419]
+transform = Transform3D(0.9999999, 0, 2.2737368e-12, 0, 1.0000001, 0, 0, 0, 0.7378998, 15.360493, 0.5278845, -0.027629297)
+shape = SubResource("BoxShape3D_gv2cp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 1/LimiteIzq3" unique_id=684774210]
+
+[node name="LimiteBack3" type="StaticBody3D" parent="Limite enemigos 1" unique_id=1258559850]
+transform = Transform3D(-4.6720096e-08, 0, -40.70035, 0, 0.9999999, 0, 0.03218926, 0, -5.3579022e-08, -20.083252, 0, -0.48316056)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 1/LimiteBack3" unique_id=476383833]
+transform = Transform3D(0.99999976, 0, 5.456968e-12, 0, 0.9999994, 0, 2.6645353e-15, 0, 0.5974106, 3.273573, 0.5384879, -0.16435468)
+shape = SubResource("BoxShape3D_gv2cp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 1/LimiteBack3" unique_id=1195891221]
+
+[node name="CharacterBody3D2" parent="." unique_id=1090110626 instance=ExtResource("27_82qno")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.937717, 13.866633, 7.119257)
+collision_layer = 2
+collision_mask = 12
+script = ExtResource("28_tcro2")
+
+[node name="CharacterBody3D9" parent="." unique_id=511050408 instance=ExtResource("29_huxtc")]
+transform = Transform3D(-0.027584651, 0, -0.7995243, 0, 0.8, 0, 0.7995243, 0, -0.027584651, 23.56144, 13.515412, -4.786417)
+collision_layer = 2
+collision_mask = 12
+script = ExtResource("30_tvqml")

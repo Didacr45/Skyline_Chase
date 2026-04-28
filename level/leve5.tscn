@@ -29,8 +29,10 @@
 [ext_resource type="PackedScene" uid="uid://ddn42334oe48i" path="res://Players/Characters/SkeletonWarriorCharacter.tscn" id="27_qjg13"]
 [ext_resource type="Script" uid="uid://x4acyl8lqsrg" path="res://Players/Characters/skeleton_warrior.gd" id="28_25s1t"]
 [ext_resource type="PackedScene" uid="uid://b4txtdgp6wa1e" path="res://Players/Characters/SkeletonMinionCharacter.tscn" id="29_25s1t"]
+[ext_resource type="PackedScene" uid="uid://c6x0sa0atynwa" path="res://Players/Characters/SkeletonMageCharacter.tscn" id="30_h6x2e"]
 [ext_resource type="PackedScene" uid="uid://c4b85w11uuoqh" path="res://Players/Characters/SkeletonRogeCharacter.tscn" id="30_trjyu"]
 [ext_resource type="Script" uid="uid://dqsod34ehqu7y" path="res://Players/Characters/SkeletonRogue.gd" id="31_h6x2e"]
+[ext_resource type="Script" uid="uid://jkink55u3xw7" path="res://Players/Characters/skeleton_movement_platform.gd" id="31_vu70a"]
 
 [sub_resource type="Curve" id="Curve_k4wis"]
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.697336, 1), 0.51276, 0.0, 0, 0]
@@ -1791,6 +1793,8 @@ shape = SubResource("ConcavePolygonShape3D_vc6p5")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=1654637408]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.1841413, 0, -1, 0, -4.371139e-08, -201.48679, 3.171825, 34.061314)
+collision_layer = 31
+collision_mask = 31
 
 [node name="HedgeStraightLong" type="MeshInstance3D" parent="StaticBody3D4" unique_id=493696828]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33187866, 0, 0.0024719238)
@@ -3399,19 +3403,324 @@ shape = SubResource("BoxShape3D_7ili6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 1/LimiteBack3" unique_id=1638331624]
 
-[node name="CharacterBody3D3" parent="." unique_id=511050408 instance=ExtResource("27_qjg13")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -114.83828, 13.847158, -32.660194)
-collision_layer = 2
-collision_mask = 12
-script = ExtResource("28_25s1t")
+[node name="Limite enemigos 2" type="StaticBody3D" parent="." unique_id=1666740225]
+transform = Transform3D(-0.7775639, 0, -2.2571412e-06, 0, 3.987954, 0, 6.79768e-08, 0, -25.81868, -127.223755, 15.460965, -55.861763)
+
+[node name="LimiteDer3" type="StaticBody3D" parent="Limite enemigos 2" unique_id=291047712]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 2/LimiteDer3" unique_id=228027486]
+transform = Transform3D(1, 0, 1.7053026e-13, 0, 0.99999785, 0, 0, 0, 0.32601303, -3.8312378, 0, 0.33602524)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 2/LimiteDer3" unique_id=1931750562]
+
+[node name="LimiteFront3" type="StaticBody3D" parent="Limite enemigos 2" unique_id=2093062475]
+transform = Transform3D(-4.6720096e-08, 0, -15.192777, 0, 0.9999995, 0, 0.03218926, 0, -2.0000174e-08, -9.559967, 0, 0.48641515)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 2/LimiteFront3" unique_id=179245531]
+transform = Transform3D(1, 0, 2.2737368e-13, 0, 1, 0, 2.6645353e-15, 0, 0.74198705, 0, 0, -0.034495592)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 2/LimiteFront3" unique_id=1548456375]
+
+[node name="LimiteIzq3" type="StaticBody3D" parent="Limite enemigos 2" unique_id=1556952127]
+transform = Transform3D(0.99999994, 0, -2.2737368e-13, 0, 0.9999999, 0, 0, 0, 1.0017388, -40.294907, 0, 0.0014425516)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 2/LimiteIzq3" unique_id=1294479488]
+transform = Transform3D(0.99999964, 0, -3.9790393e-13, 0, 1, 0, -2.220446e-16, 0, 0.316884, 26.055298, 0, 0.34222388)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 2/LimiteIzq3" unique_id=250081689]
+
+[node name="LimiteBack3" type="StaticBody3D" parent="Limite enemigos 2" unique_id=806729027]
+transform = Transform3D(-4.6720096e-08, 0, -40.70035, 0, 0.9999999, 0, 0.03218926, 0, -5.3579022e-08, -20.083252, 0, -0.48316056)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 2/LimiteBack3" unique_id=790867388]
+transform = Transform3D(1, 0, 1.4495072e-12, 0, 1, 0, 0, 0, 0.27440414, 20.866024, 0, -0.27373767)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 2/LimiteBack3" unique_id=195172662]
+
+[node name="Limite enemigos 3" type="StaticBody3D" parent="." unique_id=1623790785]
+transform = Transform3D(-0.7775639, 0, -2.2571412e-06, 0, 3.987954, 0, 6.79768e-08, 0, -25.81868, -216.1662, 5.5142374, 44.73641)
+
+[node name="LimiteDer3" type="StaticBody3D" parent="Limite enemigos 3" unique_id=1956393971]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 3/LimiteDer3" unique_id=2059669528]
+transform = Transform3D(1, 0, 3.410605e-13, 0, 0.9999993, 0, 0, 0, 0.42640024, -1.6206055, 0, -0.14965713)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 3/LimiteDer3" unique_id=1196008699]
+
+[node name="LimiteFront3" type="StaticBody3D" parent="Limite enemigos 3" unique_id=1779841889]
+transform = Transform3D(-4.6720096e-08, 0, -41.137844, 0, 0.9999999, 0, 0.03218926, 0, -5.415495e-08, -20.19072, 0, 0.4864152)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 3/LimiteFront3" unique_id=276954409]
+transform = Transform3D(1, 0, 9.663381e-13, 0, 1, 0, 4.440892e-15, 0, 0.3839616, 0, 0, 0.14227152)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 3/LimiteFront3" unique_id=927378907]
+
+[node name="LimiteIzq3" type="StaticBody3D" parent="Limite enemigos 3" unique_id=1574023480]
+transform = Transform3D(0.99999994, 0, -2.2737368e-13, 0, 0.9999999, 0, 0, 0, 1.0017388, -40.294907, 0, 0.0014425516)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 3/LimiteIzq3" unique_id=792551821]
+transform = Transform3D(0.9999991, 0, -6.82121e-13, 0, 1, 0, -4.440892e-16, 0, 0.84859973, 6.3926697, 0, 0.06624603)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 3/LimiteIzq3" unique_id=82396285]
+
+[node name="LimiteIzq4" type="StaticBody3D" parent="Limite enemigos 3" unique_id=20284776]
+transform = Transform3D(0.9999998, 0, -6.82121e-13, 0, 0.99999964, 0, -2.220446e-16, 0, 1.0017388, -24.833115, 0, 0.00144279)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 3/LimiteIzq4" unique_id=481231482]
+transform = Transform3D(0.9999991, 0, -3.410605e-13, 0, 1, 0, -4.440892e-16, 0, 0.47431582, 6.3926544, 0, 0.26284552)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 3/LimiteIzq4" unique_id=2077725850]
+
+[node name="LimiteBack3" type="StaticBody3D" parent="Limite enemigos 3" unique_id=1131926511]
+transform = Transform3D(-4.6720096e-08, 0, -40.70035, 0, 0.9999999, 0, 0.03218926, 0, -5.3579022e-08, -20.083252, 0, -0.48316056)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 3/LimiteBack3" unique_id=112851163]
+transform = Transform3D(1, 0, 4.3201e-12, 0, 1, 0, 0, 0, 0.8093428, 3.9252243, 0, -0.05213833)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 3/LimiteBack3" unique_id=1551122748]
+
+[node name="LimiteBack4" type="StaticBody3D" parent="Limite enemigos 3" unique_id=1767515693]
+transform = Transform3D(-4.6720096e-08, 0, -20.303946, 0, 0.99999917, 0, 0.03218926, 0, -2.6728646e-08, -10.958252, 0, -0.07072973)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 3/LimiteBack4" unique_id=954432786]
+transform = Transform3D(1, 0, 4.3201e-12, 0, 1, 0, 0, 0, 0.8093428, 3.9252243, 0, -0.05213833)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 3/LimiteBack4" unique_id=1322860172]
+
+[node name="Limite enemigos 4" type="StaticBody3D" parent="." unique_id=1572603503]
+transform = Transform3D(-0.7775639, 0, -2.2571412e-06, 0, 3.987954, 0, 6.79768e-08, 0, -25.81868, -256.25006, 8.540325, -1.1997776)
+
+[node name="LimiteDer3" type="StaticBody3D" parent="Limite enemigos 4" unique_id=1235736868]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 4/LimiteDer3" unique_id=742194595]
+transform = Transform3D(0.9999998, 0, 9.094947e-13, 0, 0.99999905, 0, -2.220446e-16, 0, 1.5261236, 18.553284, 0.55648565, -0.2756586)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 4/LimiteDer3" unique_id=569992814]
+
+[node name="LimiteFront3" type="StaticBody3D" parent="Limite enemigos 4" unique_id=672733235]
+transform = Transform3D(-4.6720096e-08, 0, -41.137844, 0, 0.9999999, 0, 0.03218926, 0, -5.415495e-08, -20.19072, 0, 0.4864152)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 4/LimiteFront3" unique_id=1053441478]
+transform = Transform3D(0.99999994, 0, 4.5474735e-13, 0, 1, 0, 3.4416914e-15, 0, 1.2952505, 0.61973, 0.39061642, -0.29448223)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 4/LimiteFront3" unique_id=1825691056]
+
+[node name="LimiteIzq3" type="StaticBody3D" parent="Limite enemigos 4" unique_id=1612406055]
+transform = Transform3D(0.99999994, 0, -2.2737368e-13, 0, 0.9999999, 0, 0, 0, 1.0017388, -40.294907, 0, 0.0014425516)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 4/LimiteIzq3" unique_id=633231338]
+transform = Transform3D(0.99999887, 0, -2.728484e-12, 0, 1, 0, -4.440892e-16, 0, 1.579658, 6.392639, 0.44915676, -0.26686674)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 4/LimiteIzq3" unique_id=1430824476]
+
+[node name="LimiteBack3" type="StaticBody3D" parent="Limite enemigos 4" unique_id=585587173]
+transform = Transform3D(-4.6720096e-08, 0, -40.70035, 0, 0.9999999, 0, 0.03218926, 0, -5.3579022e-08, -20.083252, 0, -0.48316056)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 4/LimiteBack3" unique_id=490155165]
+transform = Transform3D(1, 0, 7.275958e-12, 0, 1, 0, 0, 0, 1.2602195, -17.9407, 0.47085142, -0.30048466)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 4/LimiteBack3" unique_id=2095891994]
+
+[node name="Limite enemigos 5" type="StaticBody3D" parent="." unique_id=995329889]
+transform = Transform3D(-0.7775639, 0, -2.2571412e-06, 0, 3.987954, 0, 6.79768e-08, 0, -25.81868, 21.383106, 15.460965, -25.195087)
+
+[node name="LimiteDer3" type="StaticBody3D" parent="Limite enemigos 5" unique_id=402031203]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 5/LimiteDer3" unique_id=2085626754]
+transform = Transform3D(1, 0, 2.2737368e-13, 0, 0.9999999, 0, 0, 0, 1, -3.8312378, 0, -5.9604645e-08)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 5/LimiteDer3" unique_id=1850621266]
+
+[node name="LimiteFront3" type="StaticBody3D" parent="Limite enemigos 5" unique_id=1945777005]
+transform = Transform3D(-4.6720096e-08, 0, -41.137844, 0, 0.9999999, 0, 0.03218926, 0, -5.415495e-08, -20.19072, 0, 0.4864152)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 5/LimiteFront3" unique_id=1299441632]
+transform = Transform3D(1, 0, 2.2737368e-13, 0, 1, 0, 2.6645353e-15, 0, 0.74198705, 0, 0, -0.034495592)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 5/LimiteFront3" unique_id=1179779379]
+
+[node name="LimiteIzq3" type="StaticBody3D" parent="Limite enemigos 5" unique_id=236618748]
+transform = Transform3D(0.99999994, 0, -2.2737368e-13, 0, 0.9999999, 0, 0, 0, 1.0017388, -40.294907, 0, 0.0014425516)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 5/LimiteIzq3" unique_id=1124121925]
+transform = Transform3D(0.9999999, 0, -2.2737368e-13, 0, 1, 0, 0, 0, 0.99999994, 6.3926697, 0, 0)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 5/LimiteIzq3" unique_id=544396971]
+
+[node name="LimiteBack3" type="StaticBody3D" parent="Limite enemigos 5" unique_id=1007031331]
+transform = Transform3D(-4.6720096e-08, 0, -40.70035, 0, 0.9999999, 0, 0.03218926, 0, -5.3579022e-08, -20.083252, 0, -0.48316056)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 5/LimiteBack3" unique_id=1097066307]
+transform = Transform3D(1, 0, 3.524292e-12, 0, 1, 0, 0, 0, 0.7645176, 0, 0, -0.029166222)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 5/LimiteBack3" unique_id=334187305]
+
+[node name="Limite enemigos 6" type="StaticBody3D" parent="." unique_id=1681437405]
+transform = Transform3D(-0.7775639, 0, -2.2571412e-06, 0, 3.987954, 0, 6.79768e-08, 0, -25.81868, 70.06666, 41.441082, -25.195087)
+
+[node name="LimiteDer3" type="StaticBody3D" parent="Limite enemigos 6" unique_id=1255217735]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 6/LimiteDer3" unique_id=1301988104]
+transform = Transform3D(1, 0, 2.2737368e-13, 0, 0.9999999, 0, 0, 0, 1, -3.8312378, 0, -5.9604645e-08)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 6/LimiteDer3" unique_id=1814287169]
+
+[node name="LimiteFront3" type="StaticBody3D" parent="Limite enemigos 6" unique_id=2008396820]
+transform = Transform3D(-4.6720096e-08, 0, -41.137844, 0, 0.9999999, 0, 0.03218926, 0, -5.415495e-08, -20.19072, 0, 0.4864152)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 6/LimiteFront3" unique_id=127113404]
+transform = Transform3D(1, 0, 2.2737368e-13, 0, 1, 0, 2.6645353e-15, 0, 0.74198705, 0, 0, -0.034495592)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 6/LimiteFront3" unique_id=1388854939]
+
+[node name="LimiteIzq3" type="StaticBody3D" parent="Limite enemigos 6" unique_id=955473948]
+transform = Transform3D(0.99999994, 0, -2.2737368e-13, 0, 0.9999999, 0, 0, 0, 1.0017388, -40.294907, 0, 0.0014425516)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 6/LimiteIzq3" unique_id=744744215]
+transform = Transform3D(0.9999999, 0, -2.2737368e-13, 0, 1, 0, 0, 0, 0.99999994, 6.3926697, 0, 0)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 6/LimiteIzq3" unique_id=2047913447]
+
+[node name="LimiteBack3" type="StaticBody3D" parent="Limite enemigos 6" unique_id=322629079]
+transform = Transform3D(-4.6720096e-08, 0, -40.70035, 0, 0.9999999, 0, 0.03218926, 0, -5.3579022e-08, -20.083252, 0, -0.48316056)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limite enemigos 6/LimiteBack3" unique_id=1353845245]
+transform = Transform3D(1, 0, 3.524292e-12, 0, 1, 0, 0, 0, 0.7645176, 0, 0, -0.029166222)
+shape = SubResource("BoxShape3D_7ili6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Limite enemigos 6/LimiteBack3" unique_id=483842130]
 
 [node name="CharacterBody3D" parent="." unique_id=217140582 instance=ExtResource("29_25s1t")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.30612, 13.829883, -19.569736)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.30612, 13.829883, -33.16372)
+collision_layer = 2
+collision_mask = 12
+
+[node name="CharacterBody3D11" parent="." unique_id=626857599 instance=ExtResource("29_25s1t")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 79.50702, 40.227814, -33.16372)
+collision_layer = 2
+collision_mask = 12
+
+[node name="CharacterBody3D6" parent="." unique_id=1997042712 instance=ExtResource("29_25s1t")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -247.54051, 8.393239, -3.6849098)
+collision_layer = 2
+collision_mask = 12
+
+[node name="CharacterBody3D10" parent="." unique_id=1469195966 instance=ExtResource("29_25s1t")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 42.93014, 13.392344, -23.86879)
+collision_layer = 2
+collision_mask = 12
+
+[node name="CharacterBody3D4" parent="." unique_id=639892561 instance=ExtResource("29_25s1t")]
+transform = Transform3D(-0.9999193, 0, -0.012705668, 0, 1, 0, 0.012705668, 0, -0.9999193, -195.7871, 3.4971728, 44.42517)
 collision_layer = 2
 collision_mask = 12
 
 [node name="CharacterBody3D2" parent="." unique_id=1090110626 instance=ExtResource("30_trjyu")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -113.64345, 13.866633, -17.861063)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -113.64345, 13.866633, -19.849312)
 collision_layer = 2
 collision_mask = 12
 script = ExtResource("31_h6x2e")
+
+[node name="CharacterBody3D7" parent="." unique_id=788296625 instance=ExtResource("30_trjyu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -262.02332, 8.471575, 16.256561)
+collision_layer = 2
+collision_mask = 12
+script = ExtResource("31_h6x2e")
+
+[node name="CharacterBody3D3" parent="." unique_id=1533694577 instance=ExtResource("30_h6x2e")]
+transform = Transform3D(0.85469043, 0, -0.9795428, 0, 1.3, 0, 0.9795428, 0, 0.85469043, -120.3997, 13.477781, -64.27168)
+collision_mask = 12
+script = ExtResource("31_vu70a")
+
+[node name="CharacterBody3D12" parent="." unique_id=2128036074 instance=ExtResource("30_h6x2e")]
+transform = Transform3D(0.85469043, 0, -0.9795428, 0, 1.3, 0, 0.9795428, 0, 0.85469043, 93.81106, 40.205276, -22.141224)
+collision_mask = 12
+script = ExtResource("31_vu70a")
+
+[node name="CharacterBody3D5" parent="." unique_id=511050408 instance=ExtResource("27_qjg13")]
+transform = Transform3D(-0.027584651, 0, -0.7995243, 0, 0.8, 0, 0.7995243, 0, -0.027584651, -200.56448, 3.5567813, 48.757835)
+collision_layer = 2
+collision_mask = 12
+script = ExtResource("28_25s1t")
+
+[node name="CharacterBody3D8" parent="." unique_id=908068739 instance=ExtResource("27_qjg13")]
+transform = Transform3D(-0.027584651, 0, -0.7995243, 0, 0.8, 0, 0.7995243, 0, -0.027584651, -239.55066, 8.374519, 10.573244)
+collision_layer = 2
+collision_mask = 12
+script = ExtResource("28_25s1t")
+
+[node name="CharacterBody3D9" parent="." unique_id=970257094 instance=ExtResource("27_qjg13")]
+transform = Transform3D(-0.027584651, 0, -0.7995243, 0, 0.8, 0, 0.7995243, 0, -0.027584651, 33.08847, 13.515412, -25.496927)
+collision_layer = 2
+collision_mask = 12
+script = ExtResource("28_25s1t")
