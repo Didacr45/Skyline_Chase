@@ -1,23 +1,29 @@
 # Skyline Chest
 ---
-📁 Estructura del Proyecto
+**📁 Estructura del Proyecto**
 
-`/assets/` → Sprites, tilesets, efectos, UI...
+`/addons/`: Plugins y extensiones del motor.
 
-`/scenes/` → Escenas del juego (.tscn) y niveles.
+`/assets/`: Multimedia (sonidos, imagenes y texturas).
 
-`/script/` → Scripts GDScript/C#.
+`/autoload/`: Scripts globales y gestores de datos (**SQLITE**).
 
-`.gitattributes` → Normalización de archivos.
+`/escenas/`: Escenas del juego (GUI, Niveles, Estrella).
 
-`/.gitignore` → Archivos ignorados por Git.
+`/lesson_reference/`: Guías y tutoriales de apoyo.
 
-`/icon.svg` → Icono del proyecto.
+`/level/`: Mapas y niveles jugables del proyecto.
 
-`project.godot` → Archivo principal de Godot.
+`/Players/`: Personajes controlables con su lógica.
 
-`LICENSE` → Licencia MIT.
+`/Player_Select/`: Escena de selección de personaje.
 
-`README.md` → Documento actual.
+`/Scripts/`: Programación lógica en GDScript.
+
+`/WEB/`: Archivos de exportación para navegadores.
+
+`icon.svg`: Logo del juego.
+
+`README.md`: Guía y documentación del repositorio.
 
 ---
