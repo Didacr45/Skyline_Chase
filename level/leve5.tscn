@@ -654,7 +654,7 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -143.74112,
 layers = 8
 material_override = SubResource("StandardMaterial3D_tkvxb")
 use_collision = true
-collision_layer = 9
+collision_layer = 8
 collision_mask = 0
 size = Vector3(5, 1, 7.0527954)
 
@@ -746,7 +746,7 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1.3225535, -182.48837, 
 layers = 8
 material_override = SubResource("StandardMaterial3D_tkvxb")
 use_collision = true
-collision_layer = 9
+collision_layer = 8
 collision_mask = 0
 size = Vector3(7.1259766, 1, 7.0527954)
 
@@ -771,7 +771,7 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -148.47847,
 layers = 8
 material_override = SubResource("StandardMaterial3D_tkvxb")
 use_collision = true
-collision_layer = 9
+collision_layer = 8
 collision_mask = 0
 size = Vector3(5, 1, 7.0527954)
 script = ExtResource("7_oo46f")
@@ -995,7 +995,7 @@ size = Vector3(8.625092, 1, 10.039673)
 transform = Transform3D(1.4546698, 0, 0, 0, -4.3711392e-08, -1, 0, 1.0000001, -4.371139e-08, 59.554688, 25.12837, -21.02963)
 material_override = SubResource("StandardMaterial3D_y4v2u")
 use_collision = true
-collision_layer = 9
+collision_layer = 8
 collision_mask = 0
 size = Vector3(8.625092, 1, 10.039673)
 
