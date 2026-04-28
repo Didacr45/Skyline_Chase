@@ -8,8 +8,6 @@
 
 `/script/` → Scripts GDScript/C#.
 
-`/.vscode/` → Configuración opcional del editor.
-
 `.gitattributes` → Normalización de archivos.
 
 `/.gitignore` → Archivos ignorados por Git.
