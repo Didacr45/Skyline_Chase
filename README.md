@@ -42,3 +42,12 @@ Para realizar este juego hemos utilizado varias herramientas de desarollo 3D y t
 - JavaScript
 
 ---
+---
+## **👩🏻‍💻 Autores**
+
+>
+> Didac Rubio y Rubén Alcantarilla
+>
+
+
+---
