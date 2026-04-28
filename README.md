@@ -1,4 +1,7 @@
-# Skyline Chest
+# 🗺️ Skyline Chest
+
+***"Un plataformas 3D desarrollado en Godot 4 que integra gestión dinámica de niveles, selección de personajes y mecánicas interactivas"***
+
 ---
 **📁 Estructura del Proyecto**
 
