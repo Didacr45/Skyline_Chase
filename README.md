@@ -3,7 +3,7 @@
 ***"Un plataformas 3D desarrollado en Godot 4 que integra gestión dinámica de niveles, selección de personajes y mecánicas interactivas"***
 
 ---
-**📁 Estructura del Proyecto**
+## **📁 Estructura del Proyecto**
 
 `/addons/`: Plugins y extensiones del motor.
 
