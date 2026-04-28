@@ -4,23 +4,23 @@
 
 `/addons/`: Plugins y extensiones del motor.
 
-`/assets/`: Multimedia (sonidos, imagenes y texturas).
+`/assets/`: Multimedia (**sonidos, imagenes y texturas**).
 
 `/autoload/`: Scripts globales y gestores de datos (**SQLITE**).
 
-`/escenas/`: Escenas del juego (GUI, Niveles, Estrella).
+`/escenas/`: Escenas del juego (**GUI, Niveles, Estrella**).
 
-`/lesson_reference/`: Guías y tutoriales de apoyo.
+`/lesson_reference/`: Scripts principales del jugador.
 
-`/level/`: Mapas y niveles jugables del proyecto.
+`/level/`: Todo lo necesario para hacer los niveles (**Escenas, Mapas, Decoracion, Nivel Base**).
 
-`/Players/`: Personajes controlables con su lógica.
+`/Players/`: Todos los personajes.
 
-`/Player_Select/`: Escena de selección de personaje.
+`/Player_Select/`: Contenido del selector de personajes.
 
 `/Scripts/`: Programación lógica en GDScript.
 
-`/WEB/`: Archivos de exportación para navegadores.
+`/WEB/`: Archivos de la pagina WEB (**HTML, CSS, JavaScript**).
 
 `icon.svg`: Logo del juego.
 
