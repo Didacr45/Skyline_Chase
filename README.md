@@ -3,6 +3,41 @@
 ***"Un plataformas 3D desarrollado en Godot 4 que integra gestión dinámica de niveles, selección de personajes y mecánicas interactivas"***
 
 ---
+## **Mecanicas**
+Skyline Chest cuenta con diferentes mecanicas que el jugador ira aprendiendo a medida que vaya avanzando los niveles y se le presenten diferentes dificultades que tenga que sortear.
+
+- Doble salto
+- Wallslide
+- Recuperacion de vida 
+
+---
+## **Sistemas**
+
+### **Vidas**
+
+- Numero de vidas maximas: 3
+- Recuperaccion de vidas con los coleccionables
+
+### **Muerte**
+
+- Caer al vacio *-1 vida*
+- Un enemigo te ataca *-1 vida*
+- Perder las 3 vidas = ***PERDER***
+
+### **Coleccionables**
+
+- No son obligatorios pero si *RECOMENDABLES*
+- Regeneran la vida del jugador
+
+## **Puntuacion**
+
+- Al coger la estrella te sube la puntuacion
+- Se muestran en la pagina de menu de niveles
+
+## **Almacenamiento**
+
+- Sistema de guardado en base de datos para almacenar y poder pintar las estrellas recogidas durante el nivel en el selector de niveles.
+---
 ## **📁 Estructura del Proyecto**
 
 `/addons/`: Plugins y extensiones del motor.
