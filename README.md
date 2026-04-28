@@ -31,7 +31,7 @@
 
 ---
 ---
-## ** 💻 Herramientas y tecnologias usadas **
+## **💻 Herramientas y tecnologias usadas**
 Para realizar este juego hemos utilizado varias herramientas de desarollo 3D y tecnologias de programación.
 
 - Godot 4.6
