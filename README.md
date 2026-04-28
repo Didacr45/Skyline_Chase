@@ -30,3 +30,15 @@
 `README.md`: Guía y documentación del repositorio.
 
 ---
+---
+## ** 💻 Herramientas y tecnologias usadas **
+Para realizar este juego hemos utilizado varias herramientas de desarollo 3D y tecnologias de programación.
+
+- Godot 4.6
+- GDScript
+- Blender 3D
+- HTML
+- CSS
+- JavaScript
+
+---
