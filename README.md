@@ -2,30 +2,24 @@
 ---
 📁 Estructura del Proyecto
 
-'/assets/' → Sprites, tilesets, efectos, UI...
+`/assets/` → Sprites, tilesets, efectos, UI...
 
-/scenes/ → Escenas del juego (.tscn) y niveles.
+`/scenes/` → Escenas del juego (.tscn) y niveles.
 
-/script/ → Scripts GDScript/C#.
+`/script/` → Scripts GDScript/C#.
 
-/.vscode/ → Configuración opcional del editor.
+`/.vscode/` → Configuración opcional del editor.
 
-.gitattributes → Normalización de archivos.
+`.gitattributes` → Normalización de archivos.
 
-/.gitignore → Archivos ignorados por Git.
+`/.gitignore` → Archivos ignorados por Git.
 
-Faeterna.csproj → Configuración del proyecto C# (si existe).
+`/icon.svg` → Icono del proyecto.
 
-Faeterna.sln → Solución del proyecto.
+`project.godot` → Archivo principal de Godot.
 
-/bosqueTutorial.tscn → Escena tutorial.
+`LICENSE` → Licencia MIT.
 
-/icon.svg → Icono del proyecto.
-
-project.godot → Archivo principal de Godot.
-
-LICENSE → Licencia MIT.
-
-README.md → Documento actual.
+`README.md` → Documento actual.
 
 ---
