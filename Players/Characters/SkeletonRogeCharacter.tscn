@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://c4b85w11uuoqh"]
+
+[ext_resource type="PackedScene" uid="uid://cf8lh6str4v26" path="res://Player_Skeletons/KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Rogue.glb" id="1_uqs5g"]
+[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://autoload/AnimationMovement.res" id="2_obbtp"]
+[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://autoload/Animation_Items.res" id="3_mbioc"]
+[ext_resource type="Texture2D" uid="uid://bwafepllebks6" path="res://escenas/GUI/BarsPackage/Bars/Preview/HealthBar.png" id="4_obbtp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_makfs"]
+radius = 0.52441406
+height = 2.3613281
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nnypr"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mbioc"]
+viewport_path = NodePath("HealthBar3D/SubViewport")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_makfs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnypr"]
+texture = ExtResource("4_obbtp")
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1090110626]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2114887134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0509933, 0)
+shape = SubResource("CapsuleShape3D_makfs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1555352549]
+skeleton = NodePath("../Skeleton_Minion")
+
+[node name="Skeleton_Rogue" parent="." unique_id=681615791 instance=ExtResource("1_uqs5g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002598405, -0.03261268, -0.16865945)
+
+[node name="Skeleton3D" parent="Skeleton_Rogue/Rig_Medium" parent_id_path=PackedInt32Array(681615791, 824769855) index="0" unique_id=722120724]
+bones/1/position = Vector3(0, 0.39206383, 0)
+bones/2/position = Vector3(-0.17094505, 0.11358726, 1.3923275e-08)
+bones/2/rotation = Quaternion(0.9958909, 1.3462449e-07, -2.7306665e-08, 0.09056074)
+bones/3/rotation = Quaternion(0.2913201, -6.604816e-08, 2.0231164e-07, 0.95662564)
+bones/4/rotation = Quaternion(-0.55491084, 1.9804872e-07, -7.8918305e-08, 0.8319099)
+bones/5/rotation = Quaternion(-4.879908e-09, 0.92023516, -0.39136574, 5.328422e-08)
+bones/8/rotation = Quaternion(-0.58795244, -0.10844585, -0.645398, 0.47540814)
+bones/9/rotation = Quaternion(2.1184832e-08, -5.03675e-08, -0.4973854, 0.86752975)
+bones/11/rotation = Quaternion(-0.31667742, -0.34757897, 0.22899799, 0.8523287)
+bones/12/rotation = Quaternion(-3.58774e-09, 6.9489703e-09, -0.7071068, 0.7071067)
+bones/14/rotation = Quaternion(-0.5802813, 0.15828462, 0.66605324, 0.44112664)
+bones/15/rotation = Quaternion(9.095458e-09, 4.8284473e-08, 0.42497087, 0.9052071)
+bones/17/rotation = Quaternion(-0.35023588, 0.29147267, -0.1967616, 0.86813796)
+bones/18/rotation = Quaternion(-9.535865e-10, -4.3147668e-09, 0.7071068, 0.7071067)
+bones/19/position = Vector3(0.17094505, 0.11358726, 1.3923275e-08)
+bones/19/rotation = Quaternion(0.9958909, -1.2840718e-07, -1.6118022e-08, 0.09056074)
+bones/20/rotation = Quaternion(0.2913201, 6.604815e-08, -2.0231167e-07, 0.95662564)
+bones/21/rotation = Quaternion(-0.55491084, -3.3250753e-08, 7.4074116e-09, 0.8319099)
+bones/22/rotation = Quaternion(3.4523623e-08, 0.92023516, -0.39136574, 7.0025166e-08)
+
+[node name="head" parent="Skeleton_Rogue/Rig_Medium/Skeleton3D" index="0" unique_id=1563993136]
+transform = Transform3D(1, 0, 1.4210854e-14, 0, 0.99999994, 0, -1.4210854e-14, 0, 1, 0, 1.2278259, 0)
+
+[node name="chest" parent="Skeleton_Rogue/Rig_Medium/Skeleton3D" index="1" unique_id=978377660]
+transform = Transform3D(1, 0, 1.4210853e-14, 0, 0.99999994, 0, -1.4210853e-14, 0, 1, 0, 0.9590293, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Skeleton_Rogue" unique_id=2119882247]
+deterministic = true
+libraries/AnimationMovement = ExtResource("2_obbtp")
+libraries/Animation_Items = ExtResource("3_mbioc")
+
+[node name="DetectionArea" type="Area3D" parent="." unique_id=1344612573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002598405, -0.03261268, -0.16865945)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=1192980454]
+transform = Transform3D(12.764857, 0, 0, 0, 3.0073547, 0, 0, 0, 12.838219, 0, 0, 0)
+shape = SubResource("SphereShape3D_nnypr")
+
+[node name="HealthBar3D" type="Sprite3D" parent="." unique_id=1167101643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5239608, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_mbioc")
+
+[node name="SubViewport" type="SubViewport" parent="HealthBar3D" unique_id=690565246]
+transparent_bg = true
+size = Vector2i(150, 46)
+render_target_update_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthBar3D/SubViewport" unique_id=946566921]
+custom_minimum_size = Vector2(150, 30)
+offset_right = 150.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(1, 1, 0.9490196, 1)
+theme_override_styles/background = SubResource("StyleBoxEmpty_makfs")
+theme_override_styles/fill = SubResource("StyleBoxTexture_nnypr")
+max_value = 3.0
+value = 3.0
+
+[editable path="Skeleton_Rogue"]
