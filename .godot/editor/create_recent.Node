@@ -1,0 +1,14 @@
+StaticBody3D
+ProgressBar
+SubViewport
+Sprite3D
+CharacterBody3D
+BoneAttachment3D
+OmniLight3D
+CollisionShape3D
+Area3D
+MeshInstance3D
+AnimationPlayer
+DirectionalLight3D
+WorldEnvironment
+AnimationTree

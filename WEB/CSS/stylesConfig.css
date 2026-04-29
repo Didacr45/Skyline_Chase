@@ -1,0 +1,404 @@
+/* ================================================================
+  SKYLINE CHASE — stylesConfig.css
+  Paleta extraída del logo:
+    Rojo principal  → #C0392B / #E74C3C
+    Rojo oscuro     → #7B1818
+    Negro profundo  → #0A0A0A
+    Gris oscuro     → #1A1A1A
+    Gris medio      → #2A2A2A
+    Blanco          → #FFFFFF / #CCCCCC
+================================================================ */
+
+/* ────────────────────────────────────────────────────────────────
+  VARIABLES GLOBALES
+  Define los colores una sola vez aquí. Si quieres cambiar un
+  color, solo edita esta sección y se aplica en toda la página.
+──────────────────────────────────────────────────────────────── */
+:root {
+  --rojo: #c0392b; /* rojo principal del logo */
+  --rojo-vivo: #e74c3c; /* rojo más brillante para hover */
+  --rojo-oscuro: #7b1818; /* rojo apagado para fondos y bordes */
+  --negro: #0a0a0a; /* negro puro del fondo */
+  --gris-oscuro: #1a1a1a; /* fondo de tarjetas */
+  --gris-medio: #2a2a2a; /* bordes y superficies secundarias */
+  --gris-texto: #888888; /* texto secundario (descripciones) */
+  --blanco: #ffffff; /* texto principal */
+  --blanco-suave: #cccccc; /* texto intermedio */
+
+  --fuente-titulo: "Bebas Neue", sans-serif; /* fuente de impacto */
+  --fuente-cuerpo: "Barlow", sans-serif; /* fuente de texto */
+}
+
+/* ────────────────────────────────────────────────────────────────
+  RESET Y BASE
+  Elimina márgenes por defecto del navegador y aplica la fuente
+  y el color de fondo a toda la página.
+──────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* scroll suave al pulsar enlaces de nav */
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  background-color: var(--negro);
+  color: var(--blanco);
+  line-height: 1.7;
+}
+
+/* ────────────────────────────────────────────────────────────────
+  BARRA DE NAVEGACIÓN
+  Fija en la parte superior. Efecto de cristal ahumado con
+  backdrop-filter.
+──────────────────────────────────────────────────────────────── */
+.navbar {
+  position: sticky; /* se queda pegada al hacer scroll */
+  top: 0;
+  z-index: 100; /* encima de todo el contenido */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 64px;
+  background: rgba(10, 10, 10, 0.88); /* negro semitransparente */
+  backdrop-filter: blur(14px); /* efecto cristal */
+  border-bottom: 1px solid var(--rojo-oscuro);
+}
+
+/* Texto del logo: "SKYLINE" en blanco, "CHASE" en rojo */
+.nav-logo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  color: var(--blanco);
+}
+
+.nav-logo span {
+  color: var(--rojo); /* la palabra "CHASE" en rojo */
+}
+
+/* Lista horizontal de enlaces */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--blanco-suave);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s; /* transición suave al pasar el ratón */
+}
+
+.nav-links a:hover {
+  color: var(--rojo-vivo); /* rojo brillante al hacer hover */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* ──────────────────────────────────────────────────────────────── 
+  SUBMENÚ
+  Aparece al hacer hover sobre "Proyecto"
+──────────────────────────────────────────────────────────────── */
+
+/* Ancla del submenú: necesario para posicionarlo bien */
+.tiene-submenu {
+  position: relative;
+}
+
+/* El submenú aparece justo debajo del enlace "Proyecto" */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--gris-oscuro);
+  border-top: 3px solid var(--rojo);
+  width: 100px;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Se muestra al pasar el ratón por encima */
+.tiene-submenu:hover .submenu {
+  display: block;
+}
+
+/* ────────────────────────────────────────────────────────────────
+  BOTÓN DE DESCARGA
+  Botón rojo en la barra de navegación
+──────────────────────────────────────────────────────────────── */
+.btn-download {
+  display: inline-block;
+  background: var(--rojo);
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.btn-download:hover {
+  background: var(--rojo-vivo); /* rojo más brillante al hacer hover */
+  transform: translateY(-3px); /* sube ligeramente */
+}
+
+/* ────────────────────────────────────────────────────────────────
+  LÍNEA DIVISORIA
+  Separa secciones con un degradado rojo centrado.
+──────────────────────────────────────────────────────────────── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--rojo-oscuro) 40%,
+    var(--rojo) 50%,
+    var(--rojo-oscuro) 60%,
+    transparent 100%
+  );
+}
+
+/* ────────────────────────────────────────────────────────────────
+  SECCIONES DE CONTENIDO
+  Bloque reutilizable para todas las secciones. Limita el ancho
+  máximo y añade espacio vertical.
+──────────────────────────────────────────────────────────────── */
+.section {
+  max-width: 1000px;
+  margin: 0 auto; /* centrado horizontal */
+  padding: 4rem 2rem;
+}
+
+/* Etiqueta pequeña de categoría encima del título */
+.section-tag {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--rojo);
+  margin-bottom: 0.6rem;
+}
+
+/* Título principal de cada sección */
+.section-title {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(2rem, 5vw, 3.2rem); /* tamaño adaptable a la pantalla */
+  letter-spacing: 2px;
+  color: var(--blanco);
+  margin-bottom: 1rem;
+}
+
+/* Párrafo introductorio de cada sección */
+.section-lead {
+  font-size: 1.05rem;
+  color: var(--blanco-suave);
+  max-width: 620px;
+  margin-bottom: 3rem;
+}
+
+/* ────────────────────────────────────────────────────────────────
+  CUADRÍCULA Y TARJETAS DE CONTROLES / MECÁNICAS
+  Se usa la misma clase para controles y mecánicas ya que
+  tienen el mismo diseño visual.
+──────────────────────────────────────────────────────────────── */
+
+/* Cuadrícula automática: columnas que se ajustan al ancho */
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Tarjeta individual */
+.control-card {
+  background: var(--gris-oscuro);
+  border: 1px solid var(--gris-medio);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition:
+    border-color 0.25s,
+    background 0.25s;
+}
+
+.control-card:hover {
+  border-color: var(--rojo); /* borde rojo al hacer hover */
+  background: rgba(192, 57, 43, 0.07); /* fondo rojo muy suave */
+}
+
+/* Caja visual de la tecla o icono */
+.control-key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(192, 57, 43, 0.15);
+  border: 1px solid rgba(192, 57, 43, 0.45);
+  color: var(--rojo-vivo);
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: monospace; /* fuente de código para las teclas */
+  letter-spacing: 1.5px;
+  border-radius: 6px;
+  padding: 5px 12px;
+  margin-bottom: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Título dentro de cada tarjeta */
+.control-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--blanco);
+  margin-bottom: 0.4rem;
+}
+
+/* Descripción dentro de cada tarjeta */
+.control-card p {
+  font-size: 0.87rem;
+  color: var(--gris-texto);
+}
+
+/* ────────────────────────────────────────────────────────────────
+  TARJETAS CLICKABLES (solo las de mecánicas)
+  Añade cursor de mano y un texto "▶ Ver vídeo" abajo
+──────────────────────────────────────────────────────────────── */
+
+/* Cursor de mano: indica que la tarjeta es interactiva */
+.mecanica-clickable {
+  cursor: pointer;
+}
+
+/* Texto "▶ Ver vídeo" que aparece al hacer hover */
+.card-hint {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--rojo-vivo);
+  opacity: 0; /* invisible por defecto */
+  transition: opacity 0.2s;
+}
+
+/* Al pasar el ratón, el texto se hace visible */
+.mecanica-clickable:hover .card-hint {
+  opacity: 1;
+}
+
+/* ────────────────────────────────────────────────────────────────
+  MODAL DE VÍDEO
+  Ventana emergente que aparece al hacer click en una mecánica.
+  Está oculto por defecto; se muestra añadiendo la clase "activo".
+──────────────────────────────────────────────────────────────── */
+
+/* Fondo oscuro semitransparente que cubre toda la pantalla */
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed; /* cubre la pantalla aunque haya scroll */
+  inset: 0; /* ocupa toda la ventana */
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 200; /* encima de todo, incluida la navbar */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Se muestra cuando JS añade la clase "activo" */
+.modal.activo {
+  display: flex;
+}
+
+/* Caja interior con el vídeo */
+.modal-contenido {
+  position: relative;
+  background: var(--gris-oscuro);
+  border: 1px solid var(--rojo-oscuro);
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 800px;
+  width: 90%; /* se adapta a pantallas pequeñas */
+}
+
+/* El vídeo ocupa todo el ancho de la caja */
+#modal-video {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Botón de cerrar (✕) en la esquina superior derecha */
+.modal-cerrar {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: var(--rojo);
+  color: var(--blanco);
+  border: none;
+  border-radius: 50%; /* forma circular */
+  width: 30px;
+  height: 30px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.modal-cerrar:hover {
+  background: var(--rojo-vivo);
+}
+
+/* ────────────────────────────────────────────────────────────────
+  PIE DE PÁGINA
+  Franja final con los créditos del proyecto.
+──────────────────────────────────────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 2.5rem;
+  border-top: 1px solid var(--gris-medio);
+  color: var(--gris-texto);
+  font-size: 0.85rem;
+}
+
+/* Nombres de los autores en rojo */
+.footer-name {
+  color: var(--rojo-vivo);
+  font-weight: 600;
+}
+
+/* ────────────────────────────────────────────────────────────────
+  RESPONSIVE — MÓVIL
+  Cuando la pantalla es pequeña (menos de 640px):
+  - Menú con menos espacio entre enlaces
+  - Secciones con menos padding
+──────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .section {
+    padding: 2.5rem 1.25rem;
+  }
+}
