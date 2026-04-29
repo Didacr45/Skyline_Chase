@@ -81,14 +81,32 @@ func _update_health_bar() -> void:
 		print("ERROR: ¡No encuentro la barra en la ruta HealthBar3D/SubViewport/ProgressBar!")
 
 func _die() -> void:
+	if current_state == State.DEAD:
+		return
+		
 	current_state = State.DEAD
+	
+	# 1. FRENO EN SECO: Matamos la velocidad y la física al instante
 	velocity = Vector3.ZERO
-	detection_area.monitoring = false
-	detection_area.monitorable = false
-	Events.player_attack.disconnect(_on_player_attack)
-	_play_anim(ANIM_DEATH)
+	set_physics_process(false) # Bloquea el movimiento de raíz
+	
+	# 2. FANTASMA: Quitamos colisiones y escondemos la barra de vida YA
+	# Así el jugador siente que el enemigo ya "no cuenta"
+	collision_layer = 0
+	collision_mask = 0
+	if health_bar:
+		health_bar.get_parent().get_parent().hide() # Esconde el HealthBar3D completo
+	
+	# 3. DETONAR ANIMACIÓN: Cortamos la de caminar y ponemos la de muerte
+	anim_player.stop() # ¡CLAVE! Esto evita que siga "andando" mientras muere
+	anim_player.play(ANIM_DEATH)
+	
+	# 4. DESCONEXIÓN: Ya no puede recibir más daño
+	if Events.player_attack.is_connected(_on_player_attack):
+		Events.player_attack.disconnect(_on_player_attack)
+	
+	# 5. EL FINAL: Esperamos la animación y lo borramos
 	await anim_player.animation_finished
-	await get_tree().process_frame  # da tiempo al bucle a salir
 	queue_free()
 
 # ─────────────────────────────────────────
@@ -128,12 +146,18 @@ func _patrol(delta: float) -> void:
 # ─────────────────────────────────────────
 func _start_random_movement() -> void:
 	while true:
-		if not is_inside_tree():
-			return
+		if not is_inside_tree() or current_state == State.DEAD:
+			return # Si muere o desaparece, cortamos el bucle
+			
 		if current_state == State.PATROL:
 			_pick_random_direction()
+			
 		var wait_time = randf_range(1.0, 3.0)
 		await get_tree().create_timer(wait_time).timeout
+		
+		# Segunda comprobación por si ha muerto durante el tiempo de espera
+		if current_state == State.DEAD:
+			return
 
 func _pick_random_direction() -> void:
 	var directions = [

@@ -1,1 +1,4 @@
 res://level/leve5.tscn
+res://Players/Characters/SkeletonRogue.gd
+res://Players/Characters/SkeletonRogeCharacter.tscn
+res://autoload/Animation_Items.res
