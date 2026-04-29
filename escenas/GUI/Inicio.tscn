@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cnyx80j0xiht4"]
 
 [ext_resource type="PackedScene" uid="uid://bx1a7btr3gn48" path="res://escenas/GUI/button.tscn" id="1_aup5q"]
-[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="2_78lt2"]
+[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://assets/RetroMario-Regular.otf" id="2_78lt2"]
 [ext_resource type="Script" uid="uid://xxcfygc1blod" path="res://Scripts/GUI/inicio.gd" id="2_a2m0w"]
-[ext_resource type="Texture2D" uid="uid://cnlr3tgs1mbfm" path="res://escenas/GUI/Fondo Inicio.png" id="2_udi3k"]
-[ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://Fuentes/Pixel Lofi.otf" id="5_8neef"]
-[ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://LightGreen_Panel.png" id="6_i2p0x"]
+[ext_resource type="Texture2D" uid="uid://cnlr3tgs1mbfm" path="res://assets/Fondo Inicio.png" id="2_udi3k"]
+[ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://assets/Pixel Lofi.otf" id="5_8neef"]
+[ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://assets/LightGreen_Panel.png" id="6_i2p0x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g7cfe"]
 font = ExtResource("2_78lt2")

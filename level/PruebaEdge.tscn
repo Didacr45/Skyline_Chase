@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cu2cn2o5is3eh"]
 
-[ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_hoq17"]
-[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_oxdm5"]
-[ext_resource type="PackedScene" uid="uid://dksuwmynb7vjf" path="res://level/interactable/kill_plane/kill_plane_3d.tscn" id="3_sxq2t"]
+[ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://assets/sky_with_stars.tres" id="1_hoq17"]
+[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://assets/moon.png" id="2_oxdm5"]
+[ext_resource type="PackedScene" uid="uid://dksuwmynb7vjf" path="res://autoload/kill_plane/kill_plane_3d.tscn" id="3_sxq2t"]
 [ext_resource type="Material" uid="uid://da188d7yrcfr8" path="res://level/platforms.tres" id="4_eblby"]
-[ext_resource type="PackedScene" uid="uid://c6uew1wfpkt16" path="res://level/interactable/flag/flag_3d.tscn" id="5_ueo8m"]
+[ext_resource type="PackedScene" uid="uid://c6uew1wfpkt16" path="res://level/flag/flag_3d.tscn" id="5_ueo8m"]
 [ext_resource type="PackedScene" uid="uid://3agu7gb3kjif" path="res://level/cactus/cactus_tall_3.tscn" id="6_egmkw"]
 
 [sub_resource type="Curve" id="Curve_k4wis"]

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dfx6or0yf3iag"]
 
 [ext_resource type="Script" uid="uid://pi0wkdhhljj1" path="res://Scripts/GUI/victoria.gd" id="1_b2176"]
-[ext_resource type="Texture2D" uid="uid://csc40w1chhqcd" path="res://escenas/GUI/Fondo_Victoria.png" id="1_mnsbm"]
-[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="1_xed47"]
-[ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://Fuentes/Pixel Lofi.otf" id="2_ubgb4"]
-[ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://LightGreen_Panel.png" id="3_mnsbm"]
+[ext_resource type="Texture2D" uid="uid://csc40w1chhqcd" path="res://assets/Fondo_Victoria.png" id="1_mnsbm"]
+[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://assets/RetroMario-Regular.otf" id="1_xed47"]
+[ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://assets/Pixel Lofi.otf" id="2_ubgb4"]
+[ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://assets/LightGreen_Panel.png" id="3_mnsbm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2176"]
 texture = ExtResource("3_mnsbm")
