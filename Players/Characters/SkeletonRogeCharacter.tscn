@@ -1,25 +1,33 @@
 [gd_scene format=3 uid="uid://c4b85w11uuoqh"]
 
 [ext_resource type="PackedScene" uid="uid://cf8lh6str4v26" path="res://Player_Skeletons/KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Rogue.glb" id="1_uqs5g"]
+<<<<<<< HEAD
 [ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://assets/AnimationMovement.res" id="2_obbtp"]
 [ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://assets/Animation_Items.res" id="3_mbioc"]
+=======
+[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://autoload/AnimationMovement.res" id="2_obbtp"]
+[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://autoload/Animation_Items.res" id="3_mbioc"]
+[ext_resource type="Texture2D" uid="uid://bwafepllebks6" path="res://escenas/GUI/BarsPackage/Bars/Preview/HealthBar.png" id="4_obbtp"]
+>>>>>>> 001b67dafa62cfd1ee569c9c49fe8944ba90d7f1
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_makfs"]
 radius = 0.52441406
-height = 2.4980469
+height = 2.3613281
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_nnypr"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_uqs5g"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_mbioc"]
 viewport_path = NodePath("HealthBar3D/SubViewport")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obbtp"]
-bg_color = Color(1, 0, 0.50980395, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_makfs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnypr"]
+texture = ExtResource("4_obbtp")
 
 [node name="CharacterBody3D" type="CharacterBody3D" unique_id=1090110626]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2114887134]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1193527, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0509933, 0)
 shape = SubResource("CapsuleShape3D_makfs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1555352549]
@@ -67,22 +75,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002598405, -0.03261268, -0
 transform = Transform3D(12.764857, 0, 0, 0, 3.0073547, 0, 0, 0, 12.838219, 0, 0, 0)
 shape = SubResource("SphereShape3D_nnypr")
 
-[node name="HealthBar3D" type="Sprite3D" parent="." unique_id=1835038663]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4005508, 0)
+[node name="HealthBar3D" type="Sprite3D" parent="." unique_id=1167101643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5239608, 0)
 billboard = 1
-texture = SubResource("ViewportTexture_uqs5g")
+texture = SubResource("ViewportTexture_mbioc")
 
-[node name="SubViewport" type="SubViewport" parent="HealthBar3D" unique_id=1261450532]
+[node name="SubViewport" type="SubViewport" parent="HealthBar3D" unique_id=690565246]
 transparent_bg = true
-size = Vector2i(150, 20)
+size = Vector2i(150, 46)
 render_target_update_mode = 4
 
-[node name="ProgressBar" type="ProgressBar" parent="HealthBar3D/SubViewport" unique_id=1152839797]
-custom_minimum_size = Vector2(150, 20)
+[node name="ProgressBar" type="ProgressBar" parent="HealthBar3D/SubViewport" unique_id=946566921]
+custom_minimum_size = Vector2(150, 30)
 offset_right = 150.0
-offset_bottom = 27.0
+offset_bottom = 49.0
 theme_override_colors/font_color = Color(1, 1, 0.9490196, 1)
-theme_override_styles/background = SubResource("StyleBoxFlat_obbtp")
+theme_override_styles/background = SubResource("StyleBoxEmpty_makfs")
+theme_override_styles/fill = SubResource("StyleBoxTexture_nnypr")
 max_value = 3.0
 value = 3.0
 
