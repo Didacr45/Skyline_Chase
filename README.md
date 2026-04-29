@@ -6,9 +6,9 @@
 ## **🕹️Mecanicas**
 Skyline Chest cuenta con diferentes mecanicas que el jugador ira aprendiendo a medida que vaya avanzando los niveles y se le presenten diferentes dificultades que tenga que sortear.
 
-Doble salto
-Wallslide
-Recuperacion de vida 
+- Doble salto
+- Wallslide
+- Recuperacion de vida 
 
 ---
 ## **🖥⚙️Sistemas**
@@ -41,40 +41,40 @@ Sistema de guardado en base de datos para almacenar y poder pintar las estrellas
 ---
 ## **📁 Estructura del Proyecto**
 
-/addons/: Plugins y extensiones del motor.
+`/addons/`: Plugins y extensiones del motor.
 
-/assets/: Multimedia (**sonidos, imagenes y texturas**).
+`/assets/`: Multimedia (**sonidos, imagenes y texturas**).
 
-/autoload/: Scripts globales y gestores de datos (**SQLITE**).
+`/autoload/`: Scripts globales y gestores de datos (**SQLITE**).
 
-/escenas/: Escenas del juego (**GUI, Niveles, Estrella**).
+`/escenas/`: Escenas del juego (**GUI, Niveles, Estrella**).
 
-/lesson_reference/: Scripts principales del jugador.
+`/lesson_reference/`: Scripts principales del jugador.
 
-/level/: Todo lo necesario para hacer los niveles (**Escenas, Mapas, Decoracion, Nivel Base**).
+`/level/`: Todo lo necesario para hacer los niveles (**Escenas, Mapas, Decoracion, Nivel Base**).
 
-/Players/: Todos los personajes.
+`/Players/`: Todos los personajes.
 
-/Player_Select/: Contenido del selector de personajes.
+`/Player_Select/`: Contenido del selector de personajes.
 
-/Scripts/: Programación lógica en GDScript.
+`/Scripts/`: Programación lógica en GDScript.
 
-/WEB/: Archivos de la pagina WEB (**HTML, CSS, JavaScript**).
+`/WEB/`: Archivos de la pagina WEB (**HTML, CSS, JavaScript**).
 
-icon.svg: Logo del juego.
+`icon.svg`: Logo del juego.
 
-README.md: Guía y documentación del repositorio.
+`README.md`: Guía y documentación del repositorio.
 
 ---
 ## **💻 Herramientas y tecnologias usadas**
 Para realizar este juego hemos utilizado varias herramientas de desarollo 3D y tecnologias de programación.
 
-Godot 4.6
-GDScript
-Blender 3D
-HTML
-CSS
-JavaScript
+- Godot 4.6
+- GDScript
+- Blender 3D
+- HTML
+- CSS
+- JavaScript
 
 
 ---
