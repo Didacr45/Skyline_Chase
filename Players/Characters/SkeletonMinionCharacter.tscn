@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bbevj7ybu8r7x" path="res://Players/Characters/skeleton_minion_character.gd" id="1_dcqli"]
 [ext_resource type="PackedScene" uid="uid://cpk2vti0sgtad" path="res://Player_Skeletons/KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Minion.glb" id="1_x1ubn"]
-[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://autoload/AnimationMovement.res" id="2_dcqli"]
-[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://autoload/Animation_Items.res" id="3_44j7l"]
+[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://assets/AnimationMovement.res" id="2_dcqli"]
+[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://assets/Animation_Items.res" id="3_44j7l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_knrlg"]
 radius = 0.52441406

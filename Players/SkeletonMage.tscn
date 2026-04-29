@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://paeoyuu6falh"]
 
 [ext_resource type="PackedScene" uid="uid://d0gylrce1pahq" path="res://Player_Skeletons/KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Mage.glb" id="1_moyy8"]
-[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://autoload/AnimationMovement.res" id="2_e5mdi"]
-[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://autoload/Animation_Items.res" id="3_lurnk"]
+[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://assets/AnimationMovement.res" id="2_e5mdi"]
+[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://assets/Animation_Items.res" id="3_lurnk"]
 
 [node name="Skeleton_Mage" unique_id=1740831596 instance=ExtResource("1_moyy8")]
 

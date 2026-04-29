@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bxg6oejpaitdt" path="res://level/flag/flag_reached_screen.tscn" id="3_b0bhk"]
 [ext_resource type="PackedScene" uid="uid://cpohvkvagirg6" path="res://level/leve5.tscn" id="4_hl8ke"]
 [ext_resource type="PackedScene" uid="uid://bnkfs1uw2wx2x" path="res://escenas/GUI/pause_menu.tscn" id="5_a5euk"]
-[ext_resource type="PackedScene" uid="uid://dluh6kp13vsqx" path="res://escenas/ContadorEstrellas.tscn" id="6_h0ilf"]
-[ext_resource type="PackedScene" uid="uid://dpyts00g4ljql" path="res://escenas/BarraVida.tscn" id="7_v62nx"]
+[ext_resource type="PackedScene" uid="uid://dluh6kp13vsqx" path="res://escenas/GUI/ContadorEstrellas.tscn" id="6_h0ilf"]
+[ext_resource type="PackedScene" uid="uid://dpyts00g4ljql" path="res://escenas/GUI/BarraVida.tscn" id="7_v62nx"]
 
 [node name="Game" type="Node" unique_id=1596139849]
 script = ExtResource("1_hl8ke")

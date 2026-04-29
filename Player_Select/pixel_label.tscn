@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cseg4yldbjxwq"]
 
-[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="1_if5st"]
+[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://assets/RetroMario-Regular.otf" id="1_if5st"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_81hx3"]
 font = ExtResource("1_if5st")

@@ -1,29 +1,30 @@
-extends Control
+extends CanvasLayer
 
 func _ready():
-	# Ocultamos el menú al inicio
-	visible = false
-	# Permitimos que este nodo siga procesando incluso cuando el juego está pausado
-	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	# Esto asegura que el menú esté oculto al arrancar el juego
+	visible = false 
+	# Si prefieres ocultar solo el ColorRect usa:
+	# $ColorRect.visible = false
 
-func toggle_pause():
-	var paused := !get_tree().paused
-	get_tree().paused = paused
+func _input(event):
+	if event.is_action_pressed("Pausar"): 
+		actualizar_pausa()
+
+func actualizar_pausa():
+	get_tree().paused = !get_tree().paused
 	
-	# Mostramos/ocultamos este menú (PauseMenu entero)
-	visible = paused
-
-	if paused:
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE  # Cursor visible en menú
+	# Aquí es donde ocurre la magia: 
+	# Si el juego está pausado, visible será true.
+	visible = get_tree().paused
+	
+	if get_tree().paused:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED  # Cursor capturado en juego
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _unhandled_input(event):
-	if event.is_action_pressed("Pausar"):
-		toggle_pause()
 
 func _on_continuar_pressed() -> void:
-	toggle_pause()  # Despausa
+	actualizar_pausa()
 
 func _on_salir_pressed() -> void:
-	get_tree().change_scene_to_file("res://escenas/Inicio.tscn")
+	get_tree().change_scene_to_file("res://escenas/GUI/Inicio.tscn")

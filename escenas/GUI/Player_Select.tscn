@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dq44bn3h2s51x" path="res://Scripts/GUI/player_select.gd" id="1_d1hwi"]
 [ext_resource type="PackedScene" uid="uid://cseg4yldbjxwq" path="res://Player_Select/pixel_label.tscn" id="2_bdqg7"]
 [ext_resource type="PackedScene" uid="uid://xiknp6c5rcg8" path="res://Player_Select/pixel_button.tscn" id="3_d1hwi"]
-[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="4_h5yl6"]
+[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://assets/RetroMario-Regular.otf" id="4_h5yl6"]
 [ext_resource type="Texture2D" uid="uid://b5jnuxtc561rn" path="res://Player_Select/Tick.png" id="5_47c7f"]
 [ext_resource type="Texture2D" uid="uid://bnrfswsy500xt" path="res://Player_Select/Knight.png" id="7_wfh1o"]
 

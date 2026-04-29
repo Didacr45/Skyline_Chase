@@ -1,15 +1,13 @@
 [gd_scene format=3 uid="uid://cimrrj4jbd05l"]
 
-[ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_vpbbu"]
-[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_cjeyu"]
+[ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://assets/sky_with_stars.tres" id="1_vpbbu"]
+[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://assets/moon.png" id="2_cjeyu"]
 [ext_resource type="PackedScene" uid="uid://dksuwmynb7vjf" path="res://autoload/kill_plane/kill_plane_3d.tscn" id="3_8jc51"]
 [ext_resource type="PackedScene" uid="uid://c6uew1wfpkt16" path="res://level/flag/flag_3d.tscn" id="4_a53v5"]
 [ext_resource type="Material" uid="uid://da188d7yrcfr8" path="res://level/platforms.tres" id="5_ff1k0"]
 [ext_resource type="Texture2D" uid="uid://me0fyx2fxbv" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/Textures/tiny_treats_grass_texture.png" id="6_q4pno"]
 [ext_resource type="Texture2D" uid="uid://chwmqesmvvwy0" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/gltf/tiny_treats_grass_texture.png" id="7_da604"]
-[ext_resource type="PackedScene" uid="uid://clobsg4eprwfe" path="res://Player_Skeletons/KayKit_Skeletons_1.1_FREE/characters/fbx/Skeleton_Rogue.fbx" id="12_8jc51"]
 [ext_resource type="PackedScene" uid="uid://3agu7gb3kjif" path="res://level/cactus/cactus_tall_3.tscn" id="12_255j1"]
-[ext_resource type="PackedScene" uid="uid://deuhp0xy5bxv7" path="res://Player_Skeletons/KayKit_Skeletons_1.1_FREE/characters/fbx/Skeleton_Minion.fbx" id="13_a53v5"]
 [ext_resource type="Script" uid="uid://bjf6euw2h3wi2" path="res://Scripts/Star/estrellica.gd" id="13_da604"]
 [ext_resource type="ArrayMesh" uid="uid://cxribqsh0k83c" path="res://level/estrella/estrellica.obj" id="14_cjt1v"]
 [ext_resource type="ArrayMesh" uid="uid://d2jvcj50mlc4m" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/obj/hedge_straight_long.obj" id="14_ff1k0"]
@@ -299,12 +297,6 @@ shape = SubResource("SphereShape3D_wasuc")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Estrellica5" unique_id=1222739528]
 mesh = ExtResource("14_cjt1v")
 surface_material_override/0 = SubResource("StandardMaterial3D_2afyj")
-
-[node name="Skeleton_Rogue" parent="." unique_id=445885136 instance=ExtResource("12_8jc51")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.340454, 13.485433, -60.622837)
-
-[node name="Skeleton_Minion" parent="." unique_id=466318379 instance=ExtResource("13_a53v5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.560171, 13.467845, -60.22586)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=34084619]
 transform = Transform3D(1.1394656, 0, 0, 0, 1.1174396, 0, 0, 0, 1, -39.852627, 13.477758, -80.53819)

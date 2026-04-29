@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ddn42334oe48i"]
 
 [ext_resource type="PackedScene" uid="uid://bgq4il6csh3vj" path="res://Player_Skeletons/KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Warrior.glb" id="1_n13ph"]
-[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://autoload/AnimationMovement.res" id="2_luk20"]
-[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://autoload/Animation_Items.res" id="3_acmbf"]
+[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://assets/AnimationMovement.res" id="2_luk20"]
+[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://assets/Animation_Items.res" id="3_acmbf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n13ph"]
 radius = 0.52441406
