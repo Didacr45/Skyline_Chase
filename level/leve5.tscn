@@ -893,6 +893,14 @@ use_collision = true
 collision_layer = 9
 size = Vector3(8.222534, 1, 8.853546)
 
+[node name="CSGBox3D48" type="CSGBox3D" parent="." unique_id=516828523]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 34.678383, 18.959194, -46.580517)
+layers = 8
+material_override = SubResource("StandardMaterial3D_tkvxb")
+use_collision = true
+collision_layer = 9
+size = Vector3(5, 1, 7.0527954)
+
 [node name="CSGBox3D20" type="CSGBox3D" parent="." unique_id=1517499548]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.923065, 13.108939, -69.5371)
 layers = 8
