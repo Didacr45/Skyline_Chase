@@ -37,6 +37,7 @@ Se muestran en la pagina de menu de niveles
 ## **Almacenamiento**
 
 Sistema de guardado en base de datos para almacenar y poder pintar las estrellas recogidas durante el nivel en el selector de niveles.
+
 ---
 ## **📁 Estructura del Proyecto**
 
@@ -65,7 +66,6 @@ icon.svg: Logo del juego.
 README.md: Guía y documentación del repositorio.
 
 ---
----
 ## **💻 Herramientas y tecnologias usadas**
 Para realizar este juego hemos utilizado varias herramientas de desarollo 3D y tecnologias de programación.
 
@@ -76,13 +76,13 @@ HTML
 CSS
 JavaScript
 
----
+
 ---
 ## **👩🏻‍💻 Autores**
 
-
- Didac Rubio y Rubén Alcantarilla
-
+>
+>Didac Rubio y Rubén Alcantarilla
+>
 
 
 ---
