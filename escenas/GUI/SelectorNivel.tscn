@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bapi61hhmu27a"]
 
 [ext_resource type="Script" uid="uid://dhagyiyo55qe7" path="res://Scripts/GUI/selector_nivel.gd" id="1_nagik"]
-[ext_resource type="Texture2D" uid="uid://ccnqadffupj6r" path="res://assets/Fondo Selector.png" id="2_oyen7"]
-[ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://assets/LightGreen_Panel.png" id="4_dw05i"]
-[ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://assets/Pixel Lofi.otf" id="4_huh3l"]
-[ext_resource type="Texture2D" uid="uid://d3dh3pw3dfkpc" path="res://assets/estrella.png" id="5_huh3l"]
-[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://assets/RetroMario-Regular.otf" id="6_huh3l"]
+[ext_resource type="Texture2D" uid="uid://ccnqadffupj6r" path="res://escenas/GUI/Fondo Selector.png" id="2_oyen7"]
+[ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://LightGreen_Panel.png" id="4_dw05i"]
+[ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://Fuentes/Pixel Lofi.otf" id="4_huh3l"]
+[ext_resource type="Texture2D" uid="uid://d3dh3pw3dfkpc" path="res://escenas/Estrella/estrella.png" id="5_huh3l"]
+[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="6_huh3l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dw05i"]
 texture = ExtResource("4_dw05i")

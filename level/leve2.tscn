@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cnedxfn2pxh2t"]
 
-[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://assets/moon.png" id="2_kb37w"]
+[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_kb37w"]
 [ext_resource type="PackedScene" uid="uid://dksuwmynb7vjf" path="res://autoload/kill_plane/kill_plane_3d.tscn" id="3_1g472"]
 [ext_resource type="PackedScene" uid="uid://3agu7gb3kjif" path="res://level/cactus/cactus_tall_3.tscn" id="3_b7ara"]
 [ext_resource type="Texture2D" uid="uid://chwmqesmvvwy0" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/gltf/tiny_treats_grass_texture.png" id="5_a7bxw"]

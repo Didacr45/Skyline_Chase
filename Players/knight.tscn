@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dtb1m6buqj5ir" path="res://Characters_Adventurers/KayKit_Adventurers_2.0_FREE/Characters/gltf/Knight.glb" id="1_1sbet"]
 [ext_resource type="Script" uid="uid://c58p66e25fafx" path="res://Scripts/Player/knight.gd" id="2_bdedt"]
-[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://assets/AnimationMovement.res" id="2_ijvvt"]
-[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://assets/Animation_Items.res" id="3_bdedt"]
+[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://autoload/AnimationMovement.res" id="2_ijvvt"]
+[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://autoload/Animation_Items.res" id="3_bdedt"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bdedt"]
 animation = &"Animation_Items/Idle_A"

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dk2dvtjwrynil"]
 
-[ext_resource type="Script" uid="uid://h2q42hd0kd8h" path="res://Scripts/GUI/game_over.gd" id="1_6i7iq"]
-[ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://assets/Pixel Lofi.otf" id="1_or7j6"]
-[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://assets/RetroMario-Regular.otf" id="2_0kjlr"]
-[ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://assets/LightGreen_Panel.png" id="2_ih8e1"]
+[ext_resource type="Script" uid="uid://h2q42hd0kd8h" path="res://escenas/GUI/game_over.gd" id="1_6i7iq"]
+[ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://Fuentes/Pixel Lofi.otf" id="1_or7j6"]
+[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="2_0kjlr"]
+[ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://LightGreen_Panel.png" id="2_ih8e1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ih8e1"]
 font = ExtResource("2_0kjlr")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bcglha54qi5wq"]
 
-[ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://assets/sky_with_stars.tres" id="1_ioc7i"]
-[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://assets/moon.png" id="2_l3vqv"]
+[ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_ioc7i"]
+[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_l3vqv"]
 [ext_resource type="PackedScene" uid="uid://dksuwmynb7vjf" path="res://autoload/kill_plane/kill_plane_3d.tscn" id="3_r1e6t"]
 [ext_resource type="Texture2D" uid="uid://cb2w8rg6h2vsn" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/obj/tiny_treats_grass_texture.png" id="5_3qh5i"]
 [ext_resource type="PackedScene" uid="uid://c6uew1wfpkt16" path="res://level/flag/flag_3d.tscn" id="5_k3p2u"]

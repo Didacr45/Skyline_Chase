@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cimrrj4jbd05l"]
 
-[ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://assets/sky_with_stars.tres" id="1_vpbbu"]
-[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://assets/moon.png" id="2_cjeyu"]
+[ext_resource type="Shader" uid="uid://cdlt3ujrpad32" path="res://level/sky_with_stars.tres" id="1_vpbbu"]
+[ext_resource type="Texture2D" uid="uid://ca3jtautvrj1u" path="res://level/moon.png" id="2_cjeyu"]
 [ext_resource type="PackedScene" uid="uid://dksuwmynb7vjf" path="res://autoload/kill_plane/kill_plane_3d.tscn" id="3_8jc51"]
 [ext_resource type="PackedScene" uid="uid://c6uew1wfpkt16" path="res://level/flag/flag_3d.tscn" id="4_a53v5"]
 [ext_resource type="Material" uid="uid://da188d7yrcfr8" path="res://level/platforms.tres" id="5_ff1k0"]

@@ -1,14 +1,9 @@
 [gd_scene format=3 uid="uid://c4b85w11uuoqh"]
 
 [ext_resource type="PackedScene" uid="uid://cf8lh6str4v26" path="res://Player_Skeletons/KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Rogue.glb" id="1_uqs5g"]
-<<<<<<< HEAD
-[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://assets/AnimationMovement.res" id="2_obbtp"]
-[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://assets/Animation_Items.res" id="3_mbioc"]
-=======
 [ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://autoload/AnimationMovement.res" id="2_obbtp"]
 [ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://autoload/Animation_Items.res" id="3_mbioc"]
 [ext_resource type="Texture2D" uid="uid://bwafepllebks6" path="res://escenas/GUI/BarsPackage/Bars/Preview/HealthBar.png" id="4_obbtp"]
->>>>>>> 001b67dafa62cfd1ee569c9c49fe8944ba90d7f1
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_makfs"]
 radius = 0.52441406
