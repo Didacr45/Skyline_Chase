@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777459592
+::res://::1777536968
 Assets_UI.png::CompressedTexture2D::6837513927689137995::1777459569::1777459569::1::::<><><>0<>0<>b86bbbd3995213f3ddee4aa4bfce4636<>res://.godot/imported/Assets_UI.png-3e4a40fab89e141f3adb73fbe56c03e1.ctex::
 estrella_level.png::CompressedTexture2D::7797278164273183463::1777459570::1777459570::1::::<><><>0<>0<>3fd134c3f81b1815164324a30900200b<>res://.godot/imported/estrella_level.png-4b7fadb7c5cd60da4f666b89cc4f53dd.ctex::
 export_presets.cfg::TextFile::-1::1777459570::0::1::::<><><>0<>0<><>::
@@ -9,7 +9,7 @@ image.png::CompressedTexture2D::7401273660908465698::1777459570::1777459570::1::
 Interface.png::CompressedTexture2D::1116831498469317244::1777459569::1777459569::1::::<><><>0<>0<>2782fbdd6fd5ad235e1fe1af7d9fe1b0<>res://.godot/imported/Interface.png-bdcfff7cdb21c59571823aba206bd231.ctex::
 LightGreen_Panel.png::CompressedTexture2D::3276598701146989976::1777459569::1777459569::1::::<><><>0<>0<>7afcf9d0ff3792d2aef8f5070d84946a<>res://.godot/imported/LightGreen_Panel.png-af7323f14870af7b01dbdf33772aec8a.ctex::
 PlataformLeftVertical2.gd::GDScript::3919226730392675483::1777459569::0::1::::<>Node3D<><>0<>0<><>::
-README.md::TextFile::-1::1777459569::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1777460787::0::1::::<><><>0<>0<><>::
 ::res://addons/::1777459569
 ::res://addons/gdquest_colorpicker_presets/::1777459569
 colorpicker_presets.gd::GDScript::5435259860528881959::1777459569::0::1::::<>EditorPlugin<><>0<>1<><>::
@@ -693,6 +693,6 @@ estrellica1.gd::GDScript::3823144318593006837::1777459569::0::1::::<>Area3D<><>0
 estrellica.gd::GDScript::3030332620847008435::1777459569::0::1::::<>Area3D<><>0<>0<><>::
 MVEstrella.gd::GDScript::8874819639913799194::1777459569::0::1::::<>CanvasLayer<><>0<>0<><>::
 ::res://WEB/::1777459569
-::res://WEB/CSS/::1777459569
-::res://WEB/HTML/::1777459569
+::res://WEB/CSS/::1777460367
+::res://WEB/HTML/::1777459964
 ::res://WEB/MP4/::1777459569
