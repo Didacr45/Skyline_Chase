@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bwafepllebks6" path="res://escenas/GUI/BarsPackage/Bars/Preview/HealthBar.png" id="3_6wbef"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7mrhc"]
-radius = 0.375
-height = 1.4982605
+radius = 0.5083008
+height = 1.7066917
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_064yq"]
 
@@ -25,14 +25,14 @@ platform_wall_layers = 12
 script = ExtResource("1_ifmoy")
 
 [node name="CharacterCollisionShape" type="CollisionShape3D" parent="." unique_id=1757062975]
-transform = Transform3D(1, 0, -7.1054274e-14, 0, 1, 0, 7.1054274e-14, 0, 1, 4.484618e-09, 0.7444335, -0.051298022)
+transform = Transform3D(1, 0, -1.7337243e-12, 0, 1.3016279, 0, 1.7337243e-12, 0, 1, 4.484632e-09, 1.0842373, -0.051298022)
 shape = SubResource("CapsuleShape3D_7mrhc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1035182321]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton_Mage" parent="." unique_id=1740831596 instance=ExtResource("2_ifmoy")]
-transform = Transform3D(0.7, 0, -2.1316282e-14, 0, 0.7, 0, 2.1316282e-14, 0, 0.7, 6.2630465e-09, 0, -0.041478276)
+transform = Transform3D(0.845507, 0, -4.2632564e-14, 0, 0.8851223, 0, 4.2632564e-14, 0, 0.7, 6.263048e-09, 0, -0.041478273)
 
 [node name="DetectionArea" type="Area3D" parent="." unique_id=1295671895]
 
