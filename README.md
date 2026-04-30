@@ -2,6 +2,11 @@
 
 ***"Un plataformas 3D desarrollado en Godot 4 que integra gestión dinámica de niveles, selección de personajes y mecánicas interactivas"***
 
+
+![Godot Version](https://img.shields.io/badge/Godot-4.6-478cbf?logo=godot-engine&logoColor=white)
+![Estado](https://img.shields.io/badge/Estado-En%20Desarrollo-orange)
+![Licencia](https://img.shields.io/badge/Licencia-MIT-green)
+
 ---
 ## **🕹️Mecanicas**
 Skyline Chest cuenta con diferentes mecanicas que el jugador ira aprendiendo a medida que vaya avanzando los niveles y se le presenten diferentes dificultades que tenga que sortear.
