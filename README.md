@@ -75,7 +75,23 @@ Para realizar este juego hemos utilizado varias herramientas de desarollo 3D y t
 - HTML
 - CSS
 - JavaScript
+  
+---
+## **🚀 Instalación y Ejecución**
 
+Para poder jugar o editar el proyecto, sigue estos pasos:
+
+1. Clona este repositorio:
+   `git clone https://github.com/Ruben1305/JuegoRecerca.git`
+2. Descarga e instala **Godot Engine 4.6**.
+3. Abre el motor y selecciona "*Importar*".
+4. Busca el archivo `project.godot` en la carpeta raíz del proyecto.
+5. ¡Pulsa el botón de ***Play***!
+
+---
+## **📄 Licencia**
+
+Este proyecto está bajo la Licencia **MIT**. Puedes consultar el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 ## **👩🏻‍💻 Autores**
