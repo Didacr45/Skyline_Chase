@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777536968
+::res://::1777977464
 Assets_UI.png::CompressedTexture2D::6837513927689137995::1777459569::1777459569::1::::<><><>0<>0<>b86bbbd3995213f3ddee4aa4bfce4636<>res://.godot/imported/Assets_UI.png-3e4a40fab89e141f3adb73fbe56c03e1.ctex::
 estrella_level.png::CompressedTexture2D::7797278164273183463::1777459570::1777459570::1::::<><><>0<>0<>3fd134c3f81b1815164324a30900200b<>res://.godot/imported/estrella_level.png-4b7fadb7c5cd60da4f666b89cc4f53dd.ctex::
 export_presets.cfg::TextFile::-1::1777459570::0::1::::<><><>0<>0<><>::
@@ -9,7 +9,7 @@ image.png::CompressedTexture2D::7401273660908465698::1777459570::1777459570::1::
 Interface.png::CompressedTexture2D::1116831498469317244::1777459569::1777459569::1::::<><><>0<>0<>2782fbdd6fd5ad235e1fe1af7d9fe1b0<>res://.godot/imported/Interface.png-bdcfff7cdb21c59571823aba206bd231.ctex::
 LightGreen_Panel.png::CompressedTexture2D::3276598701146989976::1777459569::1777459569::1::::<><><>0<>0<>7afcf9d0ff3792d2aef8f5070d84946a<>res://.godot/imported/LightGreen_Panel.png-af7323f14870af7b01dbdf33772aec8a.ctex::
 PlataformLeftVertical2.gd::GDScript::3919226730392675483::1777459569::0::1::::<>Node3D<><>0<>0<><>::
-README.md::TextFile::-1::1777460787::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1777539349::0::1::::<><><>0<>0<><>::
 ::res://addons/::1777459569
 ::res://addons/gdquest_colorpicker_presets/::1777459569
 colorpicker_presets.gd::GDScript::5435259860528881959::1777459569::0::1::::<>EditorPlugin<><>0<>1<><>::
@@ -662,8 +662,8 @@ rogue.png::CompressedTexture2D::1198743847264531964::1777459569::1777459569::1::
 warrior.png::CompressedTexture2D::3699723522386911691::1777459569::1777459569::1::::<><><>0<>0<>1e67dc1be8846062d36e0a5cadd60885<>res://.godot/imported/warrior.png-39da0125d389d347269683399032c912.ctex::
 ::res://Player_Skeletons/KayKit_Skeletons_1.1_FREE/texture/::1777459569
 skeleton_texture.png::CompressedTexture2D::6155138073512979130::1777459569::1777459569::1::::<><><>0<>0<>bffce58d8e37e8ade196f6c9ca25d97e<>res://.godot/imported/skeleton_texture.png-713142af82e7ec5fb5b18c0954e47304.ctex::
-::res://Scripts/::1777459569
-DatabaseManager.gd::GDScript::2330917225707852184::1777459569::0::1::::<>Node<><>0<>0<><>::
+::res://Scripts/::1777538080
+DatabaseManager.gd::GDScript::2330917225707852184::1777538080::0::1::::<>Node<><>0<>0<><>::
 game.gd::GDScript::4243895259237599508::1777459569::0::1::::<>Node<><>0<>0<><>::
 ::res://Scripts/GUI/::1777459569
 button.gd::GDScript::5871653979626072549::1777459569::0::1::::<>Button<><>0<>0<><>::

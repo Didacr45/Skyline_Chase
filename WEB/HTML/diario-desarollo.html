@@ -16,16 +16,15 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script src="../javascript.js"></script>
 
     <!-- ─── Hoja de estilos externa ────────────────────────────────-->
     <link rel="stylesheet" href="../CSS/stylesdiario-desarollo.css" />
   </head>
   <body>
     <!-- ════════════════════════════════════════════════════════════
-      BARRA DE NAVEGACIÓN
-    ════════════════════════════════════════════════════════════════ -->
-    <!-- ════════════════════════════════════════════════════════════
-      BARRA DE NAVEGACIÓN
+       BARRA DE NAVEGACIÓN
+       Menú fijo en la parte superior con enlaces a cada sección
   ════════════════════════════════════════════════════════════════ -->
     <nav class="navbar">
       <div class="nav-logo">SKYLINE<span>CHASE</span></div>
@@ -51,58 +50,31 @@
       </div>
     </nav>
     <!-- ════════════════════════════════════════════════════════════
-      SECCIÓN HERO (INICIO)
-      Pantalla de bienvenida con título, descripción y badges
+       SECCIÓN PROYECTO
+       Información académica: objetivo, tecnología, mecánicas y conclusiones
   ════════════════════════════════════════════════════════════════ -->
-    <section id="inicio" class="hero">
-      <!-- Fondo decorativo: capas de color y partículas de estrellas -->
-      <div class="hero-bg"></div>
-      <div class="hero-particles"></div>
+    <section id="DevBlog" class="section">
+      <!-- Encabezado de la sección -->
+      <p class="section-tag">Diario de desarrollo</p>
+      <h2 class="section-title">Calendario de desarrollo</h2>
 
-      <!-- Contenido central del hero -->
-      <div class="hero-content">
-        <!-- Etiqueta pequeña de categoría -->
-        <div class="hero-tag">Proyecto de Recerca · 2025</div>
-
-        <!-- Título principal con la fuente de impacto -->
-        <h1 class="hero-title">
-          SKYLINE<br />
-          <span class="title-accent">CHASE</span>
-        </h1>
-
-        <!-- Descripción breve del juego -->
-        <p class="hero-desc">
-          Un juego 3D de plataformas diseñado en el motor grafico de godot, con
-          una serie de coleccionables opcionales, el objetivo es llegar a la
-          meta evita a los enemigos o acaba con ellos.
-        </p>
-
-        <!-- Botón de llamada a la acción -->
-        <a href="https://ruben1305.github.io/skylinechest-web/" class="hero-btn"
-          >Jugar</a
-        >
-
-        <!-- Badges de características del juego -->
-        <div class="hero-badges">
-          <div class="badge">🎮 Juego 3D</div>
-          <div class="badge">⭐ Coleccionables</div>
-          <div class="badge">👾 Enemigos</div>
-          <div class="badge">🏔️ Plataformas</div>
-          <div class="badge">🤖 Godot</div>
-          <div class="badge">🏔️ Plataformas</div>
+      <div class="calendar-container">
+        <div class="calendar-header">
+          <button id="prevMonth">&lt;</button>
+          <h2 id="monthDisplay"></h2>
+          <button id="nextMonth">&gt;</button>
         </div>
+        <div class="calendar-weekdays">
+          <div>Dom</div><div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div>
+        </div>
+        <div id="calendarDays" class="calendar-days">
+          </div>
       </div>
-    </section>
+
 
     <!-- ════════════════════════════════════════════════════════════
-      LÍNEA DIVISORIA DECORATIVA
-      Separa visualmente las secciones con un degradado rojo
-  ════════════════════════════════════════════════════════════════ -->
-    <div class="divider"></div>
-
-    <!-- ════════════════════════════════════════════════════════════
-      PIE DE PÁGINA
-      Créditos del proyecto
+       PIE DE PÁGINA
+       Créditos del proyecto
   ════════════════════════════════════════════════════════════════ -->
     <footer>
       <p>

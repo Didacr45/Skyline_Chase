@@ -156,9 +156,7 @@ body {
   font-size: 0.95rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition:
-    background 0.2s,
-    transform 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .btn-download:hover {
@@ -188,14 +186,13 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0; /* ocupa todo el contenedor */
-  background:
-    radial-gradient(
+  background: radial-gradient(
       ellipse 70% 55% at 50% 0%,
       rgba(192, 57, 43, 0.4) 0%,
       transparent 70%
     ),
     /* brillo rojo arriba */
-    radial-gradient(
+      radial-gradient(
         ellipse 50% 40% at 80% 90%,
         rgba(123, 24, 24, 0.25) 0%,
         transparent 60%
@@ -208,8 +205,7 @@ body {
 .hero-particles {
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(
+  background-image: radial-gradient(
       1.5px 1.5px at 12% 18%,
       rgba(255, 255, 255, 0.55) 0%,
       transparent 100%
@@ -320,9 +316,7 @@ body {
   font-size: 0.95rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition:
-    background 0.2s,
-    transform 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .hero-btn:hover {
