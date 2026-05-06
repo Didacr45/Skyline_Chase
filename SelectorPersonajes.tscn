@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bbpep1u6ht4e4"]
+
+[ext_resource type="Script" uid="uid://vhgg1en480ig" path="res://Selector2D.gd" id="1_vc0ar"]
+[ext_resource type="Texture2D" uid="uid://bnrfswsy500xt" path="res://Player_Select/Knight.png" id="2_47pam"]
+[ext_resource type="Script" uid="uid://ck2akfvt444ps" path="res://CharacterData.gd" id="3_004ck"]
+[ext_resource type="Resource" uid="uid://l1lgxfctcsl5" path="res://Players/DatosCaballero.tres" id="4_86bey"]
+
+[node name="Node2D" type="Node2D" unique_id=869320486]
+
+[node name="Control" type="Control" parent="." unique_id=1581376518]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 222.0
+offset_bottom = 87.0
+script = ExtResource("1_vc0ar")
+fotos_personajes = Array[Texture2D]([ExtResource("2_47pam")])
+datos_personajes = Array[ExtResource("3_004ck")]([ExtResource("4_86bey")])
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1664610299]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=835004365]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Control" unique_id=611032876]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 470.0
+offset_right = 93.0
+offset_bottom = 501.0
+text = "Anterior"
+
+[node name="Button2" type="Button" parent="Control" unique_id=2121820342]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 472.0
+offset_right = 471.0
+offset_bottom = 503.0
+text = "Siguiente"
+
+[node name="Button3" type="Button" parent="Control" unique_id=1193902372]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 481.0
+offset_right = 276.0
+offset_bottom = 512.0
+text = "PLAY"
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button2" to="Control" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/Button3" to="Control" method="_on_button_3_pressed"]

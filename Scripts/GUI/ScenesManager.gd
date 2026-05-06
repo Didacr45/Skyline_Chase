@@ -4,6 +4,7 @@ var nivel_actual := 1
 var ultima_escena_jugada : String = "" # Aquí guardaremos el nivel
 var proximo_nivel : String = ""
 var siguiente_numero = nivel_actual + 1
+var selected_character: CharacterData # Esta variable es la que guardará al personaje elegido
 signal game_paused(paused: bool)
 
 func pause_game(paused: bool) -> void:
@@ -49,3 +50,4 @@ func reintentar():
 	else:
 		# Por si acaso, si no hay nada guardado, que no se rompa
 		print("No hay escena previa guardada")
+		

@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://c4b85w11uuoqh" path="res://Players/Characters/SkeletonRogeCharacter.tscn" id="27_82qno"]
 [ext_resource type="Script" uid="uid://dqsod34ehqu7y" path="res://Players/Characters/SkeletonRogue.gd" id="28_tcro2"]
 [ext_resource type="PackedScene" uid="uid://ddn42334oe48i" path="res://Players/Characters/SkeletonWarriorCharacter.tscn" id="29_huxtc"]
+[ext_resource type="Script" uid="uid://bdx0xc0wvgoux" path="res://level/PlayerSpawner.gd" id="30_huxtc"]
 [ext_resource type="Script" uid="uid://x4acyl8lqsrg" path="res://Players/Characters/skeleton_warrior.gd" id="30_tvqml"]
 
 [sub_resource type="Curve" id="Curve_k4wis"]
@@ -1691,3 +1692,7 @@ transform = Transform3D(-0.027584651, 0, -0.7995243, 0, 0.8, 0, 0.7995243, 0, -0
 collision_layer = 2
 collision_mask = 12
 script = ExtResource("30_tvqml")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=2043536291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.748188, 15.189514, -69.344444)
+script = ExtResource("30_huxtc")
