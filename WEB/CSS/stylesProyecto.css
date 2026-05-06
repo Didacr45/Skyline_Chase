@@ -1,49 +1,29 @@
 /* ================================================================
-   SKYLINE CHASE — styles.css
-   Paleta extraída del logo:
-     Rojo principal  → #C0392B / #E74C3C
-     Rojo oscuro     → #7B1818
-     Negro profundo  → #0A0A0A
-     Gris oscuro     → #1A1A1A / #222222
-     Gris medio      → #333333
-     Blanco          → #FFFFFF / #F0F0F0
+   SKYLINE CHASE — Estilos de la página Proyecto
 ================================================================ */
 
-/* ────────────────────────────────────────────────────────────────
-   VARIABLES GLOBALES
-   Define los colores una sola vez aquí. Si quieres cambiar un
-   color, solo edita esta sección y se aplica en toda la página.
-──────────────────────────────────────────────────────────────── */
 :root {
-  --rojo: #c0392b; /* rojo principal del logo */
-  --rojo-vivo: #e74c3c; /* rojo más brillante para hover */
-  --rojo-oscuro: #7b1818; /* rojo apagado para fondos */
-  --negro: #0a0a0a; /* negro puro del fondo */
-  --gris-oscuro: #1a1a1a; /* fondo de tarjetas */
-  --gris-medio: #2a2a2a; /* bordes y superficies secundarias */
-  --gris-texto: #888888; /* texto secundario (descripciones) */
-  --blanco: #ffffff; /* texto principal */
-  --blanco-suave: #cccccc; /* texto intermedio */
-
-  --fuente-titulo: "Bebas Neue", sans-serif; /* fuente de impacto */
-  --fuente-cuerpo: "Barlow", sans-serif; /* fuente de texto */
+  /* Variables: Centralizamos los colores para que el diseño sea coherente */
+  --rojo: #c0392b;
+  --rojo-vivo: #e74c3c;
+  --rojo-oscuro: #7b1818;
+  --negro: #0a0a0a;
+  --gris-oscuro: #1a1a1a;
+  --gris-medio: #2a2a2a;
+  --gris-texto: #888888;
+  --blanco: #ffffff;
+  --blanco-suave: #cccccc;
+  --fuente-titulo: "Bebas Neue", sans-serif;
+  --fuente-cuerpo: "Barlow", sans-serif;
 }
 
-/* ────────────────────────────────────────────────────────────────
-     RESET Y BASE
-     Elimina márgenes por defecto del navegador y aplica la fuente
-     y el color de fondo a toda la página.
-  ──────────────────────────────────────────────────────────────── */
+/* RESET Y BASE: Asegura que todos los navegadores partan de cero (limpiando márgenes) */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth; /* scroll suave al pulsar enlaces de nav */
 }
 
 body {
@@ -53,38 +33,31 @@ body {
   line-height: 1.7;
 }
 
-/* ────────────────────────────────────────────────────────────────
-     BARRA DE NAVEGACIÓN
-     Fija en la parte superior. Se vuelve semitransparente usando
-     backdrop-filter para crear efecto de cristal ahumado.
-  ──────────────────────────────────────────────────────────────── */
+/* NAVBAR: Estructura flexible (Flexbox) con efecto de cristal ahumado (Glassmorphism) */
 .navbar {
-  position: sticky; /* se queda pegada al hacer scroll */
+  position: sticky;
   top: 0;
-  z-index: 100; /* encima de todo el contenido */
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
   height: 64px;
-  background: rgba(10, 10, 10, 0.88); /* negro semitransparente */
-  backdrop-filter: blur(14px); /* efecto cristal */
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(14px); /* Difumina el contenido que pasa por detrás */
   border-bottom: 1px solid var(--rojo-oscuro);
 }
 
-/* Logo de la barra: texto en mayúsculas con acento rojo */
 .nav-logo {
   font-family: var(--fuente-titulo);
   font-size: 1.4rem;
   letter-spacing: 3px;
-  color: var(--blanco);
 }
 
 .nav-logo span {
-  color: var(--rojo); /* la palabra "CHASE" en rojo */
+  color: var(--rojo);
 }
 
-/* Lista de enlaces de navegación */
 .nav-links {
   list-style: none;
   display: flex;
@@ -95,26 +68,42 @@ body {
   text-decoration: none;
   color: var(--blanco-suave);
   font-size: 0.88rem;
-  font-weight: 500;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  transition: color 0.2s; /* transición suave al pasar el ratón */
+  transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: var(--rojo-vivo); /* rojo brillante al hacer hover */
+  color: var(--rojo-vivo);
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 2.5rem; /* mismo gap que entre los links */
+  gap: 2.5rem;
 }
-/* ================================= 
-      Boton Descargar
-   ================================= */
+
+/* --- SUBMENÚ DESPLEGABLE --- */
+.tiene-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--gris-oscuro);
+  border-top: 3px solid var(--rojo);
+  width: 120px;
+  list-style: none;
+}
+
+.tiene-submenu:hover .submenu {
+  display: block;
+}
+
+/* Botón de descarga rápido */
 .btn-download {
-  display: inline-block;
   background: var(--rojo);
   color: var(--blanco);
   text-decoration: none;
@@ -122,47 +111,22 @@ body {
   border-radius: 4px;
   font-weight: 600;
   font-size: 0.95rem;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  transition:
-    background 0.2s,
-    transform 0.2s;
+  transition: all 0.2s;
 }
 
 .btn-download:hover {
-  background: var(--rojo-vivo); /* rojo más brillante al hacer hover */
-  transform: translateY(-3px); /* sube ligeramente */
+  background: var(--rojo-vivo);
+  transform: translateY(-3px);
 }
 
-/* ────────────────────────────────────────────────────────────────
-     LÍNEA DIVISORIA
-     Línea horizontal entre secciones con degradado rojo centrado
-  ──────────────────────────────────────────────────────────────── */
-.divider {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--rojo-oscuro) 40%,
-    var(--rojo) 50%,
-    var(--rojo-oscuro) 60%,
-    transparent 100%
-  );
-}
-
-/* ────────────────────────────────────────────────────────────────
-     SECCIONES DE CONTENIDO (CONTROLES Y PROYECTO)
-     Bloque reutilizable para ambas secciones. Limita el ancho
-     y añade espacio vertical generoso.
-  ──────────────────────────────────────────────────────────────── */
+/* SECCIONES: Contenedor estándar con limitador de ancho (max-width) */
 .section {
   max-width: 1000px;
   margin: 0 auto;
   padding: 6rem 2rem;
 }
 
-/* Etiqueta de categoría encima del título de sección */
 .section-tag {
   font-size: 0.75rem;
   letter-spacing: 3px;
@@ -171,60 +135,29 @@ body {
   margin-bottom: 0.6rem;
 }
 
-/* Título de cada sección */
 .section-title {
   font-family: var(--fuente-titulo);
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  letter-spacing: 2px;
+  font-size: clamp(2rem, 5vw, 3.2rem); /* Tamaño fluido según la pantalla */
   color: var(--blanco);
   margin-bottom: 1rem;
 }
 
-/* Párrafo introductorio de cada sección */
-.section-lead {
-  font-size: 1.05rem;
-  color: var(--blanco-suave);
-  max-width: 620px;
-  margin-bottom: 3rem;
-}
-
-.control-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--blanco);
-  margin-bottom: 0.4rem;
-}
-
-.control-card p {
-  font-size: 0.87rem;
-  color: var(--gris-texto);
-}
-
-/* ────────────────────────────────────────────────────────────────
-     SECCIÓN PROYECTO — TARJETAS
-     Bloque destacado + cuadrícula de 2 columnas
-  ──────────────────────────────────────────────────────────────── */
-
-/* Párrafo introductorio del proyecto con borde izquierdo rojo */
+/* TARJETAS PROYECTO: Diseño de rejilla (CSS Grid) de 2 columnas */
 .about-highlight {
   border-left: 3px solid var(--rojo);
   padding: 1.5rem 1.75rem;
   background: rgba(192, 57, 43, 0.06);
   border-radius: 0 10px 10px 0;
-  font-size: 1rem;
   color: var(--blanco-suave);
-  line-height: 1.85;
   margin-bottom: 2.5rem;
 }
 
-/* Cuadrícula de 2 columnas para las tarjetas del proyecto */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
   gap: 1.25rem;
 }
 
-/* Tarjeta individual de información del proyecto */
 .about-card {
   background: var(--gris-oscuro);
   border: 1px solid var(--gris-medio);
@@ -232,67 +165,43 @@ body {
   padding: 1.75rem;
   transition: border-color 0.25s;
 }
-
 .about-card:hover {
-  border-color: var(--rojo-oscuro); /* borde rojo oscuro al hacer hover */
+  border-color: var(--rojo);
 }
 
 .about-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
   color: var(--blanco);
   margin-bottom: 0.75rem;
 }
-
 .about-card p {
   font-size: 0.9rem;
   color: var(--gris-texto);
-  line-height: 1.75;
 }
 
-/* Boton */
-
+/* HERO SECTION: Contenedor para el botón final de GitHub */
 .hero {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  overflow: hidden;
   padding-bottom: 6rem;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 760px;
-}
-
 .hero-btn {
-  display: inline-block;
   background: var(--rojo);
   color: var(--blanco);
   text-decoration: none;
   padding: 14px 40px;
   border-radius: 4px;
   font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  transition:
-    background 0.2s,
-    transform 0.2s;
+  transition: all 0.2s;
 }
-
 .hero-btn:hover {
   background: var(--rojo-vivo);
   transform: translateY(-3px);
 }
 
-/* ────────────────────────────────────────────────────────────────
-     PIE DE PÁGINA
-     Franja final con créditos del proyecto
-  ──────────────────────────────────────────────────────────────── */
+/* FOOTER: Pie de página centrado */
 footer {
   text-align: center;
   padding: 2.5rem;
@@ -300,8 +209,6 @@ footer {
   color: var(--gris-texto);
   font-size: 0.85rem;
 }
-
-/* Nombres */
 .footer-name {
   color: var(--rojo-vivo);
   font-weight: 600;
