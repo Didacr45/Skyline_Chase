@@ -3,13 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="styles" href="../CSS/stylesgaleria.css" />
-    <title>Skyline Chase</title>
+    <title>Skyline Chase - Galería</title>
 
-    <!-- ─── Google Fonts ───────────────────────────────────────────
-      Bebas Neue: fuente de título, impacto visual fuerte
-      Barlow: fuente de cuerpo, limpia y moderna
-  ──────────────────────────────────────────────────────────────── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,18 +12,12 @@
       rel="stylesheet"
     />
 
-    <!-- ─── Hoja de estilos externa ────────────────────────────────-->
     <link rel="stylesheet" href="../CSS/stylesgaleria.css" />
   </head>
   <body>
-    <!-- ════════════════════════════════════════════════════════════
-      BARRA DE NAVEGACIÓN
-    ════════════════════════════════════════════════════════════════ -->
-    <!-- ════════════════════════════════════════════════════════════
-      BARRA DE NAVEGACIÓN
-  ════════════════════════════════════════════════════════════════ -->
     <nav class="navbar">
       <div class="nav-logo">SKYLINE<span>CHASE</span></div>
+
       <div class="nav-right">
         <ul class="nav-links">
           <li><a href="../index.html">Inicio</a></li>
@@ -50,42 +39,38 @@
         </a>
       </div>
     </nav>
-    <!-- ════════════════════════════════════════════════════════════
-      SECCIÓN HERO (INICIO)
-      Pantalla de bienvenida con título, descripción y badges
-  ════════════════════════════════════════════════════════════════ -->
-    <section id="inicio" class="hero">
-      <!-- Fondo decorativo: capas de color y partículas de estrellas -->
-      <div class="hero-bg"></div>
-      <div class="hero-particles"></div>
 
-      <!-- Contenido central del hero -->
-      <div class="hero-content">
-        <!-- Etiqueta pequeña de categoría -->
-        <div class="hero-tag">Proyecto de Recerca · 2025</div>
+    <section id="galeria" class="section">
+      <p class="section-tag">Capturas</p>
+      <h2 class="section-title">Galería de Imágenes</h2>
 
-        <!-- Título principal con la fuente de impacto -->
-        <h1 class="hero-title">
-          SKYLINE<br />
-          <span class="title-accent">CHASE</span>
-        </h1>
+      <div class="carousel-container">
+        <button class="carousel-btn prev" id="prevBtn">&lt;</button>
 
+        <div class="carousel-window">
+          <div class="carousel-track" id="track">
+            <img src="../IMG/decoration.png" alt="Decoracion del mapa" />
+            <img src="../IMG/mage.png" alt="Enemigo Mago" />
+            <img src="../IMG/map.png" alt="Parte de mapa" />
+            <img src="../IMG/player.png" alt="Jugador" />
+            <img src="../IMG/star.png" alt="Coleccionables" />
+            <img src="../IMG/warrior.png" alt="Enemigo warrior" />
+          </div>
+        </div>
 
-    <!-- ════════════════════════════════════════════════════════════
-      LÍNEA DIVISORIA DECORATIVA
-      Separa visualmente las secciones con un degradado rojo
-  ════════════════════════════════════════════════════════════════ -->
+        <button class="carousel-btn next" id="nextBtn">&gt;</button>
+      </div>
+    </section>
+
     <div class="divider"></div>
 
-    <!-- ════════════════════════════════════════════════════════════
-      PIE DE PÁGINA
-      Créditos del proyecto
-  ════════════════════════════════════════════════════════════════ -->
     <footer>
       <p>
         Skyline Chase &mdash; Proyecto de Recerca &mdash; Desarrollado por
         <span class="footer-name">Didac Rubio y Rubén Alcantarilla</span>
       </p>
     </footer>
+
+    <script src="../JS/carrusel.js"></script>
   </body>
 </html>

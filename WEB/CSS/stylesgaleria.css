@@ -1,49 +1,35 @@
 /* ================================================================
-   SKYLINE CHASE — styles.css
-   Paleta extraída del logo:
-     Rojo principal  → #C0392B / #E74C3C
-     Rojo oscuro     → #7B1818
-     Negro profundo  → #0A0A0A
-     Gris oscuro     → #1A1A1A / #222222
-     Gris medio      → #333333
-     Blanco          → #FFFFFF / #F0F0F0
+   SKYLINE CHASE — Estilos Galería
+   Estructura: Variables > Reset > Navbar > Galería > Footer
 ================================================================ */
 
-/* ────────────────────────────────────────────────────────────────
-   VARIABLES GLOBALES
-   Define los colores una sola vez aquí. Si quieres cambiar un
-   color, solo edita esta sección y se aplica en toda la página.
-──────────────────────────────────────────────────────────────── */
 :root {
-  --rojo: #c0392b; /* rojo principal del logo */
-  --rojo-vivo: #e74c3c; /* rojo más brillante para hover */
-  --rojo-oscuro: #7b1818; /* rojo apagado para fondos */
-  --negro: #0a0a0a; /* negro puro del fondo */
-  --gris-oscuro: #1a1a1a; /* fondo de tarjetas */
-  --gris-medio: #2a2a2a; /* bordes y superficies secundarias */
-  --gris-texto: #888888; /* texto secundario (descripciones) */
-  --blanco: #ffffff; /* texto principal */
-  --blanco-suave: #cccccc; /* texto intermedio */
+  /* Paleta de colores para mantener la identidad visual */
+  --rojo: #c0392b;
+  --rojo-vivo: #e74c3c;
+  --rojo-oscuro: #7b1818;
+  --negro: #0a0a0a;
+  --gris-oscuro: #1a1a1a;
+  --gris-medio: #2a2a2a;
+  --gris-texto: #888888;
+  --blanco: #ffffff;
+  --blanco-suave: #cccccc;
 
-  --fuente-titulo: "Bebas Neue", sans-serif; /* fuente de impacto */
-  --fuente-cuerpo: "Barlow", sans-serif; /* fuente de texto */
+  /* Tipografías cargadas desde Google Fonts */
+  --fuente-titulo: "Bebas Neue", sans-serif;
+  --fuente-cuerpo: "Barlow", sans-serif;
 }
 
 /* ────────────────────────────────────────────────────────────────
-       RESET Y BASE
-       Elimina márgenes por defecto del navegador y aplica la fuente
-       y el color de fondo a toda la página.
-    ──────────────────────────────────────────────────────────────── */
+   RESET Y ESTILOS BASE
+   Asegura que todos los navegadores partan de la misma base.
+──────────────────────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth; /* scroll suave al pulsar enlaces de nav */
+  box-sizing: border-box; /* El padding no aumenta el tamaño total del elemento */
 }
 
 body {
@@ -54,37 +40,33 @@ body {
 }
 
 /* ────────────────────────────────────────────────────────────────
-       BARRA DE NAVEGACIÓN
-       Fija en la parte superior. Se vuelve semitransparente usando
-       backdrop-filter para crear efecto de cristal ahumado.
-    ──────────────────────────────────────────────────────────────── */
+   NAVEGACIÓN (NAVBAR)
+   Barra superior fija con efecto de desenfoque (glassmorphism).
+──────────────────────────────────────────────────────────────── */
 .navbar {
-  position: sticky; /* se queda pegada al hacer scroll */
+  position: sticky;
   top: 0;
-  z-index: 100; /* encima de todo el contenido */
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
   height: 64px;
-  background: rgba(10, 10, 10, 0.88); /* negro semitransparente */
-  backdrop-filter: blur(14px); /* efecto cristal */
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(14px); /* Difumina el contenido que pasa por detrás */
   border-bottom: 1px solid var(--rojo-oscuro);
 }
 
-/* Logo de la barra: texto en mayúsculas con acento rojo */
 .nav-logo {
   font-family: var(--fuente-titulo);
   font-size: 1.4rem;
   letter-spacing: 3px;
-  color: var(--blanco);
 }
 
 .nav-logo span {
-  color: var(--rojo); /* la palabra "CHASE" en rojo */
+  color: var(--rojo);
 }
 
-/* Lista de enlaces de navegación */
 .nav-links {
   list-style: none;
   display: flex;
@@ -95,58 +77,42 @@ body {
   text-decoration: none;
   color: var(--blanco-suave);
   font-size: 0.88rem;
-  font-weight: 500;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  transition: color 0.2s; /* transición suave al pasar el ratón */
+  transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: var(--rojo-vivo); /* rojo brillante al hacer hover */
+  color: var(--rojo-vivo);
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 2.5rem; /* mismo gap que entre los links */
+  gap: 2.5rem;
 }
 
-/*==================================
-      SUBMENU
-   ================================== */
-
-/* 1. EL ANCLA: Esto le dice al submenú que no se mueva al borde de la pantalla */
+/* --- SUBMENÚ DESPLEGABLE --- */
 .tiene-submenu {
   position: relative;
 }
 
-/* 2. EL SUBMENÚ: Ahora "left: 0" significa "la izquierda de Proyecto", no de la web */
 .submenu {
   display: none;
   position: absolute;
-  top: 100%; /* Justo debajo del texto */
-  left: 0; /* Alineado a la izquierda del texto "Proyecto" */
-
-  /* Tus colores y estilos */
+  top: 100%;
+  left: 0;
   background-color: var(--gris-oscuro);
   border-top: 3px solid var(--rojo);
-  width: 100px; /* Un ancho fijo para que no se vea comprimido */
-  z-index: 0; /* Para que pase por encima de imágenes o texto */
-  padding: 0;
-  margin: 0;
+  width: 120px;
   list-style: none;
 }
 
-/* 3. PARA QUE SE MUESTRE */
 .tiene-submenu:hover .submenu {
   display: block;
 }
 
-/* ================================= 
-        Boton Descargar
-     ================================= */
+/* Botón de descarga rápido */
 .btn-download {
-  display: inline-block;
   background: var(--rojo);
   color: var(--blanco);
   text-decoration: none;
@@ -154,20 +120,92 @@ body {
   border-radius: 4px;
   font-weight: 600;
   font-size: 0.95rem;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  transition: background 0.2s, transform 0.2s;
+  transition: all 0.2s;
 }
 
 .btn-download:hover {
-  background: var(--rojo-vivo); /* rojo más brillante al hacer hover */
-  transform: translateY(-3px); /* sube ligeramente */
+  background: var(--rojo-vivo);
+  transform: translateY(-3px);
 }
 
 /* ────────────────────────────────────────────────────────────────
-       LÍNEA DIVISORIA
-       Línea horizontal entre secciones con degradado rojo centrado
-    ──────────────────────────────────────────────────────────────── */
+   SECCIÓN DE GALERÍA (CARRUSEL)
+   Contenedor centrado que usa Flexbox para alinear botones y fotos.
+──────────────────────────────────────────────────────────────── */
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--rojo);
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+/* --- ESTRUCTURA DEL CARRUSEL --- */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Separación entre botones e imágenes */
+  margin-top: 2rem;
+}
+
+.carousel-window {
+  flex: 1;
+  aspect-ratio: 16 / 9; /* Mantiene proporción de pantalla de juego */
+  overflow: hidden; /* Oculta las imágenes que no están a la vista */
+  border-radius: 12px;
+  border: 2px solid var(--gris-medio);
+}
+
+.carousel-track {
+  display: flex; /* Coloca las imágenes una al lado de otra en una fila infinita */
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Suaviza el movimiento */
+}
+
+.carousel-track img {
+  width: 100%; /* Cada imagen ocupa exactamente el ancho de la ventana */
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  flex-shrink: 0; /* Evita que las imágenes se compriman */
+}
+
+/* --- BOTONES DE CONTROL --- */
+.carousel-btn {
+  width: 50px;
+  height: 50px;
+  background: var(--rojo);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+  background: var(--rojo-vivo);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   ELEMENTOS DE CIERRE (DIVIDER Y FOOTER)
+──────────────────────────────────────────────────────────────── */
 .divider {
   width: 100%;
   height: 1px;
@@ -181,155 +219,13 @@ body {
   );
 }
 
-/* ────────────────────────────────────────────────────────────────
-       SECCIONES DE CONTENIDO (CONTROLES Y PROYECTO)
-       Bloque reutilizable para ambas secciones. Limita el ancho
-       y añade espacio vertical generoso.
-    ──────────────────────────────────────────────────────────────── */
-.section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 6rem 2rem;
-}
-
-/* Etiqueta de categoría encima del título de sección */
-.section-tag {
-  font-size: 0.75rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--rojo);
-  margin-bottom: 0.6rem;
-}
-
-/* Título de cada sección */
-.section-title {
-  font-family: var(--fuente-titulo);
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  letter-spacing: 2px;
-  color: var(--blanco);
-  margin-bottom: 1rem;
-}
-
-/* Párrafo introductorio de cada sección */
-.section-lead {
-  font-size: 1.05rem;
-  color: var(--blanco-suave);
-  max-width: 620px;
-  margin-bottom: 3rem;
-}
-
-.control-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--blanco);
-  margin-bottom: 0.4rem;
-}
-
-.control-card p {
-  font-size: 0.87rem;
-  color: var(--gris-texto);
-}
-
-/* ────────────────────────────────────────────────────────────────
-       SECCIÓN PROYECTO — TARJETAS
-       Bloque destacado + cuadrícula de 2 columnas
-    ──────────────────────────────────────────────────────────────── */
-
-/* Párrafo introductorio del proyecto con borde izquierdo rojo */
-.about-highlight {
-  border-left: 3px solid var(--rojo);
-  padding: 1.5rem 1.75rem;
-  background: rgba(192, 57, 43, 0.06);
-  border-radius: 0 10px 10px 0;
-  font-size: 1rem;
-  color: var(--blanco-suave);
-  line-height: 1.85;
-  margin-bottom: 2.5rem;
-}
-
-/* Cuadrícula de 2 columnas para las tarjetas del proyecto */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-}
-
-/* Tarjeta individual de información del proyecto */
-.about-card {
-  background: var(--gris-oscuro);
-  border: 1px solid var(--gris-medio);
-  border-radius: 10px;
-  padding: 1.75rem;
-  transition: border-color 0.25s;
-}
-
-.about-card:hover {
-  border-color: var(--rojo-oscuro); /* borde rojo oscuro al hacer hover */
-}
-
-.about-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--blanco);
-  margin-bottom: 0.75rem;
-}
-
-.about-card p {
-  font-size: 0.9rem;
-  color: var(--gris-texto);
-  line-height: 1.75;
-}
-
-/* Boton */
-
-.hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  padding-bottom: 6rem;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 760px;
-}
-
-.hero-btn {
-  display: inline-block;
-  background: var(--rojo);
-  color: var(--blanco);
-  text-decoration: none;
-  padding: 14px 40px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.hero-btn:hover {
-  background: var(--rojo-vivo);
-  transform: translateY(-3px);
-}
-
-/* ────────────────────────────────────────────────────────────────
-       PIE DE PÁGINA
-       Franja final con créditos del proyecto
-    ──────────────────────────────────────────────────────────────── */
 footer {
   text-align: center;
   padding: 2.5rem;
-  border-top: 1px solid var(--gris-medio);
   color: var(--gris-texto);
   font-size: 0.85rem;
 }
 
-/* Nombres */
 .footer-name {
   color: var(--rojo-vivo);
   font-weight: 600;

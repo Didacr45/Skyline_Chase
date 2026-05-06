@@ -1,3 +1,5 @@
 # Godot-specific ignores
 .godot/
+explorations/
 *.translation
+node_modules/

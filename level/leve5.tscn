@@ -3700,12 +3700,12 @@ script = ExtResource("31_h6x2e")
 [node name="CharacterBody3D3" parent="." unique_id=1533694577 instance=ExtResource("30_h6x2e")]
 transform = Transform3D(0.85469043, 0, -0.9795428, 0, 1.3, 0, 0.9795428, 0, 0.85469043, -120.3997, 13.477781, -64.27168)
 collision_mask = 12
-script = ExtResource("31_vu70a")
 
 [node name="CharacterBody3D12" parent="." unique_id=2128036074 instance=ExtResource("30_h6x2e")]
 transform = Transform3D(0.85469043, 0, -0.9795428, 0, 1.3, 0, 0.9795428, 0, 0.85469043, 93.81106, 40.205276, -22.141224)
 collision_mask = 12
 script = ExtResource("31_vu70a")
+max_health = 3
 
 [node name="CharacterBody3D5" parent="." unique_id=511050408 instance=ExtResource("27_qjg13")]
 transform = Transform3D(-0.027584651, 0, -0.7995243, 0, 0.8, 0, 0.7995243, 0, -0.027584651, -200.56448, 3.5567813, 48.757835)

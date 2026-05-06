@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://b4txtdgp6wa1e" path="res://Players/Characters/SkeletonMinionCharacter.tscn" id="14_py5fv"]
 [ext_resource type="PackedScene" uid="uid://c6x0sa0atynwa" path="res://Players/Characters/SkeletonMageCharacter.tscn" id="15_jvm81"]
 [ext_resource type="ArrayMesh" uid="uid://d2jvcj50mlc4m" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/obj/hedge_straight_long.obj" id="15_ku3ub"]
-[ext_resource type="Script" uid="uid://jkink55u3xw7" path="res://Players/Characters/skeleton_movement_platform.gd" id="16_3qh5i"]
 [ext_resource type="ArrayMesh" uid="uid://bcn4h3akxgycq" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/obj/hedge_corner.obj" id="16_rep6o"]
 [ext_resource type="ArrayMesh" uid="uid://8oo8eilk2dix" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/obj/street_lantern.obj" id="17_ku3ub"]
 [ext_resource type="PackedScene" uid="uid://ddn42334oe48i" path="res://Players/Characters/SkeletonWarriorCharacter.tscn" id="17_rep6o"]
@@ -1566,17 +1565,14 @@ shape = SubResource("BoxShape3D_py5fv")
 [node name="CharacterBody3D3" parent="." unique_id=1533694577 instance=ExtResource("15_jvm81")]
 transform = Transform3D(0.85469043, 0, -0.9795428, 0, 1.3, 0, 0.9795428, 0, 0.85469043, -11.795892, 1.4923053, -101.89665)
 collision_mask = 12
-script = ExtResource("16_3qh5i")
 
 [node name="CharacterBody3D4" parent="." unique_id=627607553 instance=ExtResource("15_jvm81")]
 transform = Transform3D(0.85469043, 0, -0.9795428, 0, 1.3, 0, 0.9795428, 0, 0.85469043, -16.835516, 5.6441073, -166.8122)
 collision_mask = 12
-script = ExtResource("16_3qh5i")
 
 [node name="CharacterBody3D5" parent="." unique_id=1176037407 instance=ExtResource("15_jvm81")]
 transform = Transform3D(0.85469043, 0, -0.9795428, 0, 1.3, 0, 0.9795428, 0, 0.85469043, -132.08713, 24.781057, -173.0089)
 collision_mask = 12
-script = ExtResource("16_3qh5i")
 
 [node name="CharacterBody3D9" parent="." unique_id=511050408 instance=ExtResource("17_rep6o")]
 transform = Transform3D(-0.027584651, 0, -0.7995243, 0, 0.8, 0, 0.7995243, 0, -0.027584651, -7.475969, 4.5655565, -215.65158)
