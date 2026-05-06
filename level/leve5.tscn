@@ -34,6 +34,7 @@
 [ext_resource type="Script" uid="uid://dqsod34ehqu7y" path="res://Players/Characters/SkeletonRogue.gd" id="31_h6x2e"]
 [ext_resource type="Script" uid="uid://jkink55u3xw7" path="res://Players/Characters/skeleton_movement_platform.gd" id="31_vu70a"]
 [ext_resource type="Script" uid="uid://bdx0xc0wvgoux" path="res://level/PlayerSpawner.gd" id="34_e173k"]
+[ext_resource type="Resource" uid="uid://l1lgxfctcsl5" path="res://Players/DatosCaballero.tres" id="35_y2iua"]
 
 [sub_resource type="Curve" id="Curve_k4wis"]
 _data = [Vector2(0.331719, 0.0391753), 0.0, 0.0, 0, 0, Vector2(0.697336, 1), 0.51276, 0.0, 0, 0]
@@ -3729,3 +3730,4 @@ script = ExtResource("28_25s1t")
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1281192297]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.135914, 13.812265, -69.344444)
 script = ExtResource("34_e173k")
+personaje_por_defecto = ExtResource("35_y2iua")

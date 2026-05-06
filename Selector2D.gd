@@ -22,7 +22,7 @@ func _on_button_3_pressed() -> void:
 	# Guardamos el personaje elegido en el Autoload (ScenesManager)
 	ScenesManager.selected_character = datos_personajes[indice]
 	# Saltamos al nivel 3D
-	get_tree().change_scene_to_file("res://level/leve1.tscn")
+	get_tree().change_scene_to_file("res://escenas/LVLS/gamelv1.tscn")
 
 
 func _on_button_2_pressed() -> void:

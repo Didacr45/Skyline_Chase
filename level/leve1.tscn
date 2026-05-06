@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://bdx0xc0wvgoux" path="res://level/PlayerSpawner.gd" id="24_py17n"]
 [ext_resource type="PackedScene" uid="uid://ddn42334oe48i" path="res://Players/Characters/SkeletonWarriorCharacter.tscn" id="25_255j1"]
 [ext_resource type="ArrayMesh" uid="uid://8oo8eilk2dix" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/obj/street_lantern.obj" id="25_cjt1v"]
+[ext_resource type="Resource" uid="uid://l1lgxfctcsl5" path="res://Players/DatosCaballero.tres" id="25_da604"]
 [ext_resource type="Script" uid="uid://x4acyl8lqsrg" path="res://Players/Characters/skeleton_warrior.gd" id="26_cjt1v"]
 [ext_resource type="PackedScene" uid="uid://c6x0sa0atynwa" path="res://Players/Characters/SkeletonMageCharacter.tscn" id="27_cjt1v"]
 
@@ -1739,6 +1740,7 @@ collision_mask = 12
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1003298962]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.98723, 13.812265, -69.344444)
 script = ExtResource("24_py17n")
+personaje_por_defecto = ExtResource("25_da604")
 
 [connection signal="body_entered" from="Estrellica3" to="KillPlane" method="_on_estrellica_body_entered"]
 [connection signal="body_shape_entered" from="Estrellica3" to="KillPlane" method="_on_estrellica_body_shape_entered"]

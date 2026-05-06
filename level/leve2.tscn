@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://c4b85w11uuoqh" path="res://Players/Characters/SkeletonRogeCharacter.tscn" id="24_5gg8m"]
 [ext_resource type="Script" uid="uid://dqsod34ehqu7y" path="res://Players/Characters/SkeletonRogue.gd" id="25_lkd8r"]
 [ext_resource type="Script" uid="uid://bdx0xc0wvgoux" path="res://level/PlayerSpawner.gd" id="26_lkd8r"]
+[ext_resource type="Resource" uid="uid://l1lgxfctcsl5" path="res://Players/DatosCaballero.tres" id="27_lpw1j"]
 
 [sub_resource type="Shader" id="Shader_seuvc"]
 code = "shader_type sky;
@@ -1964,3 +1965,4 @@ script = ExtResource("25_lkd8r")
 [node name="Marker3D" type="Marker3D" parent="." unique_id=721739391]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.435493, 14.495923, -71.77876)
 script = ExtResource("26_lkd8r")
+personaje_por_defecto = ExtResource("27_lpw1j")
