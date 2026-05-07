@@ -17,7 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Skyline Chase"
 run/main_scene="uid://cnyx80j0xiht4"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="uid://ddph5puyawbdi"
+config/icon="/home/smx2a/imagen.jpg"
 
 [audio]
 
@@ -36,6 +36,7 @@ ContadorEstrellas="*uid://doh016fk7ie6a"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/size/initial_screen=1
 window/size/window_width_override=2560
 window/size/window_height_override=1440

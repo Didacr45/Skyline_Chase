@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://difaqay464xsx"]
+
+[ext_resource type="Script" uid="uid://b1p1lnectvs25" path="res://Scripts/game.gd" id="1_x4k63"]
+[ext_resource type="PackedScene" uid="uid://bxg6oejpaitdt" path="res://level/flag/flag_reached_screen.tscn" id="2_7djge"]
+[ext_resource type="PackedScene" uid="uid://cimrrj4jbd05l" path="res://level/leve1.tscn" id="3_wky8h"]
+[ext_resource type="PackedScene" uid="uid://dluh6kp13vsqx" path="res://escenas/ContadorEstrellas.tscn" id="4_r5es6"]
+[ext_resource type="PackedScene" uid="uid://dpyts00g4ljql" path="res://escenas/BarraVida.tscn" id="5_dqh4y"]
+[ext_resource type="PackedScene" uid="uid://bnkfs1uw2wx2x" path="res://escenas/GUI/pause_menu.tscn" id="6_vj6u2"]
+
+[node name="Tutorial" type="Node" unique_id=2132981713 groups=["enemigo", "player"]]
+script = ExtResource("1_x4k63")
+
+[node name="FlagReachedScreen" parent="." unique_id=1250105717 instance=ExtResource("2_7djge")]
+
+[node name="Level" parent="." unique_id=1923898584 instance=ExtResource("3_wky8h")]
+
+[node name="Level2" parent="." unique_id=2101854845 instance=ExtResource("3_wky8h")]
+
+[node name="Contador Estrellas" parent="." unique_id=1347886127 instance=ExtResource("4_r5es6")]
+
+[node name="Barra Vida" parent="." unique_id=406063415 instance=ExtResource("5_dqh4y")]
+
+[node name="Menu Pausa" parent="." unique_id=489775383 instance=ExtResource("6_vj6u2")]
