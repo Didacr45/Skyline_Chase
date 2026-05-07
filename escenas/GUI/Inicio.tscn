@@ -29,6 +29,24 @@ texture = ExtResource("6_i2p0x")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_otuv3"]
 texture = ExtResource("6_i2p0x")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0gik1"]
+texture = ExtResource("6_i2p0x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v24uy"]
+texture = ExtResource("6_i2p0x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3boft"]
+texture = ExtResource("6_i2p0x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0d8m6"]
+texture = ExtResource("6_i2p0x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j2odn"]
+texture = ExtResource("6_i2p0x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rjbyq"]
+texture = ExtResource("6_i2p0x")
+
 [node name="Control" type="Control" unique_id=1547842643]
 process_mode = 2
 layout_mode = 3
@@ -58,10 +76,10 @@ label_settings = SubResource("LabelSettings_g7cfe")
 process_mode = 3
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 0
-offset_left = 763.0
-offset_top = 478.0
-offset_right = 1113.0
-offset_bottom = 644.0
+offset_left = 755.0
+offset_top = 414.0
+offset_right = 1105.0
+offset_bottom = 580.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("5_8neef")
@@ -76,10 +94,10 @@ script = null
 process_mode = 3
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 0
-offset_left = 765.0
-offset_top = 678.0
-offset_right = 1108.0
-offset_bottom = 844.0
+offset_left = 758.0
+offset_top = 770.0
+offset_right = 1109.0
+offset_bottom = 936.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("5_8neef")
@@ -89,5 +107,35 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_apdpf")
 theme_override_styles/hover = SubResource("StyleBoxTexture_otuv3")
 text = "Salir"
 
+[node name="Personajes" type="Button" parent="." unique_id=1196703981]
+process_mode = 3
+layout_mode = 0
+offset_left = 57.0
+offset_top = 851.0
+offset_right = 566.0
+offset_bottom = 1033.0
+theme_override_fonts/font = ExtResource("5_8neef")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_0gik1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v24uy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3boft")
+text = "Personajes"
+
+[node name="Tutorial" type="Button" parent="." unique_id=1923458990]
+process_mode = 3
+layout_mode = 0
+offset_left = 757.0
+offset_top = 592.0
+offset_right = 1105.0
+offset_bottom = 756.0
+theme_override_fonts/font = ExtResource("5_8neef")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxTexture_0d8m6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j2odn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rjbyq")
+text = "Tutorial"
+
 [connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Personajes" to="." method="_on_personajes_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]

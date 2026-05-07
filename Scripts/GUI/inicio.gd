@@ -18,3 +18,9 @@ func _on_salir_pressed() -> void:
 
 func _on_start_game_pressed() -> void:
 	get_tree().change_scene_to_file("res://escenas/GUI/SelectorNivel.tscn")
+
+func _on_personajes_pressed() -> void:
+	get_tree().change_scene_to_file("res://SelectorPersonajes.tscn")
+
+func _on_tutorial_pressed() -> void:
+	get_tree().change_scene_to_file("res://escenas/LVLS/tutorial.tscn")
