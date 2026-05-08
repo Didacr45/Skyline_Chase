@@ -50,22 +50,42 @@ const ANIM_SPAWN  = "Animation_Items/Spawn_Ground"
 const ANIM_ATTACK = "Animation_Items/Throw"
 
 func _ready() -> void:
-	_start_position = global_position
+	# 1. Registro en el grupo para que el KillPlane te detecte
 	add_to_group("player")
+	
+	# 2. Buscar el punto de inicio en el nivel (Marker3D en grupo "puntos_spawn")
+	var puntos = get_tree().get_nodes_in_group("puntos_spawn")
+	if puntos.size() > 0:
+		_start_position = puntos[0].global_position
+	else:
+		_start_position = global_position
+
+	# 3. Posicionar al personaje y animar
+	global_position = _start_position
 	_do_spawn_animation()
 
-	Events.kill_plane_touched.connect(func():
-		global_position = _start_position
-		velocity = Vector3.ZERO
-		jumps_left = max_jumps
-		is_attacking = false
-		can_attack = true
-		_do_spawn_animation()
-	)
+	# 4. Configurar el evento de Respawn (KillPlane)
+	if Events.kill_plane_touched.is_connected(_on_kill_plane_triggered):
+		Events.kill_plane_touched.disconnect(_on_kill_plane_triggered)
+	Events.kill_plane_touched.connect(_on_kill_plane_triggered)
+
+	# 5. Otros eventos y configuración inicial
 	attack_area.monitoring = false
-	Events.flag_reached.connect(func():
-		puede_moverse = false
-	)
+	if not Events.flag_reached.is_connected(_on_flag_reached):
+		Events.flag_reached.connect(_on_flag_reached)
+
+# --- Funciones de soporte para las señales ---
+
+func _on_kill_plane_triggered() -> void:
+	global_position = _start_position
+	velocity = Vector3.ZERO
+	jumps_left = max_jumps
+	is_attacking = false
+	can_attack = true
+	_do_spawn_animation()
+
+func _on_flag_reached() -> void:
+	puede_moverse = false
 
 func _do_spawn_animation() -> void:
 	set_physics_process(false)

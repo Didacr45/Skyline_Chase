@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://b1ot6gn6tms6h"]
+[gd_scene format=4 uid="uid://jxnhk7dkpfmp"]
 
 [ext_resource type="Script" uid="uid://b5ecua1qxlsek" path="res://lesson_reference/Player_emplate.gd" id="1_dpokc"]
 [ext_resource type="PackedScene" uid="uid://duxmuxyoprw1n" path="res://Players/knight.tscn" id="4_jgkwk"]
@@ -77,7 +77,7 @@ fov = 50.0
 unique_name_in_owner = true
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.00873208, 0.053124547, -0.020297587)
 
-[node name="Skeleton3D" parent="Knight/Rig_Medium" parent_id_path=PackedInt32Array(1617534243, 1428073489) index="0" unique_id=791126746]
+[node name="Skeleton3D" parent="Knight/Rig_Medium" parent_id_path=PackedInt32Array(1617534243, 142741678) index="0" unique_id=345881785]
 bones/1/position = Vector3(0, 0.39206383, 0)
 bones/1/rotation = Quaternion(0, -1.19209275e-07, 0, 1)
 bones/1/scale = Vector3(1, 1, 1)

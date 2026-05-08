@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0df4qrb3hgqv"
-path="res://.godot/imported/Fondo_Start.png-d133c3ceb188ecac01f01ea4d275e6b6.ctex"
+uid="uid://cwfqyu6feif04"
+path="res://.godot/imported/KnightSelect.png-fff003c05e244ce900758b1bc8abf09e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/GUI/Fondo_Start.png"
-dest_files=["res://.godot/imported/Fondo_Start.png-d133c3ceb188ecac01f01ea4d275e6b6.ctex"]
+source_file="res://escenas/GUI/Select/KnightSelect.png"
+dest_files=["res://.godot/imported/KnightSelect.png-fff003c05e244ce900758b1bc8abf09e.ctex"]
 
 [params]
 

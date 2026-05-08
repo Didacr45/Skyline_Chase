@@ -169,7 +169,7 @@ fov = 37.849285
 unique_name_in_owner = true
 script = ExtResource("2_whcap")
 
-[node name="Skeleton3D" parent="Rogue_Hooded/Rig_Medium" parent_id_path=PackedInt32Array(419157118, 1064552532) index="0" unique_id=777762669]
+[node name="Skeleton3D" parent="Rogue_Hooded/Rig_Medium" parent_id_path=PackedInt32Array(419157118, 29271332) index="0" unique_id=173758502]
 bones/1/position = Vector3(0, 0.39206383, 0)
 bones/2/position = Vector3(0.17094505, 0.11358726, 1.3923275e-08)
 bones/2/rotation = Quaternion(0.9958909, -1.2840718e-07, -1.6118022e-08, 0.09056074)
