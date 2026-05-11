@@ -87,7 +87,7 @@ Para realizar este juego hemos utilizado varias herramientas de desarollo 3D y t
 Para poder jugar o editar el proyecto, sigue estos pasos:
 
 1. Clona este repositorio:
-   `git clone https://github.com/Ruben1305/JuegoRecerca.git`
+   `https://github.com/Didacr45/Skyline_Chase.git`
 2. Descarga e instala **Godot Engine 4.6**.
 3. Abre el motor y selecciona "*Importar*".
 4. Busca el archivo `project.godot` en la carpeta raíz del proyecto.
