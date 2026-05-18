@@ -32,7 +32,7 @@ func recibir_daño(cantidad: int) -> void:
 	actualizar_vidas()
 
 	if vidas_actuales <= 0:
-		game_over()
+		await game_over()
 
 func caer_del_mapa() -> void:
 	# Comprobamos que el índice es válido antes de animar
@@ -47,7 +47,7 @@ func caer_del_mapa() -> void:
 	actualizar_vidas()
 
 	if vidas_actuales == 0:
-		game_over()
+		await game_over()
 
 func actualizar_vidas() -> void:
 	for i in range(vidas.size()):
@@ -60,6 +60,18 @@ func actualizar_vidas() -> void:
 			animar_latido(vidas[i], 0.5)
 
 func game_over() -> void:
+	print("=== GAME OVER LLAMADO ===")
+	var player = get_tree().get_first_node_in_group("player")
+	print("Jugador encontrado: ", player)
+	
+	if player and player.has_method("ejecutar_animacion_muerte"):
+		print("Ejecutando animación de muerte...")
+		await player.ejecutar_animacion_muerte()
+		print("Animación terminada")
+	else:
+		print("No se encontró el jugador o no tiene el método")
+	
+	print("Yendo a Game Over...")
 	ScenesManager.ir_a_game_over()
 
 func animar_latido(corazon: TextureRect, duracion: float = 0.5) -> void:
