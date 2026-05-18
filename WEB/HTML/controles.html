@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -11,11 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
+    <script src="../JS/cursor.js" defer></script>
     <link rel="stylesheet" href="../CSS/stylesConfig.css" />
   </head>
 
   <body>
+    <div class="cursor" id="cursor">
+      <div class="cursor-star" id="cursorStar">⭐</div>
+    </div>
     <nav class="navbar">
       <div class="nav-logo">SKYLINE<span>CHASE</span></div>
       <div class="nav-right">
@@ -219,16 +222,5 @@
         if (e.key === "Escape") cerrarModal();
       });
     </script>
-    
-    <div class="cursor-personalizado"></div>
-    <script>
-    const cursor = document.querySelector('.cursor-personalizado');
-
-    document.addEventListener('mousemove', (e) => {
-      // clientX y clientY detectan la posición del ratón en la pantalla
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-  </script>
   </body>
 </html>
