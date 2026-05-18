@@ -25,9 +25,9 @@ func pintar_estrellas(lvl_node: Node, cantidad: int, n1: String, n2: String, n3:
 	for i in range(3):
 		var estrella = lvl_node.get_node(nombres[i])
 		if i < cantidad:
-			estrella.modulate = Color(1, 0.85, 0)    # dorada
+			estrella.modulate = Color(1, 0.85, 0)    
 		else:
-			estrella.modulate = Color(0.25, 0.25, 0.25)  # gris
+			estrella.modulate = Color(0.25, 0.25, 0.25)  
 
 func _on_lvl_1_pressed() -> void:
 	ScenesManager.ir_a_nivel(1, "res://escenas/LVLS/gamelv1.tscn")
