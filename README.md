@@ -1,4 +1,4 @@
-# 🗺️ Skyline Chest
+# 🗺️ Skyline Chase
 
 ***"Un plataformas 3D desarrollado en Godot 4 que integra gestión dinámica de niveles, selección de personajes y mecánicas interactivas"***
 
