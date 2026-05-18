@@ -18,3 +18,17 @@ document.addEventListener("mousemove", (e) => {
     trail.remove();
   }, 600);
 });
+
+// ─────────────────────────────────────────────
+// HOVER LINKS
+// ─────────────────────────────────────────────
+document
+  .querySelectorAll("a, button, .feat-card, .dl-btn, .ctrl-row, .share-btn")
+  .forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      coin.classList.add("hovering");
+    });
+    el.addEventListener("mouseleave", () => {
+      coin.classList.remove("hovering");
+    });
+  });

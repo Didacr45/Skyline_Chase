@@ -215,19 +215,64 @@ footer {
 }
 
 /* Ocultamos el cursor original en toda la página */
-*, body {
+*,
+body {
   cursor: none !important;
 }
 
-/* Diseñamos el nuevo cursor */
-.cursor-personalizado {
-  width: 40px; /* Ajusta el tamaño a tu gusto */
-  height: 40px;
-  background-image: url('../escenas/Estrella/estrella.png');  background-size: contain;
-  background-repeat: no-repeat;
+/* ── CURSOR ── */
+* {
+  cursor: none !important;
+}
+
+.cursor {
   position: fixed;
-  pointer-events: none; /* Crucial para que puedas hacer click a través del cursor */
-  transform: translate(-50%, -50%); /* Centra la imagen en la punta del mouse */
-  z-index: 9999; /* Asegura que esté por encima de todo */
-  
+  pointer-events: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+.cursor-coin {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--gold2);
+  box-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.12s,
+    height 0.12s,
+    box-shadow 0.12s;
+}
+.cursor-coin.hovering {
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 0 20px rgba(245, 197, 24, 0.7);
+}
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: trail-fade 0.5s ease forwards;
+}
+@keyframes trail-fade {
+  0% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
 }
