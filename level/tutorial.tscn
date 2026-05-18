@@ -130,6 +130,12 @@ viewport_path = NodePath("Sprite3D/SubViewport")
 [sub_resource type="ViewportTexture" id="ViewportTexture_kkkoq"]
 viewport_path = NodePath("Sprite3D2/SubViewport")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_a5x5j"]
+viewport_path = NodePath("Sprite3D3/SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vkhw6"]
+viewport_path = NodePath("Sprite3D4/SubViewport")
+
 [node name="Level" type="Node3D" unique_id=1923898584]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=817897838]
@@ -1006,7 +1012,7 @@ collision_mask = 12
 script = ExtResource("22_e43xh")
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1003298962]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.98723, 13.812265, -69.344444)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.98723, 13.656475, -69.344444)
 script = ExtResource("24_5nkfk")
 personaje_por_defecto = ExtResource("25_r8og8")
 
@@ -1042,6 +1048,29 @@ offset_bottom = 23.0
 text = "Cuando recojes la \"Estrellica\" se te regeneraran tus corazones 
 siempre y cuando te falte algun corazon de los tres que dispones 
 de base"
+
+[node name="Sprite3D3" type="Sprite3D" parent="." unique_id=238072595]
+transform = Transform3D(-0.562574, 0, -0.82674694, 0, 1, 0, 0.82674694, 0, -0.562574, -19.646221, 15.778411, -49.393383)
+texture = SubResource("ViewportTexture_a5x5j")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D3" unique_id=1184575534]
+
+[node name="Label" type="Label" parent="Sprite3D3/SubViewport" unique_id=2112552326]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Para llegar a la siguiente plataforma tendras que realizar un
+un doble salto presionando la tecla \"espacio\" dos veces"
+
+[node name="Sprite3D4" type="Sprite3D" parent="." unique_id=1095794393]
+transform = Transform3D(-0.5121778, 0, -0.8588795, 0, 1, 0, 0.8588795, 0, -0.5121778, -18.751728, 16.925306, -8.201566)
+texture = SubResource("ViewportTexture_vkhw6")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D4" unique_id=1669644631]
+
+[node name="Label" type="Label" parent="Sprite3D4/SubViewport" unique_id=1090330335]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Cuidado un enemigo matalo con el \"Click derecho\""
 
 [connection signal="body_entered" from="Estrellica3" to="KillPlane" method="_on_estrellica_body_entered"]
 [connection signal="body_shape_entered" from="Estrellica3" to="KillPlane" method="_on_estrellica_body_shape_entered"]
