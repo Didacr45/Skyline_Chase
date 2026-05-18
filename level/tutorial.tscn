@@ -136,6 +136,9 @@ viewport_path = NodePath("Sprite3D3/SubViewport")
 [sub_resource type="ViewportTexture" id="ViewportTexture_vkhw6"]
 viewport_path = NodePath("Sprite3D4/SubViewport")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_yxfp6"]
+viewport_path = NodePath("Sprite3D5/SubViewport")
+
 [node name="Level" type="Node3D" unique_id=1923898584]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=817897838]
@@ -1071,6 +1074,19 @@ texture = SubResource("ViewportTexture_vkhw6")
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Cuidado un enemigo matalo con el \"Click derecho\""
+
+[node name="Sprite3D5" type="Sprite3D" parent="." unique_id=1194790581]
+transform = Transform3D(-0.5121778, 0, -0.8588795, 0, 1, 0, 0.8588795, 0, -0.5121778, -18.751728, 18.71122, 27.556095)
+texture = SubResource("ViewportTexture_yxfp6")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D5" unique_id=364578354]
+
+[node name="Label" type="Label" parent="Sprite3D5/SubViewport" unique_id=2087222598]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Muy bien, has consegido llegar, ahora para pasarte esta parte 
+necesitaras utilizar el \"wallslide\" saltando de lado a lado, cuando 
+tocas una pared el personaje recarga su doble salto "
 
 [connection signal="body_entered" from="Estrellica3" to="KillPlane" method="_on_estrellica_body_entered"]
 [connection signal="body_shape_entered" from="Estrellica3" to="KillPlane" method="_on_estrellica_body_shape_entered"]
