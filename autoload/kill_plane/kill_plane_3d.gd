@@ -7,6 +7,3 @@ func _on_body_entered(body: PhysicsBody3D) -> void:
 	if body.is_in_group("player"):
 		await get_tree().process_frame
 		Events.kill_plane_touched.emit()
-
-	
-	

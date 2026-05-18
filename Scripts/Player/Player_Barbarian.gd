@@ -51,26 +51,23 @@ const ANIM_SPAWN  = "Animation_Items/Spawn_Ground"
 const ANIM_ATTACK = "Animation_Items/Throw"
 
 func _ready() -> void:
-	# 1. Registro en el grupo para que el KillPlane te detecte
+	# Añadimos el grupo Player al jugador para que agarre sus propiedades
 	add_to_group("player")
 	
-	# 2. Buscar el punto de inicio en el nivel (Marker3D en grupo "puntos_spawn")
-	var puntos = get_tree().get_nodes_in_group("puntos_spawn")
-	if puntos.size() > 0:
-		_start_position = puntos[0].global_position
-	else:
-		_start_position = global_position
-
-	# 3. Posicionar al personaje y animar
+	# Esperamos para darle tiempo a godot a que procese
+	await get_tree().process_frame
+	
+	# Guardamos esta posición exacta como nuestro punto de retorno seguro.
+	_start_position = global_position
 	global_position = _start_position
 	_do_spawn_animation()
 
-	# 4. Configurar el evento de Respawn (KillPlane)
+	# Configurar KillPlane
 	if Events.kill_plane_touched.is_connected(_on_kill_plane_triggered):
 		Events.kill_plane_touched.disconnect(_on_kill_plane_triggered)
 	Events.kill_plane_touched.connect(_on_kill_plane_triggered)
 
-	# 5. Otros eventos y configuración inicial
+	# Ataque y Bandera
 	attack_area.monitoring = false
 	if not Events.flag_reached.is_connected(_on_flag_reached):
 		Events.flag_reached.connect(_on_flag_reached)
