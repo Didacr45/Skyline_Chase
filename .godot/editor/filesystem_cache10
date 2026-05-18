@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778489109
+::res://::1779087041
 Assets_UI.png::CompressedTexture2D::6837513927689137995::1777375662::1777457368::1::::<><><>0<>0<>b86bbbd3995213f3ddee4aa4bfce4636<>res://.godot/imported/Assets_UI.png-3e4a40fab89e141f3adb73fbe56c03e1.ctex::
 CharacterData.gd::GDScript::5530486157026032988::1778061581::0::1::::CharacterData<>Resource<><>0<>0<><>::
 CharacterSelector.gd::GDScript::1313798664635200380::1778064356::0::1::::<>Node3D<><>0<>0<><>::
@@ -226,7 +226,7 @@ estrellasinfondo.png::CompressedTexture2D::1638698612537842289::1778489041::1778
 ::res://escenas/Estrella/::1778489093
 estrella.png::CompressedTexture2D::9131218650497450368::1777375662::1777457367::1::::<><><>0<>0<>a645d9bf1099bf6db2c8732b4725fee6<>res://.godot/imported/estrella.png-63826eb8bc6250a6c5db1b28b768e694.ctex::
 Estrella.tscn::PackedScene::4175749645712865532::1777375662::0::1::::<><><>0<>0<><>::uid://bjf6euw2h3wi2::::res://Scripts/Star/estrellica.gd<>uid://cxribqsh0k83c::::res://level/estrella/estrellica.obj
-::res://escenas/GUI/::1778489102
+::res://escenas/GUI/::1778489117
 barra-de-vida.png::CompressedTexture2D::6726241166613779585::1777375662::1777457367::1::::<><><>0<>0<>cd1524b757b3c49a7d74364c2b3255fe<>res://.godot/imported/barra-de-vida.png-1335d05e9dc13106ed8152c0ac8e6784.ctex::
 button.tscn::PackedScene::4054495137063062271::1777375662::0::1::::<><><>0<>0<><>::uid://cpwjjvmknhq74::::res://Scripts/GUI/button.gd
 buttonLvl1.gd::GDScript::8262070261137737162::1777375662::0::1::::<>Button<><>0<>0<><>::
@@ -240,7 +240,7 @@ game_over.gd::GDScript::548084793847543157::1777375662::0::1::::<>Control<><>0<>
 Inicio.tscn::PackedScene::5736298150964485839::1778143997::0::1::::<><><>0<>0<><>::uid://bx1a7btr3gn48::::res://escenas/GUI/button.tscn<>uid://rfhcjmiaxtx4::::res://Fuentes/RetroMario-Regular.otf<>uid://xxcfygc1blod::::res://Scripts/GUI/inicio.gd<>uid://cnlr3tgs1mbfm::::res://escenas/GUI/Fondo Inicio.png<>uid://c60mk86dx6721::::res://Fuentes/Pixel Lofi.otf<>uid://bmxhdp1ynbopk::::res://LightGreen_Panel.png
 pause_menu.gd::GDScript::8221903420182539010::1777375662::0::1::::<>CanvasLayer<><>0<>0<><>::
 pause_menu.tscn::PackedScene::3319856555321984937::1777375662::0::1::::<><><>0<>0<><>::uid://dpe0svulpt8ig::::res://escenas/GUI/pause_menu.gd<>uid://c60mk86dx6721::::res://Fuentes/Pixel Lofi.otf<>uid://bmxhdp1ynbopk::::res://LightGreen_Panel.png<>uid://rfhcjmiaxtx4::::res://Fuentes/RetroMario-Regular.otf
-SelectorNivel.tscn::PackedScene::2417928822312818220::1778489102::0::1::::<><><>0<>0<><>::uid://dhagyiyo55qe7::::res://Scripts/GUI/selector_nivel.gd<>uid://ccnqadffupj6r::::res://escenas/GUI/Fondo Selector.png<>uid://bmxhdp1ynbopk::::res://LightGreen_Panel.png<>uid://c60mk86dx6721::::res://Fuentes/Pixel Lofi.otf<>uid://d3dh3pw3dfkpc::::res://escenas/Estrella/estrella.png<>uid://rfhcjmiaxtx4::::res://Fuentes/RetroMario-Regular.otf
+SelectorNivel.tscn::PackedScene::2417928822312818220::1778489117::0::1::::<><><>0<>0<><>::uid://dhagyiyo55qe7::::res://Scripts/GUI/selector_nivel.gd<>uid://ccnqadffupj6r::::res://escenas/GUI/Fondo Selector.png<>uid://bmxhdp1ynbopk::::res://LightGreen_Panel.png<>uid://c60mk86dx6721::::res://Fuentes/Pixel Lofi.otf<>uid://xl2ekrcbs474::::res://escenas/estrellasinfondo.png<>uid://d3dh3pw3dfkpc::::res://escenas/Estrella/estrella.png<>uid://rfhcjmiaxtx4::::res://Fuentes/RetroMario-Regular.otf
 SelectorPersonajes.tscn::PackedScene::5204629000869897730::1778488029::0::1::::<><><>0<>0<><>::uid://bsjtvf1lsnxv5::::res://escenas/GUI/Select/SelectorFondo.png<>uid://vhgg1en480ig::::res://Selector2D.gd<>uid://cwfqyu6feif04::::res://escenas/GUI/Select/KnightSelect.png<>uid://g6yyqpqngofj::::res://escenas/GUI/Select/BarbaroSelect.png<>uid://ck2akfvt444ps::::res://CharacterData.gd<>uid://l1lgxfctcsl5::::res://Players/DatosCaballero.tres<>uid://cecq1qu42k4hp::::res://escenas/GUI/Select/MageSelect.png<>uid://ruhionsvdpy3::::res://escenas/GUI/Select/RangerSelect.png<>uid://cpm6c4pffs7oc::::res://escenas/GUI/Select/RogueSelect.png<>uid://dpjvt33pybvcg::::res://Players/Barbaro.tres<>uid://dlsrsuuasc7nc::::res://Players/Mago.tres<>uid://c06wutg20bjsy::::res://Players/Ranger.tres<>uid://dmp8v57qfn1d4::::res://Players/Bandido.tres<>uid://bmxhdp1ynbopk::::res://LightGreen_Panel.png<>uid://rfhcjmiaxtx4::::res://Fuentes/RetroMario-Regular.otf
 victoria.tscn::PackedScene::7559595118118573334::1777375662::0::1::::<><><>0<>0<><>::uid://pi0wkdhhljj1::::res://Scripts/GUI/victoria.gd<>uid://csc40w1chhqcd::::res://escenas/GUI/Fondo_Victoria.png<>uid://rfhcjmiaxtx4::::res://Fuentes/RetroMario-Regular.otf<>uid://c60mk86dx6721::::res://Fuentes/Pixel Lofi.otf<>uid://bmxhdp1ynbopk::::res://LightGreen_Panel.png
 ::res://escenas/GUI/BarsPackage/::1777375662
@@ -732,5 +732,5 @@ map.png::CompressedTexture2D::4491059129752421585::1778143879::1778234992::1::::
 player.png::CompressedTexture2D::905790365541924256::1778143879::1778234992::1::::<><><>0<>0<>7676d135de33ed7ee58908932d156c86<>res://.godot/imported/player.png-4dd1cf15089068fae09c36c54d4956bd.ctex::
 star.png::CompressedTexture2D::4631588371653737888::1778143879::1778234992::1::::<><><>0<>0<>0768034081aa89720dae5e3bdd9b32a8<>res://.godot/imported/star.png-a7b826ef7dfcc1659a43d223241af379.ctex::
 warrior.png::CompressedTexture2D::5532577999271874136::1778143879::1778234992::1::::<><><>0<>0<>cf575b6a198e03e95b6caf23f4ebc711<>res://.godot/imported/warrior.png-563413f3806b13c8068536a657d2cfd9.ctex::
-::res://WEB/JS/::1778143879
+::res://WEB/JS/::1779086046
 ::res://WEB/MP4/::1777375662
