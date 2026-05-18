@@ -172,7 +172,7 @@
 
         <div
           class="control-card mecanica-clickable"
-          onclick="abrirModal('videos/reinicio.mp4')"
+          onclick="abrirModal('../MP4/RecogerVida.mp4')"
         >
           <div class="control-key">🗘❤️</div>
           <h3>Reinicio de vidas</h3>
@@ -219,5 +219,16 @@
         if (e.key === "Escape") cerrarModal();
       });
     </script>
+    
+    <div class="cursor-personalizado"></div>
+    <script>
+    const cursor = document.querySelector('.cursor-personalizado');
+
+    document.addEventListener('mousemove', (e) => {
+      // clientX y clientY detectan la posición del ratón en la pantalla
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+  </script>
   </body>
 </html>

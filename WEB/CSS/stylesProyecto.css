@@ -213,3 +213,21 @@ footer {
   color: var(--rojo-vivo);
   font-weight: 600;
 }
+
+/* Ocultamos el cursor original en toda la página */
+*, body {
+  cursor: none !important;
+}
+
+/* Diseñamos el nuevo cursor */
+.cursor-personalizado {
+  width: 40px; /* Ajusta el tamaño a tu gusto */
+  height: 40px;
+  background-image: url('../escenas/Estrella/estrella.png');  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  pointer-events: none; /* Crucial para que puedas hacer click a través del cursor */
+  transform: translate(-50%, -50%); /* Centra la imagen en la punta del mouse */
+  z-index: 9999; /* Asegura que esté por encima de todo */
+  
+}

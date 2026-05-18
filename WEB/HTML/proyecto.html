@@ -93,5 +93,17 @@
         <span class="footer-name">Didac Rubio y Rubén Alcantarilla</span>
       </p>
     </footer>
+    <div class="cursor-personalizado"></div>
+    
+    <script>
+    const cursor = document.querySelector('.cursor-personalizado');
+
+    document.addEventListener('mousemove', (e) => {
+      // clientX y clientY detectan la posición del ratón en la pantalla
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+  </script>
+
   </body>
 </html>
