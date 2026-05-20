@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dmp8v57qfn1d4"]
-
-[ext_resource type="PackedScene" uid="uid://cbke2c1tjb0xj" path="res://Players/Bandido.tscn" id="1_bu0cd"]
-[ext_resource type="Script" uid="uid://ck2akfvt444ps" path="res://CharacterData.gd" id="1_ipyjd"]
-
-[resource]
-script = ExtResource("1_ipyjd")
-model_scene = ExtResource("1_bu0cd")
-metadata/_custom_type_script = "uid://ck2akfvt444ps"
