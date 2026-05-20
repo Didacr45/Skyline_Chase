@@ -19,6 +19,7 @@
 [ext_resource type="ArrayMesh" uid="uid://dtsgpetf7fk53" path="res://level/Texturas, Paisaje y Objetos/tiny_treats_pretty_park_set/Assets/obj/fountain_leaves.obj" id="18_5keyk"]
 [ext_resource type="PackedScene" uid="uid://ddn42334oe48i" path="res://Players/Characters/SkeletonWarriorCharacter.tscn" id="21_nkpgn"]
 [ext_resource type="Script" uid="uid://x4acyl8lqsrg" path="res://Players/Characters/skeleton_warrior.gd" id="22_e43xh"]
+[ext_resource type="FontFile" uid="uid://c60mk86dx6721" path="res://Fuentes/Pixel Lofi.otf" id="22_kkkoq"]
 [ext_resource type="Script" uid="uid://bdx0xc0wvgoux" path="res://level/PlayerSpawner.gd" id="24_5nkfk"]
 [ext_resource type="Resource" uid="uid://l1lgxfctcsl5" path="res://Players/DatosCaballero.tres" id="25_r8og8"]
 
@@ -127,15 +128,42 @@ size = Vector3(1.5488281, 1, 1)
 [sub_resource type="ViewportTexture" id="ViewportTexture_0m5k3"]
 viewport_path = NodePath("Sprite3D/SubViewport")
 
+[sub_resource type="LabelSettings" id="LabelSettings_a5x5j"]
+line_spacing = 5.0
+font = ExtResource("22_kkkoq")
+font_size = 20
+font_color = Color(0, 1, 0, 1)
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_kkkoq"]
 viewport_path = NodePath("Sprite3D2/SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vkhw6"]
+line_spacing = 10.0
+font = ExtResource("22_kkkoq")
+font_size = 20
+font_color = Color(0, 1, 0, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_a5x5j"]
 viewport_path = NodePath("Sprite3D3/SubViewport")
 
+[sub_resource type="LabelSettings" id="LabelSettings_kkkoq"]
+line_spacing = 10.0
+font = ExtResource("22_kkkoq")
+font_size = 20
+font_color = Color(0, 1, 0, 1)
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_vkhw6"]
 viewport_path = NodePath("Sprite3D4/SubViewport")
 
+<<<<<<< HEAD
+[sub_resource type="LabelSettings" id="LabelSettings_yxfp6"]
+line_spacing = 5.0
+font = ExtResource("22_kkkoq")
+font_size = 20
+font_color = Color(0, 1, 0, 1)
+
+=======
+>>>>>>> 627a66beb698a88681602556952b69e50f7987f8
 [sub_resource type="ViewportTexture" id="ViewportTexture_yxfp6"]
 viewport_path = NodePath("Sprite3D5/SubViewport")
 
@@ -1025,6 +1053,7 @@ modulate = Color(0.33615652, 0.45410293, 0.24529162, 1)
 texture = SubResource("ViewportTexture_0m5k3")
 
 [node name="SubViewport" type="SubViewport" parent="Sprite3D" unique_id=605428360]
+size = Vector2i(600, 300)
 
 [node name="Label" type="Label" parent="Sprite3D/SubViewport" unique_id=1256001096]
 offset_right = 40.0
@@ -1032,48 +1061,76 @@ offset_bottom = 23.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Bienvenido a Skyline Chase juego diseñado por Didac  y Ruben.
 
-En este juego encontraras distintas mecanicas y distintos enemigos 
-que se iran viendo en este nivel
+En este juego encontraras distintas mecanicas y distintos 
+enemigos que se iran viendo en este nivel
 
 	              w- Primero de todo un salto basico a una plataforma. 
 
                               - Presiona: \"Espacio\" para saltar "
+label_settings = SubResource("LabelSettings_a5x5j")
 
 [node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1118733250]
 transform = Transform3D(-0.6881646, 0, -0.7255546, 0, 1, 0, 0.7255546, 0, -0.6881646, 3.274376, 16.20444, -73.48175)
+modulate = Color(0.3372549, 0.45490196, 0.24705882, 1)
 texture = SubResource("ViewportTexture_kkkoq")
 
 [node name="SubViewport" type="SubViewport" parent="Sprite3D2" unique_id=1028886417]
+size = Vector2i(512, 200)
 
 [node name="Label" type="Label" parent="Sprite3D2/SubViewport" unique_id=217354320]
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Cuando recojes la \"Estrellica\" se te regeneraran tus corazones 
+text = "Cuando recojes la \"Estrellica\" ⭐ se te regeneraran tus corazones 
 siempre y cuando te falte algun corazon de los tres que dispones 
 de base"
+label_settings = SubResource("LabelSettings_vkhw6")
 
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=238072595]
-transform = Transform3D(-0.562574, 0, -0.82674694, 0, 1, 0, 0.82674694, 0, -0.562574, -19.646221, 15.778411, -49.393383)
+transform = Transform3D(-0.562574, 0, -0.82674694, 0, 1, 0, 0.82674694, 0, -0.562574, -21.83565, 15.178988, -49.931072)
+modulate = Color(0.3372549, 0.45490196, 0.24705882, 1)
 texture = SubResource("ViewportTexture_a5x5j")
 
 [node name="SubViewport" type="SubViewport" parent="Sprite3D3" unique_id=1184575534]
+size = Vector2i(512, 200)
 
 [node name="Label" type="Label" parent="Sprite3D3/SubViewport" unique_id=2112552326]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Para llegar a la siguiente plataforma tendras que realizar un
 un doble salto presionando la tecla \"espacio\" dos veces"
+label_settings = SubResource("LabelSettings_kkkoq")
 
 [node name="Sprite3D4" type="Sprite3D" parent="." unique_id=1095794393]
-transform = Transform3D(-0.5121778, 0, -0.8588795, 0, 1, 0, 0.8588795, 0, -0.5121778, -18.751728, 16.925306, -8.201566)
+transform = Transform3D(-0.5121778, 0, -0.8588795, 0, 1, 0, 0.8588795, 0, -0.5121778, -17.486647, 16.291468, -5.6131196)
+modulate = Color(0.3372549, 0.45490196, 0.24705882, 1)
 texture = SubResource("ViewportTexture_vkhw6")
 
 [node name="SubViewport" type="SubViewport" parent="Sprite3D4" unique_id=1669644631]
+size = Vector2i(512, 100)
 
 [node name="Label" type="Label" parent="Sprite3D4/SubViewport" unique_id=1090330335]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Cuidado un enemigo matalo con el \"Click derecho\""
+label_settings = SubResource("LabelSettings_yxfp6")
+
+[node name="Sprite3D5" type="Sprite3D" parent="." unique_id=471125532]
+transform = Transform3D(0.8522205, 0, -0.5231829, 0, 1, 0, 0.5231829, 0, 0.8522205, -14.766065, 16.925306, 12.982693)
+modulate = Color(0.3372549, 0.45490196, 0.24705882, 1)
+texture = SubResource("ViewportTexture_yxfp6")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D5" unique_id=1181897712]
+size = Vector2i(500, 200)
+
+[node name="Label" type="Label" parent="Sprite3D5/SubViewport" unique_id=1279642156]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Pegate a las paredes para deslizarte (WALLSLIDE) y 
+despegate con el boton \"SALTAR\"
+
+\"¡¡¡IMPORTANTE ESTO TE REINICIA LOS SALTOS!!!\"
+"
+label_settings = SubResource("LabelSettings_yxfp6")
 
 [node name="Sprite3D5" type="Sprite3D" parent="." unique_id=1194790581]
 transform = Transform3D(-0.5121778, 0, -0.8588795, 0, 1, 0, 0.8588795, 0, -0.5121778, -18.751728, 18.71122, 27.556095)
