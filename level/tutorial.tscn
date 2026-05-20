@@ -1068,7 +1068,7 @@ que se iran viendo en este nivel
 label_settings = SubResource("LabelSettings_yxfp6")
 
 [node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1118733250]
-transform = Transform3D(-0.6881646, 0, -0.7255546, 0, 1, 0, 0.7255546, 0, -0.6881646, 3.274376, 16.20444, -73.48175)
+transform = Transform3D(-0.6881646, 0, -0.7255546, 0, 1, 0, 0.7255546, 0, -0.6881646, 3.274376, 15.829138, -73.48175)
 modulate = Color(0.3372549, 0.45490196, 0.24705882, 1)
 texture = SubResource("ViewportTexture_kkkoq")
 
@@ -1084,7 +1084,7 @@ de base"
 label_settings = SubResource("LabelSettings_a2enb")
 
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=238072595]
-transform = Transform3D(-0.562574, 0, -0.82674694, 0, 1, 0, 0.82674694, 0, -0.562574, -19.646221, 15.778411, -49.393383)
+transform = Transform3D(-0.562574, 0, -0.82674694, 0, 1, 0, 0.82674694, 0, -0.562574, -23.187576, 15.481547, -51.821106)
 modulate = Color(0.3372549, 0.45490196, 0.24705882, 1)
 texture = SubResource("ViewportTexture_a5x5j")
 
@@ -1099,7 +1099,7 @@ un doble salto presionando la tecla \"espacio\" dos veces"
 label_settings = SubResource("LabelSettings_vkhw6")
 
 [node name="Sprite3D4" type="Sprite3D" parent="." unique_id=1095794393]
-transform = Transform3D(-0.5121778, 0, -0.8588795, 0, 1, 0, 0.8588795, 0, -0.5121778, -18.751728, 16.925306, -8.201566)
+transform = Transform3D(-0.5121778, 0, -0.8588795, 0, 1, 0, 0.8588795, 0, -0.5121778, -18.751728, 15.656422, -8.201566)
 modulate = Color(0.3372549, 0.45490196, 0.24705882, 1)
 texture = SubResource("ViewportTexture_vkhw6")
 
@@ -1113,7 +1113,7 @@ text = "Cuidado un enemigo matalo con el \"Click derecho\""
 label_settings = SubResource("LabelSettings_kkkoq")
 
 [node name="Sprite3D5" type="Sprite3D" parent="." unique_id=1194790581]
-transform = Transform3D(-0.5121778, 0, -0.8588795, 0, 1, 0, 0.8588795, 0, -0.5121778, -18.751728, 18.71122, 27.556095)
+transform = Transform3D(-0.5121778, 0, -0.8588795, 0, 1, 0, 0.8588795, 0, -0.5121778, -18.751728, 16.929567, 27.556095)
 modulate = Color(0.3372549, 0.45490196, 0.24705882, 1)
 texture = SubResource("ViewportTexture_yxfp6")
 
