@@ -155,12 +155,15 @@ font_color = Color(0, 1, 0, 1)
 [sub_resource type="ViewportTexture" id="ViewportTexture_vkhw6"]
 viewport_path = NodePath("Sprite3D4/SubViewport")
 
+<<<<<<< HEAD
 [sub_resource type="LabelSettings" id="LabelSettings_yxfp6"]
 line_spacing = 5.0
 font = ExtResource("22_kkkoq")
 font_size = 20
 font_color = Color(0, 1, 0, 1)
 
+=======
+>>>>>>> 627a66beb698a88681602556952b69e50f7987f8
 [sub_resource type="ViewportTexture" id="ViewportTexture_yxfp6"]
 viewport_path = NodePath("Sprite3D5/SubViewport")
 
@@ -1128,6 +1131,19 @@ despegate con el boton \"SALTAR\"
 \"¡¡¡IMPORTANTE ESTO TE REINICIA LOS SALTOS!!!\"
 "
 label_settings = SubResource("LabelSettings_yxfp6")
+
+[node name="Sprite3D5" type="Sprite3D" parent="." unique_id=1194790581]
+transform = Transform3D(-0.5121778, 0, -0.8588795, 0, 1, 0, 0.8588795, 0, -0.5121778, -18.751728, 18.71122, 27.556095)
+texture = SubResource("ViewportTexture_yxfp6")
+
+[node name="SubViewport" type="SubViewport" parent="Sprite3D5" unique_id=364578354]
+
+[node name="Label" type="Label" parent="Sprite3D5/SubViewport" unique_id=2087222598]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Muy bien, has consegido llegar, ahora para pasarte esta parte 
+necesitaras utilizar el \"wallslide\" saltando de lado a lado, cuando 
+tocas una pared el personaje recarga su doble salto "
 
 [connection signal="body_entered" from="Estrellica3" to="KillPlane" method="_on_estrellica_body_entered"]
 [connection signal="body_shape_entered" from="Estrellica3" to="KillPlane" method="_on_estrellica_body_shape_entered"]

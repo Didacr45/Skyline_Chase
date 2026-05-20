@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -11,10 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
+    <script src="JS/cursor.js" defer></script>
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
   <body>
+    <div class="cursor" id="cursor">
+      <div class="cursor-star" id="cursorStar">⭐</div>
+    </div>
     <nav class="navbar">
       <div class="nav-logo">SKYLINE<span>CHASE</span></div>
       <div class="nav-right">
@@ -70,6 +73,54 @@
         </div>
       </div>
     </section>
+    <section class="compartir-section">
+      <div class="section-header centered">
+        <div class="section-tag">Comparte</div>
+        <h2>¿Te ha gustado?<br />Reta a tus amigos</h2>
+      </div>
+      <div class="compartir-grid">
+        <a
+          href="https://twitter.com/intent/tweet?text=Estoy%20jugando%20a%20CollectTheCoins%2C%20un%20juego%202D%20gratuito%20donde%20tienes%20que%20recoger%20monedas%20sin%20morir%20%F0%9F%AA%99%20%C2%BFPuedes%20superarme%3F&url=https://robindowski.itch.io/collectthecoins"
+          target="_blank"
+          class="compartir-btn compartirl-x"
+        >
+          <span class="compartir-icon">𝕏</span>
+          <span class="compartir-info">
+            <span class="compartir-label">Compartir en</span>
+            <span class="compartir-name">Twitter / X</span>
+          </span>
+        </a>
+        <a
+          href="https://www.reddit.com/submit?url=https://robindowski.itch.io/collectthecoins&title=CollectTheCoins%20%E2%80%94%20Juego%202D%20gratuito"
+          target="_blank"
+          class="compartir-btn compartirl-reddit"
+        >
+          <span class="compartir-icon">👾</span>
+          <span class="compartir-info">
+            <span class="compartir-label">Compartir en</span>
+            <span class="compartir-name">Reddit</span>
+          </span>
+        </a>
+        <a
+          href="https://wa.me/?text=Echa%20un%20vistazo%20a%20CollectTheCoins%2C%20un%20juego%202D%20gratis%20%F0%9F%AA%99%20https://robindowski.itch.io/collectthecoins"
+          target="_blank"
+          class="compartir-btn compartirl-whatsapp"
+        >
+          <span class="compartir-icon">💬</span>
+          <span class="compartir-info">
+            <span class="compartir-label">Compartir en</span>
+            <span class="compartir-name">WhatsApp</span>
+          </span>
+        </a>
+        <button class="compartir-btn compartir-copy" onclick="copyLink()">
+          <span class="compartir-icon">🔗</span>
+          <span class="compartir-info">
+            <span class="compartir-label">Copiar enlace</span>
+            <span class="compartir-name" id="copyText">itch.io</span>
+          </span>
+        </button>
+      </div>
+    </section>
 
     <div class="divider"></div>
 
@@ -79,16 +130,5 @@
         <span class="footer-name">Didac Rubio y Rubén Alcantarilla</span>
       </p>
     </footer>
-    <div class="cursor-personalizado"></div>
-
-  <script>
-    const cursor = document.querySelector('.cursor-personalizado');
-
-    document.addEventListener('mousemove', (e) => {
-      // clientX y clientY detectan la posición del ratón en la pantalla
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-  </script>
   </body>
 </html>

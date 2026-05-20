@@ -48,7 +48,6 @@ var ledge_point := Vector3.ZERO
 
 const ANIM_SPAWN  = "Animation_Items/Spawn_Ground"
 const ANIM_ATTACK = "Animation_Items/Throw"
-const ANIM_MUERTE = "Animation_Items/Death_A"
 
 func _ready() -> void:
 	# Añadimos el grupo Player al jugador para que agarre sus propiedades
@@ -96,24 +95,6 @@ func _do_spawn_animation() -> void:
 	await _anim_player.animation_finished
 	_anim_tree.active = true
 	set_physics_process(true)
-	
-func ejecutar_animacion_muerte() -> void:
-	print("=== ANIMACIÓN MUERTE INICIADA ===")
-	set_physics_process(false)
-	set_process_unhandled_input(false)
-	set_process_input(false)
-	puede_moverse = false
-	velocity = Vector3.ZERO
-
-	if _anim_tree:
-		_anim_tree.active = false
-		print("AnimationTree desactivado")
-
-	if _anim_player:
-		print("Reproduciendo: ", ANIM_MUERTE)
-		_anim_player.play(ANIM_MUERTE)
-		await _anim_player.animation_finished
-		print("Animación terminada")
 
 
 func _do_attack() -> void:
