@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dpjvt33pybvcg"]
+
+[ext_resource type="PackedScene" uid="uid://d3jvaovv5ca4n" path="res://Players/barbaro.tscn" id="1_hmu68"]
+[ext_resource type="Script" uid="uid://ck2akfvt444ps" path="res://CharacterData.gd" id="1_sn2tl"]
+
+[resource]
+script = ExtResource("1_sn2tl")
+model_scene = ExtResource("1_hmu68")
+metadata/_custom_type_script = "uid://ck2akfvt444ps"

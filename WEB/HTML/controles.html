@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skyline Chase</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../JS/cursor.js" defer></script>
+    <link rel="stylesheet" href="../CSS/stylesConfig.css" />
+  </head>
+
+  <body>
+    <div class="cursor" id="cursor">
+      <div class="cursor-star" id="cursorStar">⭐</div>
+    </div>
+    <nav class="navbar">
+      <div class="nav-logo">SKYLINE<span>CHASE</span></div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="controles.html">Sobre el juego</a></li>
+          <li class="tiene-submenu">
+            <a href="proyecto.html">Proyecto ▼</a>
+            <ul class="submenu">
+              <li><a href="diario-desarollo.html">DevBlog</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a
+          href="https://github.com/Ruben1305/JuegoRecerca/blob/main/release.zip"
+          download="SkylineChest.zip"
+          class="btn-download"
+        >
+          Descargalo aquí
+        </a>
+      </div>
+    </nav>
+    <div class="divider"></div>
+
+    <section id="controles" class="section">
+      <p class="section-tag">Controles</p>
+      <h2 class="section-title">Lo básico</h2>
+      <p class="section-lead">
+        Skyline Chase es fácil de aprender. Muévete por las plataformas, esquiva
+        los enemigos o acaba con ellos y, si quieres, recoge las estrellas que
+        encuentres por el camino.
+      </p>
+
+      <div class="controls-grid">
+        <div class="control-card">
+          <div class="control-key">W A S D</div>
+          <h3>Movimiento</h3>
+          <p>Desplázate por las plataformas en todas las direcciones.</p>
+        </div>
+
+        <div class="control-card">
+          <div class="control-key">ESPACIO</div>
+          <h3>Saltar</h3>
+          <p>Salta para subir plataformas y esquivar obstáculos.</p>
+        </div>
+
+        <div class="control-card">
+          <div class="control-key">RATÓN</div>
+          <h3>Cámara</h3>
+          <p>Mueve el ratón para controlar la dirección de la cámara.</p>
+        </div>
+
+        <div class="control-card">
+          <div class="control-key">CLICK IZQ</div>
+          <h3>Atacar</h3>
+          <p>Ataca para acabar con los enemigos durante los niveles.</p>
+        </div>
+
+        <div class="control-card">
+          <div class="control-key">ESC</div>
+          <h3>Pausa</h3>
+          <p>Pausa la partida y accede al menú de opciones.</p>
+        </div>
+
+        <div class="control-card">
+          <div class="control-key">F11</div>
+          <h3>Pantalla completa</h3>
+          <p>Pon la pantalla en modo pantalla completa.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="Jugabilidad" class="section">
+      <p class="section-tag">Jugabilidad</p>
+      <h2 class="section-title">Cómo se juega</h2>
+      <p class="section-lead">
+        El objetivo principal es llegar a la meta. A lo largo de los diferentes
+        niveles se implementarán nuevas mecánicas. Hay coleccionables ⭐ que
+        puedes recoger te lo aconsejo, no olvides que las caídas de las
+        plataformas no son lo único que pueden acabar contigo: evita o acaba con
+        los enemigos de los diferentes niveles. Tienes tres oportunidades para
+        pasarte el nivel, ¡sino vuelve a intentarlo!
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="Mecanicas" class="section">
+      <p class="section-tag">Mecánicas</p>
+      <h2 class="section-title">Mecánicas del juego</h2>
+      <p class="section-lead">
+        Haz click en cualquier tarjeta para ver un vídeo de la mecánica y
+        entender cómo funciona.
+      </p>
+
+      <div class="controls-grid">
+        <div
+          class="control-card mecanica-clickable"
+          onclick="abrirModal('../MP4/Mecanica-Vida.mp4')"
+        >
+          <div class="control-key">❤️</div>
+          <h3>Vidas</h3>
+          <p>Tienes tres vidas. ¡Pásate los niveles antes de perderlas!</p>
+          <span class="card-hint">▶ Ver vídeo</span>
+        </div>
+
+        <div
+          class="control-card mecanica-clickable"
+          onclick="abrirModal('../MP4/Mecanica-WallSlide.mp4')"
+        >
+          <div class="control-key">🧱</div>
+          <h3>WallSlide</h3>
+          <p>
+            Pegate a las paredes y deslízate por ellas para llegar al objetivo.
+          </p>
+          <span class="card-hint">▶ Ver vídeo</span>
+        </div>
+
+        <div
+          class="control-card mecanica-clickable"
+          onclick="abrirModal('../MP4/Mecanica-Coleccionables.mp4')"
+        >
+          <div class="control-key">⭐</div>
+          <h3>Coleccionables</h3>
+          <p>
+            Las estrellas son opcionales. ¡Recógelas si las encuentras! Ocultan
+            un secreto.
+          </p>
+          <span class="card-hint">▶ Ver vídeo</span>
+        </div>
+
+        <div
+          class="control-card mecanica-clickable"
+          onclick="abrirModal('../MP4/Mecanica-Doble-Salto.mp4')"
+        >
+          <div class="control-key">🚀</div>
+          <h3>Doble Salto</h3>
+          <p>Utiliza el doble salto para poder llegar más lejos.</p>
+          <span class="card-hint">▶ Ver vídeo</span>
+        </div>
+
+        <div
+          class="control-card mecanica-clickable"
+          onclick="abrirModal('../MP4/Mecanica-Ataque.mp4')"
+        >
+          <div class="control-key">🗡️</div>
+          <h3>Ataque</h3>
+          <p>Utiliza el ataque para acabar con los enemigos.</p>
+          <span class="card-hint">▶ Ver vídeo</span>
+        </div>
+
+        <div
+          class="control-card mecanica-clickable"
+          onclick="abrirModal('../MP4/RecogerVida.mp4')"
+        >
+          <div class="control-key">🗘❤️</div>
+          <h3>Reinicio de vidas</h3>
+          <p>Al recoger una estrella se regeneran las vidas.</p>
+          <span class="card-hint">▶ Ver vídeo</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="modal" onclick="cerrarModal()">
+      <div class="modal-contenido" onclick="event.stopPropagation()">
+        <button class="modal-cerrar" onclick="cerrarModal()">✕</button>
+        <video id="modal-video" controls></video>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <footer>
+      <p>
+        Skyline Chase &mdash; Proyecto de Recerca &mdash; Desarrollado por
+        <span class="footer-name">Didac Rubio y Rubén Alcantarilla</span>
+      </p>
+    </footer>
+
+    <script>
+      function abrirModal(rutaVideo) {
+        const modal = document.getElementById("modal");
+        const video = document.getElementById("modal-video");
+        video.src = rutaVideo;
+        video.play();
+        modal.classList.add("activo");
+      }
+
+      function cerrarModal() {
+        const modal = document.getElementById("modal");
+        const video = document.getElementById("modal-video");
+        video.pause();
+        video.src = "";
+        modal.classList.remove("activo");
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") cerrarModal();
+      });
+    </script>
+  </body>
+</html>

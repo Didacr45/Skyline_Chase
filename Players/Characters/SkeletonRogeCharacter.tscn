@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://c4b85w11uuoqh"]
+
+[ext_resource type="PackedScene" uid="uid://cf8lh6str4v26" path="res://Player_Skeletons/KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Rogue.glb" id="1_uqs5g"]
+[ext_resource type="AnimationLibrary" uid="uid://bxniabd7rqxeu" path="res://autoload/AnimationMovement.res" id="2_obbtp"]
+[ext_resource type="AnimationLibrary" uid="uid://dsyyqd7dsv1sa" path="res://autoload/Animation_Items.res" id="3_mbioc"]
+[ext_resource type="Texture2D" uid="uid://bwafepllebks6" path="res://escenas/GUI/BarsPackage/Bars/Preview/HealthBar.png" id="4_obbtp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_makfs"]
+radius = 0.52441406
+height = 2.3613281
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nnypr"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mbioc"]
+viewport_path = NodePath("HealthBar3D/SubViewport")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_makfs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnypr"]
+texture = ExtResource("4_obbtp")
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1090110626]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2114887134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0509933, 0)
+shape = SubResource("CapsuleShape3D_makfs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1555352549]
+skeleton = NodePath("../Skeleton_Minion")
+
+[node name="Skeleton_Rogue" parent="." unique_id=681615791 instance=ExtResource("1_uqs5g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002598405, -0.03261268, -0.16865945)
+
+[node name="Skeleton3D" parent="Skeleton_Rogue/Rig_Medium" parent_id_path=PackedInt32Array(681615791, 824769855) index="0" unique_id=722120724]
+bones/1/position = Vector3(0.006773933, 0.21609509, 0.23370263)
+bones/1/rotation = Quaternion(0.5413459, 0.074180946, 0.0058256667, 0.837501)
+bones/1/scale = Vector3(0.99999994, 1, 0.99999994)
+bones/2/position = Vector3(-0.18495472, 0.09429556, 0.15557255)
+bones/2/rotation = Quaternion(0.99580777, -0.032144636, 0.0076972423, -0.08529066)
+bones/2/scale = Vector3(0.9999999, 0.99999976, 1.0000008)
+bones/3/rotation = Quaternion(0.41591793, -6.4165015e-08, 2.7400088e-07, 0.90940225)
+bones/3/scale = Vector3(0.99999994, 0.99999976, 0.99999994)
+bones/4/rotation = Quaternion(-0.4262603, 0.5000241, -0.047492303, 0.75234467)
+bones/4/scale = Vector3(0.99999976, 1.0000006, 0.9999992)
+bones/5/rotation = Quaternion(-0.00048121056, 0.9202344, -0.3913673, 0.00010906717)
+bones/5/scale = Vector3(1.0000002, 0.9999979, 1.0000024)
+bones/6/rotation = Quaternion(0.05019242, 0.0047781123, 0.0043445425, 0.9987187)
+bones/6/scale = Vector3(1.0000001, 1, 1.0000001)
+bones/7/rotation = Quaternion(0.05769593, -0.02145058, 0.06293791, 0.9961174)
+bones/7/scale = Vector3(1, 0.9999999, 1)
+bones/8/position = Vector3(0.21200736, 0.13413203, 7.9299625e-08)
+bones/8/rotation = Quaternion(-0.77723515, -0.37318248, -0.47431785, 0.17794088)
+bones/8/scale = Vector3(0.9999991, 0.9999986, 0.9999996)
+bones/9/rotation = Quaternion(1.7078406e-08, -5.84372e-08, -0.36635843, 0.93047386)
+bones/9/scale = Vector3(1.0000006, 0.99999946, 1)
+bones/10/rotation = Quaternion(7.250843e-09, 9.200791e-09, 0.026658095, 0.99964464)
+bones/10/scale = Vector3(0.99999994, 1, 1.0000001)
+bones/11/rotation = Quaternion(0.30690357, -0.27933174, 0.040216483, 0.9089371)
+bones/11/scale = Vector3(0.9999998, 0.9999999, 1.0000004)
+bones/12/position = Vector3(-0.04038381, 0.6219432, -0.036331292)
+bones/12/rotation = Quaternion(-0.0165128, -0.00667081, -0.7921999, 0.61000174)
+bones/12/scale = Vector3(0.99999994, 1.0000001, 1.0000001)
+bones/13/rotation = Quaternion(-0.011366565, 0.45472604, 0.023132816, 0.8902584)
+bones/13/scale = Vector3(1, 0.99999994, 1)
+bones/14/position = Vector3(-0.21200737, 0.13413203, 8.6813984e-08)
+bones/14/rotation = Quaternion(-0.7905408, 0.420948, 0.33685875, 0.2904726)
+bones/14/scale = Vector3(0.99999905, 0.9999985, 0.9999996)
+bones/15/rotation = Quaternion(2.623691e-08, 5.8394082e-08, 0.38684955, 0.92214286)
+bones/15/scale = Vector3(1.0000008, 0.99999964, 0.9999999)
+bones/16/rotation = Quaternion(7.300499e-09, -7.3388096e-09, -0.0266581, 0.99964464)
+bones/16/scale = Vector3(1.0000001, 1, 1)
+bones/17/rotation = Quaternion(0.2150467, 0.3087656, -0.10010359, 0.92108524)
+bones/17/scale = Vector3(0.9999998, 0.99999994, 1.0000002)
+bones/18/position = Vector3(-0.055227347, 0.3810017, 0.008437723)
+bones/18/rotation = Quaternion(0.005149319, 0.0051493477, 0.44576573, 0.89512)
+bones/18/scale = Vector3(1, 1.0000001, 1.0000001)
+bones/19/position = Vector3(0.16674598, 0.09429554, 0.04223124)
+bones/19/rotation = Quaternion(0.93675643, 0.1754659, -0.30261979, 0.010973339)
+bones/19/scale = Vector3(0.99999994, 0.9999997, 1.0000008)
+bones/20/rotation = Quaternion(0.0020042213, 2.4509479e-08, -7.6715345e-09, 0.99999803)
+bones/20/scale = Vector3(1.0000004, 0.9999999, 0.99999994)
+bones/21/rotation = Quaternion(0.078665115, 0.026392395, -0.0045172204, 0.9965415)
+bones/21/scale = Vector3(0.99999964, 1.0000006, 0.99999946)
+bones/22/rotation = Quaternion(-0.012383728, 0.960994, -0.27503252, -0.0263489)
+bones/22/scale = Vector3(0.99999994, 0.99999774, 1.0000024)
+
+[node name="head" parent="Skeleton_Rogue/Rig_Medium/Skeleton3D" index="0" unique_id=1563993136]
+transform = Transform3D(0.51043105, -0.088552594, 0.85534716, 0.8515083, 0.19082534, -0.48838437, -0.119974196, 0.97762156, 0.17280641, 0.03846535, 0.46844956, 1.0254338)
+
+[node name="chest" parent="Skeleton_Rogue/Rig_Medium/Skeleton3D" index="1" unique_id=978377660]
+transform = Transform3D(0.9954377, -0.037381846, 0.08778775, 0.093459845, 0.1966829, -0.97600263, 0.019218419, 0.97975427, 0.19927922, 0.048513465, 0.41558188, 0.76207924)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Skeleton_Rogue" unique_id=2119882247]
+deterministic = true
+libraries/AnimationMovement = ExtResource("2_obbtp")
+libraries/Animation_Items = ExtResource("3_mbioc")
+
+[node name="DetectionArea" type="Area3D" parent="." unique_id=1344612573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002598405, -0.03261268, -0.16865945)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=1192980454]
+transform = Transform3D(12.764857, 0, 0, 0, 3.0073547, 0, 0, 0, 12.838219, 0, 0, 0)
+shape = SubResource("SphereShape3D_nnypr")
+
+[node name="HealthBar3D" type="Sprite3D" parent="." unique_id=1167101643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5239608, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_mbioc")
+
+[node name="SubViewport" type="SubViewport" parent="HealthBar3D" unique_id=690565246]
+transparent_bg = true
+size = Vector2i(150, 46)
+render_target_update_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthBar3D/SubViewport" unique_id=946566921]
+custom_minimum_size = Vector2(150, 30)
+offset_right = 150.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(1, 1, 0.9490196, 1)
+theme_override_styles/background = SubResource("StyleBoxEmpty_makfs")
+theme_override_styles/fill = SubResource("StyleBoxTexture_nnypr")
+max_value = 3.0
+value = 3.0
+
+[editable path="Skeleton_Rogue"]

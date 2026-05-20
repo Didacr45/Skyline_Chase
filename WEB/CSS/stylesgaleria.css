@@ -1,0 +1,295 @@
+/* ================================================================
+   SKYLINE CHASE — Estilos Galería
+   Estructura: Variables > Reset > Navbar > Galería > Footer
+================================================================ */
+
+:root {
+  /* Paleta de colores para mantener la identidad visual */
+  --rojo: #c0392b;
+  --rojo-vivo: #e74c3c;
+  --rojo-oscuro: #7b1818;
+  --negro: #0a0a0a;
+  --gris-oscuro: #1a1a1a;
+  --gris-medio: #2a2a2a;
+  --gris-texto: #888888;
+  --blanco: #ffffff;
+  --blanco-suave: #cccccc;
+
+  /* Tipografías cargadas desde Google Fonts */
+  --fuente-titulo: "Bebas Neue", sans-serif;
+  --fuente-cuerpo: "Barlow", sans-serif;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   RESET Y ESTILOS BASE
+   Asegura que todos los navegadores partan de la misma base.
+──────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* El padding no aumenta el tamaño total del elemento */
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  background-color: var(--negro);
+  color: var(--blanco);
+  line-height: 1.7;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   NAVEGACIÓN (NAVBAR)
+   Barra superior fija con efecto de desenfoque (glassmorphism).
+──────────────────────────────────────────────────────────────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 64px;
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(14px); /* Difumina el contenido que pasa por detrás */
+  border-bottom: 1px solid var(--rojo-oscuro);
+}
+
+.nav-logo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+}
+
+.nav-logo span {
+  color: var(--rojo);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--blanco-suave);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--rojo-vivo);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* --- SUBMENÚ DESPLEGABLE --- */
+.tiene-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--gris-oscuro);
+  border-top: 3px solid var(--rojo);
+  width: 120px;
+  list-style: none;
+}
+
+.tiene-submenu:hover .submenu {
+  display: block;
+}
+
+/* Botón de descarga rápido */
+.btn-download {
+  background: var(--rojo);
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.btn-download:hover {
+  background: var(--rojo-vivo);
+  transform: translateY(-3px);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   SECCIÓN DE GALERÍA (CARRUSEL)
+   Contenedor centrado que usa Flexbox para alinear botones y fotos.
+──────────────────────────────────────────────────────────────── */
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--rojo);
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+/* --- ESTRUCTURA DEL CARRUSEL --- */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Separación entre botones e imágenes */
+  margin-top: 2rem;
+}
+
+.carousel-window {
+  flex: 1;
+  aspect-ratio: 16 / 9; /* Mantiene proporción de pantalla de juego */
+  overflow: hidden; /* Oculta las imágenes que no están a la vista */
+  border-radius: 12px;
+  border: 2px solid var(--gris-medio);
+}
+
+.carousel-track {
+  display: flex; /* Coloca las imágenes una al lado de otra en una fila infinita */
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Suaviza el movimiento */
+}
+
+.carousel-track img {
+  width: 100%; /* Cada imagen ocupa exactamente el ancho de la ventana */
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  flex-shrink: 0; /* Evita que las imágenes se compriman */
+}
+
+/* --- BOTONES DE CONTROL --- */
+.carousel-btn {
+  width: 50px;
+  height: 50px;
+  background: var(--rojo);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+  background: var(--rojo-vivo);
+}
+
+/* ────────────────────────────────────────────────────────────────
+   ELEMENTOS DE CIERRE (DIVIDER Y FOOTER)
+──────────────────────────────────────────────────────────────── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--rojo-oscuro) 40%,
+    var(--rojo) 50%,
+    var(--rojo-oscuro) 60%,
+    transparent 100%
+  );
+}
+
+footer {
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--gris-texto);
+  font-size: 0.85rem;
+}
+
+.footer-name {
+  color: var(--rojo-vivo);
+  font-weight: 600;
+}
+
+/* Ocultamos el cursor original en toda la página */
+*,
+body {
+  cursor: none !important;
+}
+
+/* ── CURSOR ── */
+* {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+.cursor-coin {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--gold2);
+  box-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.12s,
+    height 0.12s,
+    box-shadow 0.12s;
+}
+.cursor-coin.hovering {
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 0 20px rgba(245, 197, 24, 0.7);
+}
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: trail-fade 0.5s ease forwards;
+}
+@keyframes trail-fade {
+  0% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}

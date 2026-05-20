@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://brjhyk63w8ped"]
+
+[sub_resource type="GDScript" id="GDScript_i7deo"]
+script/source = "extends Node
+
+# Esta variable es la que guardará al personaje elegido
+var selected_character: CharacterData
+"
+
+[node name="GameManager" type="Node" unique_id=934278074]
+script = SubResource("GDScript_i7deo")

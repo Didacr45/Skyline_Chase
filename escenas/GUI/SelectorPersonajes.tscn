@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://cgffqj88xcj5c"]
+
+[ext_resource type="Texture2D" uid="uid://bsjtvf1lsnxv5" path="res://escenas/GUI/Select/SelectorFondo.png" id="1_0ivj2"]
+[ext_resource type="Script" uid="uid://vhgg1en480ig" path="res://Selector2D.gd" id="1_vc0ar"]
+[ext_resource type="Texture2D" uid="uid://cwfqyu6feif04" path="res://escenas/GUI/Select/KnightSelect.png" id="2_mody1"]
+[ext_resource type="Texture2D" uid="uid://g6yyqpqngofj" path="res://escenas/GUI/Select/BarbaroSelect.png" id="3_0ivj2"]
+[ext_resource type="Script" uid="uid://ck2akfvt444ps" path="res://CharacterData.gd" id="3_004ck"]
+[ext_resource type="Resource" uid="uid://l1lgxfctcsl5" path="res://Players/DatosCaballero.tres" id="4_86bey"]
+[ext_resource type="Texture2D" uid="uid://cecq1qu42k4hp" path="res://escenas/GUI/Select/MageSelect.png" id="4_fdy6m"]
+[ext_resource type="Texture2D" uid="uid://ruhionsvdpy3" path="res://escenas/GUI/Select/RangerSelect.png" id="5_qjsl0"]
+[ext_resource type="Texture2D" uid="uid://cpm6c4pffs7oc" path="res://escenas/GUI/Select/RogueSelect.png" id="6_lkyjk"]
+[ext_resource type="Resource" uid="uid://dpjvt33pybvcg" path="res://Players/Barbaro.tres" id="6_qxl6m"]
+[ext_resource type="Resource" uid="uid://dlsrsuuasc7nc" path="res://Players/Mago.tres" id="8_wm5cb"]
+[ext_resource type="Resource" uid="uid://c06wutg20bjsy" path="res://Players/Ranger.tres" id="10_rebxv"]
+[ext_resource type="Resource" uid="uid://dmp8v57qfn1d4" path="res://Players/Bandido.tres" id="12_nnn8r"]
+[ext_resource type="Texture2D" uid="uid://bmxhdp1ynbopk" path="res://LightGreen_Panel.png" id="14_fdy6m"]
+[ext_resource type="FontFile" uid="uid://rfhcjmiaxtx4" path="res://Fuentes/RetroMario-Regular.otf" id="14_qjsl0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qjsl0"]
+texture = ExtResource("14_fdy6m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lkyjk"]
+texture = ExtResource("14_fdy6m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3yeds"]
+texture = ExtResource("14_fdy6m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxy6d"]
+texture = ExtResource("14_fdy6m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ix8tw"]
+texture = ExtResource("14_fdy6m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1w7nj"]
+texture = ExtResource("14_fdy6m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oenon"]
+texture = ExtResource("14_fdy6m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hqfic"]
+texture = ExtResource("14_fdy6m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ca7c3"]
+texture = ExtResource("14_fdy6m")
+
+[node name="Node2D" type="Node2D" unique_id=869320486]
+
+[node name="SelectorFondo" type="Sprite2D" parent="." unique_id=454098134]
+position = Vector2(959.74994, 543.25)
+scale = Vector2(1.5851943, 1.8155259)
+texture = ExtResource("1_0ivj2")
+
+[node name="Control" type="Control" parent="." unique_id=1581376518]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 686.0
+offset_top = 276.0
+offset_right = 907.0
+offset_bottom = 361.0
+script = ExtResource("1_vc0ar")
+fotos_personajes = Array[Texture2D]([ExtResource("2_mody1"), ExtResource("3_0ivj2"), ExtResource("4_fdy6m"), ExtResource("5_qjsl0"), ExtResource("6_lkyjk")])
+datos_personajes = Array[ExtResource("3_004ck")]([ExtResource("4_86bey"), ExtResource("6_qxl6m"), ExtResource("8_wm5cb"), ExtResource("10_rebxv"), ExtResource("12_nnn8r")])
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1664610299]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26244345
+anchor_top = -0.6117647
+anchor_right = 1.7930001
+anchor_bottom = 5.302
+offset_right = -298.25302
+offset_bottom = -462.66998
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control" unique_id=835004365]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39819005
+anchor_top = -0.62352943
+anchor_right = 0.39819005
+anchor_bottom = -0.62352943
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Anterior" type="Button" parent="Control" unique_id=611032876]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.7914163
+anchor_top = 5.8468237
+anchor_right = 0.543172
+anchor_bottom = 7.094294
+offset_left = -0.09700012
+offset_top = 0.019989014
+offset_right = -0.041007996
+offset_bottom = -0.015014648
+theme_override_fonts/font = ExtResource("14_qjsl0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxTexture_qjsl0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lkyjk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3yeds")
+text = "Anterior"
+metadata/_edit_use_anchors_ = true
+
+[node name="Siguiente" type="Button" parent="Control" unique_id=2121820342]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.7243751
+anchor_top = 5.834824
+anchor_right = 3.0136652
+anchor_bottom = 7.082765
+offset_left = -0.08691406
+offset_top = 0.03994751
+offset_right = -0.020019531
+offset_bottom = -0.03503418
+theme_override_fonts/font = ExtResource("14_qjsl0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxTexture_wxy6d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ix8tw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1w7nj")
+text = "Siguiente"
+metadata/_edit_use_anchors_ = true
+
+[node name="Jugar" type="Button" parent="Control" unique_id=1193902372]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 5.8120003
+anchor_right = 1.8009956
+anchor_bottom = 7.6585298
+offset_left = 1.4999924
+offset_top = -0.020019531
+offset_right = -0.020019531
+offset_bottom = 0.024963379
+theme_override_fonts/font = ExtResource("14_qjsl0")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_oenon")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hqfic")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ca7c3")
+text = "PLAY"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Control/Anterior" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Siguiente" to="Control" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/Jugar" to="Control" method="_on_button_3_pressed"]

@@ -1,0 +1,381 @@
+/* ================================================================
+  SKYLINE CHASE — stylesConfig.css (Optimizado para Controles/Mecánicas)
+================================================================ */
+
+:root {
+  /* VARIABLES: Centralizamos colores y fuentes para que el diseño sea consistente */
+  --rojo: #c0392b;
+  --rojo-vivo: #e74c3c;
+  --rojo-oscuro: #7b1818;
+  --negro: #0a0a0a;
+  --gris-oscuro: #1a1a1a;
+  --gris-medio: #2a2a2a;
+  --gris-texto: #888888;
+  --blanco: #ffffff;
+  --blanco-suave: #cccccc;
+  --fuente-titulo: "Bebas Neue", sans-serif;
+  --fuente-cuerpo: "Barlow", sans-serif;
+}
+
+/* RESET Y BASE: Limpieza de márgenes del navegador para evitar descuadres */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  background-color: var(--negro);
+  color: var(--blanco);
+  line-height: 1.7;
+}
+
+/* BARRA DE NAVEGACIÓN: Usamos Flexbox para alinear el logo y los enlaces */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 64px;
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(14px); /* Difumina el contenido que pasa por detrás */
+  border-bottom: 1px solid var(--rojo-oscuro);
+}
+
+.nav-logo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+}
+
+.nav-logo span {
+  color: var(--rojo);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--blanco-suave);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--rojo-vivo);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* --- SUBMENÚ DESPLEGABLE --- */
+.tiene-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--gris-oscuro);
+  border-top: 3px solid var(--rojo);
+  width: 120px;
+  list-style: none;
+}
+
+.tiene-submenu:hover .submenu {
+  display: block;
+}
+
+/* Botón de descarga rápido */
+.btn-download {
+  background: var(--rojo);
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.btn-download:hover {
+  background: var(--rojo-vivo);
+  transform: translateY(-3px);
+}
+
+/* LÍNEA DIVISORIA: Degradado lineal para separar visualmente las secciones */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--rojo-oscuro) 40%,
+    var(--rojo) 50%,
+    var(--rojo-oscuro) 60%,
+    transparent 100%
+  );
+}
+
+/* SECCIONES: Contenedor general centrado */
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--rojo);
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(
+    2rem,
+    5vw,
+    3.2rem
+  ); /* Ajuste de tamaño fluido según pantalla */
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.section-lead {
+  font-size: 1.05rem;
+  color: var(--blanco-suave);
+  max-width: 620px;
+  margin-bottom: 3rem;
+}
+
+/* GRID DE TARJETAS: Usamos Grid para que las tarjetas se ajusten solas */
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.control-card {
+  background: var(--gris-oscuro);
+  border: 1px solid var(--gris-medio);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.25s;
+}
+
+.control-card:hover {
+  border-color: var(--rojo);
+  background: rgba(192, 57, 43, 0.07);
+}
+
+/* ESTILO DE TECLA/ICONO: Simula visualmente un botón de teclado */
+.control-key {
+  display: inline-flex;
+  background: rgba(192, 57, 43, 0.15);
+  border: 1px solid rgba(192, 57, 43, 0.45);
+  color: var(--rojo-vivo);
+  font-family: monospace;
+  border-radius: 6px;
+  padding: 5px 12px;
+  margin-bottom: 0.9rem;
+  text-transform: uppercase;
+}
+
+.control-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.control-card p {
+  font-size: 0.87rem;
+  color: var(--gris-texto);
+}
+
+/* MECÁNICAS CLICKABLES */
+.mecanica-clickable {
+  cursor: pointer;
+}
+
+.card-hint {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--rojo-vivo);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.mecanica-clickable:hover .card-hint {
+  opacity: 1;
+}
+
+/* MODAL DE VÍDEO: El contenedor está fijo y oculto por defecto */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.activo {
+  display: flex; /* Clase añadida por JS para mostrar el modal */
+}
+
+.modal-contenido {
+  position: relative;
+  background: var(--gris-oscuro);
+  border: 1px solid var(--rojo-oscuro);
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 800px;
+  width: 90%;
+}
+
+#modal-video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: var(--rojo);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  text-align: center;
+  padding: 2.5rem;
+  border-top: 1px solid var(--gris-medio);
+  color: var(--gris-texto);
+  font-size: 0.85rem;
+}
+
+.footer-name {
+  color: var(--rojo-vivo);
+  font-weight: 600;
+}
+
+/* RESPONSIVE: Ajustes para pantallas pequeñas */
+@media (max-width: 640px) {
+  .nav-links {
+    gap: 1.2rem;
+  }
+  .section {
+    padding: 2.5rem 1.25rem;
+  }
+}
+
+/* Ocultamos el cursor original en toda la página */
+*,
+body {
+  cursor: none !important;
+}
+
+/* Diseñamos el nuevo cursor */
+.cursor-personalizado {
+  width: 40px; /* Ajusta el tamaño a tu gusto */
+  height: 40px;
+  background-image: url("/escenas/Estrella/estrella.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  pointer-events: none; /* Crucial para que puedas hacer click a través del cursor */
+  transform: translate(-50%, -50%); /* Centra la imagen en la punta del mouse */
+  z-index: 9999; /* Asegura que esté por encima de todo */
+}
+/* Ocultamos el cursor original en toda la página */
+*,
+body {
+  cursor: none !important;
+}
+
+/* ── CURSOR ── */
+* {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+.cursor-coin {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--gold2);
+  box-shadow: 0 0 10px rgba(245, 197, 24, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.12s,
+    height 0.12s,
+    box-shadow 0.12s;
+}
+.cursor-coin.hovering {
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 0 20px rgba(245, 197, 24, 0.7);
+}
+.cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: trail-fade 0.5s ease forwards;
+}
+@keyframes trail-fade {
+  0% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
